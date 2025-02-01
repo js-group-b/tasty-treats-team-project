@@ -32,7 +32,6 @@
   color: #F8F8F8;
 }
 
-/* Scroll çubuğu genel özellikleri */
 .all-categories-menu {
   position: absolute;
   max-height: 416px;
@@ -51,12 +50,10 @@
   background-color: #0505052E;
   border-radius: 10px;
   border: 1px solid #ccc;
-  /* Border */
 }
 
 .all-categories-menu::-webkit-scrollbar-button {
   display: none;
-  /* Yukarı/aşağı oklarını gizle */
 }
 
 .categories-list {
