@@ -1,178 +1,174 @@
 :root {
-  --primary-color: #9bb537;
-  --primary-color-rgb: 155, 181, 55;
-  --secondary-color: #050505;
-  --text-color: #333;
-  --text-color-rgb: 51, 51, 51;
-  --dark-bg: #383838;
-  --white-bg: #f8f8f8;
-  --white-bg-rgb: 248, 248, 248;
-  --secondary-bg: #05050533;
-  --toggle-bg-color: #e0e0e0;
-  --toggle-bg-color-active: #8dc63f;
-  --toggle-knob-color: #fff;
-  --color1: black;
-  --border-color: #05050533;
+    --primary-color: #9bb537;
+    --primary-color-rgb: 155,181,55;
+    --secondary-color: #050505;
+    --text-color: #333;
+    --text-color-rgb: 51,51,51;
+    --dark-bg: #383838;
+    --white-bg: #f8f8f8;
+    --white-bg-rgb: 248,248,248;
+    --secondary-bg: #05050533;
+    --toggle-bg-color: #e0e0e0;
+    --toggle-bg-color-active: #8dc63f;
+    --toggle-knob-color: #fff;
+    --color1: black;
+    --border-color: #05050533
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  border: none;
-}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+ }
 
 #filter-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px
 }
 
-.custom-select-container,
-.input-container {
-  position: relative;
+.custom-select-container,.input-container {
+    position: relative
 }
 
 .search-container {
-  width: 335px;
+    width: 335px
 }
 
 .search-input {
-  outline: 0;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  background-color: transparent;
-  padding: 14px 48px;
-  border-radius: 15px;
-  width: 100%;
-  line-height: 18px;
+    outline: 0;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 14px 48px;
+    border-radius: 15px;
+    width: 100%;
+    line-height: 18px
 }
 
-.search-input:focus + .btn-search > .svg-search {
-  fill: var(--primary-color);
+.search-input:focus+.btn-search>.svg-search {
+    fill: var(--primary-color)
 }
 
-.svg-arrow,
-.svg-search {
-  fill: var(--border-color);
-  transition: fill 0.3s;
+.svg-arrow,.svg-search {
+    fill: var(--border-color);
+    transition: fill .3s
 }
 
 .btn-search {
-  width: 18px;
-  height: 18px;
-  background-color: transparent;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 18px;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px
 }
 
 .btn-cancel {
-  width: 18px;
-  height: 18px;
-  background-color: transparent;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 18px;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px
 }
 
 .custom-select-trigger {
-  cursor: pointer;
-  border: 1px solid var(--border-color);
-  border-radius: 15px;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 18px;
-  font-size: 1.4rem;
-  color: var(--border-color);
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    font-size: 1.4rem;
+    color: var(--border-color)
 }
 
-.area-container,
-.time-container {
-  width: 160px;
+.area-container,.time-container {
+    width: 160px
 }
 
 .ingr-container {
-  width: 188px;
+    width: 188px
 }
 
 .form-label {
-  display: inline-block;
-  font-size: 1.2rem;
-  line-height: 14px;
-  font-weight: 500;
-  color: var(--border-color);
-  margin-bottom: 8px;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 14px;
+    font-weight: 500;
+    color: var(--border-color);
+    margin-bottom: 8px
 }
 
 .options {
-  max-height: 176px;
-  padding: 14px 18px;
-  background-color: var(--white-bg);
-  box-shadow: 0 4px 20px 0 var(--border-color);
-  border-radius: 15px;
-  overflow-y: scroll;
-  position: absolute;
-  z-index: 50;
-  transition: display 4s ease-in-out;
-  min-width: 100%;
+    max-height: 176px;
+    padding: 14px 18px;
+    background-color: var(--white-bg);
+    box-shadow: 0 4px 20px 0 var(--border-color);
+    border-radius: 15px;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 50;
+    transition: display 4s ease-in-out;
+    min-width: 100%
 }
 
 .options::-webkit-scrollbar {
-  width: 6px;
+    width: 6px
 }
 
 .options::-webkit-scrollbar-thumb {
-  width: 6px;
-  background-color: var(--border-color);
-  border-radius: 12px;
+    width: 6px;
+    background-color: var(--border-color);
+    border-radius: 12px
 }
 
 .option {
-  font-size: 1.4rem;
-  line-height: 18px;
-  color: var(--border-color);
-  cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 18px;
+    color: var(--border-color);
+    cursor: pointer
 }
 
 .option:hover {
-  color: var(--text-color);
+    color: var(--text-color)
 }
 
-.hidden,
-.hidden-dropdown {
-  display: none;
+.hidden,.hidden-dropdown {
+    display: none
 }
 
 .trigger-active {
-  color: var(--text-color);
+    color: var(--text-color)
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 20px;
-  max-width: 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+    max-width: 335px
 }
 
 .reset-filter-btn {
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: 0 0;
-  color: var(--border-color);
-  border: none;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: 0 0;
+    color: var(--border-color);
+    border: none;
 }
 
 .reset-filter-btn:hover {
-  cursor: pointer;
-  color: var(--text-color);
+    cursor: pointer;
+    color: var(--text-color)
 }
 
 .svg-reset {
@@ -181,86 +177,83 @@
   height: 1em;
   stroke-width: 0;
   fill: var(--primary-color);
-  stroke: var(--primary-color);
+    stroke: var(--primary-color);
 }
 
-#area-trigger-text,
-#ingredient-trigger-text,
-#time-trigger-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  line-height: 18px;
+#area-trigger-text,#ingredient-trigger-text,#time-trigger-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    overflow: hidden;
+    line-height: 18px
 }
 
 @media screen and (min-width: 768px) {
-  #filter-form {
-    gap: 16px;
-  }
+    #filter-form {
+        gap:16px
+    }
 
-  .search-container {
-    flex-basis: 60%;
-    flex-grow: 0;
-  }
+    .search-container {
+        flex-basis: 60%;
+        flex-grow: 0
+    }
 
-  .custom-select-trigger {
-    font-size: 1.6rem;
-  }
+    .custom-select-trigger {
+        font-size: 1.6rem
+    }
 
-  .time-container,
-  .area-container {
-    flex-basis: calc(40% - 16px);
-    flex-grow: 0;
-  }
+    .time-container,.area-container {
+        flex-basis: calc(40% - 16px);
+        flex-grow: 0
+    }
 
-  .ingr-container {
-    flex-basis: 40%;
-    flex-grow: 0;
-  }
+    .ingr-container {
+        flex-basis: 40%;
+        flex-grow: 0
+    }
 
-  .form-lanbel {
-    font-size: 1.4rem;
-    line-height: 18px;
-  }
+    .form-lanbel {
+        font-size: 1.4rem;
+        line-height: 18px
+    }
 
-  .options {
-    max-height: 188px;
-  }
+    .options {
+        max-height: 188px
+    }
 
-  .option {
-    font-size: 1.6rem;
-    line-height: 20px;
-  }
+    .option {
+        font-size: 1.6rem;
+        line-height: 20px
+    }
 
-  .form-container {
-    margin-bottom: 16px;
-    max-width: 419px;
-  }
+    .form-container {
+        margin-bottom: 16px;
+        max-width: 419px
+    }
 }
 
 @media screen and (min-width: 1280px) {
-  #filter-form {
-    flex-wrap: nowrap;
-  }
+    #filter-form {
+        flex-wrap:nowrap
+    }
 
-  .search-container {
-    flex-basis: 30%;
-  }
+    .search-container {
+        flex-basis: 30%
+    }
 
-  .time-container {
-    flex-basis: calc(15% - 16px);
-  }
+    .time-container {
+        flex-basis: calc(15% - 16px)
+    }
 
-  .area-container {
-    flex-basis: calc(25% - 16px);
-  }
+    .area-container {
+        flex-basis: calc(25% - 16px)
+    }
 
-  .ingr-container {
-    flex-basis: calc(30% - 16px);
-  }
+    .ingr-container {
+        flex-basis: calc(30% - 16px)
+    }
 
-  .form-container {
-    max-width: 780px;
-  }
+    .form-container {
+        max-width: 780px
+    }
 }
