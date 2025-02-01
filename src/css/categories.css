@@ -1,1 +1,92 @@
-/* */ 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  color: #0505054D;
+}
+
+.all-categories-content-div {
+  max-width: 332px;
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+
+}
+
+.all-categories-btn {
+  background: none;
+  border: 1px solid #0505054D;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 174px;
+  padding: 14px 28px;
+  color: #05050580;
+
+}
+
+.all-categories-btn:hover {
+  background-color: #9BB537;
+  color: #F8F8F8;
+}
+
+/* Scroll çubuğu genel özellikleri */
+.all-categories-menu {
+  position: absolute;
+  max-height: 416px;
+  overflow-y: auto;
+  width: 235px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.all-categories-menu::-webkit-scrollbar {
+  width: 8px;
+
+}
+
+.all-categories-menu::-webkit-scrollbar-thumb {
+  background-color: #0505052E;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  /* Border */
+}
+
+.all-categories-menu::-webkit-scrollbar-button {
+  display: none;
+  /* Yukarı/aşağı oklarını gizle */
+}
+
+.categories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+
+}
+
+.categories-list li {
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 20px;
+}
+
+.categories-list li:hover {
+  color: #9BB537;
+}
+
+@media (min-width: 768px) {
+  .all-categories-content-div {
+    max-width: 600px;
+  }
+
+}
+
+@media(min-width: 1280px) {
+  .all-categories-content-div {
+    max-width: 1024px;
+  }
+}
