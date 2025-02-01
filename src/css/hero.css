@@ -1,4 +1,4 @@
-@media screen and (min-width: 375px) and (max-width: 768px) {
+
   .hero-section-order-now {
     display: flex;
     width: Fixed (335px) px;
@@ -90,9 +90,9 @@
     background: #7ea03f;
     color: white;
   }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1158px) {
+
+@media screen and (min-width: 768px) {
   .hero-section-order-now {
     display: flex;
     width: Fixed (446px) px;
@@ -181,7 +181,7 @@
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1280px) {
   .hero-section-order-now {
     display: flex;
     width: Fixed (446px) px;
