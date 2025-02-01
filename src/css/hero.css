@@ -1,5 +1,5 @@
 @media screen and (min-width: 375px) and (max-width: 768px) {
-    body {
+    .hero-section-order-now {
         display: flex;
         width: Fixed (335px) px;
         height: Hug (143px) px;
@@ -9,7 +9,7 @@
         opacity: 0px;
     }
 
-    .card {
+    .hero-section-order-card {
         background: white;
         padding: 20px;
 
@@ -20,7 +20,7 @@
         left: 20px;
     }
 
-    h1 {
+    .hero-section-order-title {
         width: 335px;
         height: 93px;
         font-family: Inter;
@@ -32,7 +32,7 @@
         text-decoration-skip-ink: none;
     }
 
-    .highlight {
+    .hero-section-highlight {
         font-style: italic;
         color: #7ea03f;
         font-family: Inter;
@@ -44,7 +44,7 @@
         text-decoration-skip-ink: none;
     }
 
-    p {
+        .hero-section-order-p {
         color: #555;
         font-family: Inter;
         font-size: 14px;
@@ -57,7 +57,7 @@
         height: 36px;
     }
 
-    .button {
+    .hero-section-order-button {
         display: inline-block;
         margin-top: 10px;
         padding: 10px 20px;
@@ -86,14 +86,14 @@
         text-align: center;
     }
 
-    .button:hover {
+    .hero-section-order-button:hover {
         background: #7ea03f;
         color: white;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1158px) {
-    body {
+    .hero-section-order-now {
         display: flex;
         width: Fixed (446px) px;
         height: Hug (193px) px;
@@ -103,7 +103,7 @@
         opacity: 0px;
     }
 
-    .card {
+    .hero-section-order-card {
         background: white;
         width: Fixed (446px) px;
         height: Hug (193px) px;
@@ -113,7 +113,7 @@
         opacity: 0px;
     }
 
-    h1 {
+    .hero-section-order-title {
         font-family: Inter;
         font-size: 36px;
         font-weight: 600;
@@ -127,7 +127,7 @@
         opacity: 0px;
     }
 
-    .highlight {
+    .hero-section-highlight {
         color: #7ea03f;
 
         font-family: Inter;
@@ -140,14 +140,14 @@
         text-decoration-skip-ink: none;
     }
 
-    p {
+        .hero-section-order-p {
         color: #555;
         width: 408px;
         height: 48px;
 
     }
 
-    .button {
+        .hero-section-order-button {
         display: inline-block;
         margin-top: 10px;
         padding: 10px 20px;
@@ -176,14 +176,14 @@
         text-align: center;
     }
 
-    .button:hover {
+    .hero-section-order-button:hover {
         background: #7ea03f;
         color: white;
     }
 }
 
 @media screen and (min-width: 1158px) {
-    body {
+    .hero-section-order-now {
         display: flex;
         width: Fixed (446px)px;
         height: Hug (193px)px;
@@ -191,7 +191,7 @@
         margin-left: 100px;
     }
 
-    .card {
+    .hero-section-order-card {
         background: white;
         width: Fixed (446px)px;
         height: Hug (193px)px;
@@ -201,7 +201,7 @@
         opacity: 0px;
     }
 
-    h1 {
+    .hero-section-order-title {
         font-family: Inter;
         font-size: 36px;
         font-weight: 600;
@@ -216,7 +216,7 @@
 
     }
 
-    .highlight {
+    .hero-section-highlight {
         color: #7ea03f;
         font-family: Inter;
         font-size: 36px;
@@ -228,7 +228,7 @@
         text-decoration-skip-ink: none;
     }
 
-    p {
+   .hero-section-order-p {
         color: #555;
         display: flex;
 
@@ -237,7 +237,7 @@
 
     }
 
-    .button {
+    .hero-section-order-button {
         display: inline-block;
         margin-top: 10px;
         padding: 10px 20px;
@@ -266,7 +266,7 @@
         text-align: center;
     }
 
-    .button:hover {
+    .hero-section-order-button:hover {
         background: #7ea03f;
         color: white;
     }
