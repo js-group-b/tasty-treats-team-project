@@ -167,11 +167,20 @@
 }
 
 .reset-filter-btn:hover {
-    color: var(--text-color)
+    color: var(--text-color);
+}
+
+.svg-reset {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: var(--primary-color);
+  fill: var(--primary-color)
 }
 
 .reset-filter-btn:hover .svg-reset {
-    fill: var(--primary-color)
+    fill: var(--primary-color);
 }
 
 #area-trigger-text,#ingredient-trigger-text,#time-trigger-text {
