@@ -1,0 +1,11 @@
+:root {
+    --background-color: #FFFFFF;
+    --text-color:#050505;
+    --primary-color: #9BB537;
+}
+
+body.darkmode {
+    --background-color:#1E1E1E;
+    --text-color:#FFFFFF;
+    --primary-color: #9BB537;
+}
