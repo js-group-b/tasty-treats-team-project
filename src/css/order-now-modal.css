@@ -1,112 +1,129 @@
-.order-now-modal-body {
-  background-color: #f8f8f8;
+.hero-modal-now-form {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #f4f4f4;
 }
 
+
 .order-now-modal {
+  display: none;
   position: fixed;
-  top: 0;
+  z-index: 1000;
   left: 0;
+  top: 0;
   width: 100%;
-  height: auto;
-  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .order-modal-content {
-  background: white;
+  background-color: white;
   padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
   position: relative;
-  width: 335px;
-  height: 582px;
-  gap: 0px;
-  border-radius: 15px;
-  opacity: 0px;
-}
-.order-now-title {
-  font-family: Inter;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.order-now-close {
-  width: 100%;
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 20px;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
 }
 
-.order-now-form-group {
+.order-modal-title {
+  color: #333;
   margin-bottom: 15px;
-}
-
-.order-now-form-group label {
-  display: block;
-  color: #05050580;
-  margin-bottom: 5px;
   font-family: Inter;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
 
-.order-now-form-group input,
-.order-now-form-group textarea {
+.order-now-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  width: 24px;
+    height: 24px;
+color: #050505;
+}
+
+.hero-order-modal-form {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.order-modal-label {
+  margin-top: 18px;
+  margin-bottom: 8px;
   width: 100%;
-  padding: 8px;
-  border: 1px solid #05050533;
+    height: 18px;
+  font-weight: bold;
+  color: #05050580;;
+  font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.hero-order-modal-input,
+.hero-order-modal-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 15px;
-  display: block;
-  color: #05050580;
-  margin-bottom: 5px; 
-  font-family: Inter;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+    color: #05050580;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      
 }
 
-.order-now-send-button {
-  color: #f8f8f8;
-  width: 100%;
-  background: #9bb537;
+.hero-order-modal-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.hero-order-submit-btn {
+  background-color: #a6c54a;
+  color: white;
   border: none;
+  padding: 10px;
   border-radius: 15px;
-  margin-top: 20px;
-  gap: 10px;
-  text-align: center;
-  top: 508px;
-  left: 20px;
-  padding: 15px 162px 15px 162px;
-  gap: 10px;
-  opacity: 0px;
-}
-.order-now-button-text {
-  width: 35px;
-  height: 16px;
-  gap: 0px;
-  opacity: 0px;
-  font-family: Inter;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top:40px;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 16.94px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+
+  
+    height: 48px;
+
+
+}
+
+.hero-order-submit-btn:hover {
+  background-color: #8faa39;
+}
+
+@media (min-width: 768px) {
+  .order-modal-content {
+   width: 100%;
+   height: auto;
+  }
 }
