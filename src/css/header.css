@@ -9,6 +9,13 @@
 }
 .navigation {
   display: none;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.52px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
   @media screen and (min-width: 768px) {
     display: inline;
     position: relative;
@@ -19,13 +26,13 @@
   position: relative;
 }
 .navigation a::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--green); /* Цвет полоски */
+  background-color: #9bb537;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -34,16 +41,22 @@
   transform: scaleX(1);
 }
 
+.btn-home {
+  color: #9bb537;
+  text-decoration: underline;
+}
 .header-nav-links {
-  color: var(--black);
+  color: #050505;
   font-size: 12px;
   font-weight: 500;
   font-size: 12px;
+  text-decoration: none;
 }
 
 .header-nav-links:hover,
 .header-nav-links:focus {
-  color: var(--green);
+  color: #9bb537;
+  text-decoration: solid;
   transition: var(--trns-general);
 }
 
@@ -52,11 +65,12 @@
 }
 
 .logo-first {
-  color: var(--green);
+  color: #9bb537;
   font-size: 16px;
   font-weight: 600;
   line-height: calc(18 / 16);
   letter-spacing: -0.64px;
+  text-decoration: none;
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: calc(20 / 18);
@@ -65,11 +79,12 @@
 }
 
 .logo-second {
-  color: var(--black);
+  color: #050505;
   font-size: 16px;
   font-weight: 600;
   line-height: calc(18 / 16);
   letter-spacing: -0.64px;
+  text-decoration: none;
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: calc(20 / 18);
@@ -111,7 +126,7 @@
 }
 
 .mobile-menu-icon {
-  stroke: var(--black);
+  stroke: #050505;
 }
 
 .header-switch {
@@ -137,38 +152,38 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--gray-radiobtn-w);
+  background-color: #a09ea066;
   transition: 0.4s;
   border-radius: 34px;
-  box-shadow: 4px 4px 15px rgba(243, 243, 243, 0.25);
+  box-shadow: 7px 5px 15px #a09ea066;
 }
 
 .header-slider:before {
   position: absolute;
-  content: '';
+  content: "";
   height: 17px;
   width: 17px;
   left: 2px;
   bottom: 2px;
-  background-color: var(--background-w);
+  background-color: #a09ea066;
   transition: 0.4s;
   border-radius: 50%;
 }
 
 .header-switch input:checked + .header-slider {
   background: linear-gradient(#9bb537, #9bb537);
-  box-shadow: 4px 4px 15px rgba(243, 243, 243, 0.25);
+  box-shadow: 7px 5px 15px #a09ea066;
 }
 
 .header-switch input:checked + .header-slider:before {
-  box-shadow: 4px 4px 15px rgba(243, 243, 243, 0.25);
+  box-shadow: 7px 5px 15px #a09ea066;
   transform: translateX(26px);
 }
 
 /* Mobile Menu Styles */
 
 .mobile-menu {
-  background-color: var(--green);
+  background-color: #9bb537;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -207,7 +222,7 @@
 }
 
 .mob-menu-close-icon {
-  stroke: white;
+  stroke: #f8f8f8;
 }
 
 .mob-menu-list {
@@ -221,14 +236,14 @@
 }
 
 .header-list-item .main-page {
-  color: var(--white-d);
+  color: #f8f8f8;
   font-size: 12px;
   font-weight: 500;
   justify-content: center;
 }
 
 .header-list-item {
-  color: var(--white-d);
+  color: #f8f8f8;
   font-size: 12px;
   font-weight: 500;
   justify-content: center;
@@ -264,7 +279,7 @@
 
 .slider:before {
   position: absolute;
-  content: '';
+  content: "";
   height: 15px;
   width: 15px;
   left: 4px;
@@ -285,19 +300,19 @@ input:checked + .slider:before {
 
 .current::after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--green);
+  background-color: #9bb537;
 }
 
 .nav-link-active {
-  color: var(--green);
+  color: #9bb537;
 }
 
 .shopping-icon-use {
-  fill: var(--white-w);
-  stroke: var(--black);
+  fill: #FFFFFF;
+  stroke: #050505;
 }
