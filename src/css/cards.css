@@ -1,1 +1,36 @@
-/* */
+.cards-section-main-container {
+    /* will be used to align with other sections*/
+}
+
+.cards-section-content-div {
+    max-width: 335px;
+    margin:auto;
+}
+
+
+/* will be back here */ 
+.cards-section-card-item-inner-div {
+    position: relative;
+}
+
+.cards-section-card-item-inner-div img {
+    display: block;
+}
+
+.cards-section-card-content {
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+
+/* */ 
+
+.cards-section-favorites-button {
+    width:22px;
+    height:22px;
+    position: absolute;
+    background-color: red;
+    top:16px;
+    left:297px;
+}
