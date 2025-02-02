@@ -4,15 +4,15 @@
     gap: 14px
 }
 
-.custom-select-container,.input-container {
+.filter-custom-select-container,.filter-input-container {
     position: relative
 }
 
-.search-container {
+.filter-search-container {
     width: 335px
 }
 
-.search-input {
+.filter-search-input {
     outline: 0;
     border: 1px solid var(--border-color);
     color: var(--text-color);
@@ -23,16 +23,16 @@
     line-height: 18px
 }
 
-.search-input:focus+.btn-search>.svg-search {
+.filter-search-input:focus+.filter-btn-search>.filter-svg-search {
     fill: var(--primary-color)
 }
 
-.svg-arrow,.svg-search {
+.svg-arrow,.filter-svg-search {
     fill: var(--border-color);
     transition: fill .3s
 }
 
-.btn-search {
+.filter-btn-search {
     width: 18px;
     height: 18px;
     background-color: transparent;
@@ -42,7 +42,7 @@
     left: 18px
 }
 
-.btn-cancel {
+.filter-btn-cancel {
     width: 18px;
     height: 18px;
     background-color: transparent;
@@ -52,7 +52,7 @@
     right: 18px
 }
 
-.custom-select-trigger {
+.filter-custom-select-trigger {
     cursor: pointer;
     border: 1px solid var(--border-color);
     border-radius: 15px;
@@ -73,7 +73,7 @@
     width: 188px
 }
 
-.form-label {
+.filter-form-label {
     display: inline-block;
     font-size: 1.2rem;
     line-height: 14px;
@@ -82,7 +82,7 @@
     margin-bottom: 8px
 }
 
-.options {
+.filter-options {
     max-height: 176px;
     padding: 14px 18px;
     background-color: var(--white-bg);
@@ -95,11 +95,11 @@
     min-width: 100%
 }
 
-.options::-webkit-scrollbar {
+.filter-options::-webkit-scrollbar {
     width: 6px
 }
 
-.options::-webkit-scrollbar-thumb {
+.filter-options::-webkit-scrollbar-thumb {
     width: 6px;
     background-color: var(--border-color);
     border-radius: 12px
@@ -116,7 +116,7 @@
     color: var(--text-color)
 }
 
-.hidden,.hidden-dropdown {
+.filter-hidden,.filter-hidden-dropdown {
     display: none
 }
 
@@ -124,7 +124,7 @@
     color: var(--text-color)
 }
 
-.form-container {
+.filter-form-container {
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -169,12 +169,12 @@
         gap:16px
     }
 
-    .search-container {
+    .filter-search-container {
         flex-basis: 60%;
         flex-grow: 0
     }
 
-    .custom-select-trigger {
+    .filter-custom-select-trigger {
         font-size: 1.6rem
     }
 
@@ -193,7 +193,7 @@
         line-height: 18px
     }
 
-    .options {
+    .filter-options {
         max-height: 188px
     }
 
@@ -202,7 +202,7 @@
         line-height: 20px
     }
 
-    .form-container {
+    .filter-form-container {
         margin-bottom: 16px;
         max-width: 419px
     }
@@ -213,7 +213,7 @@
         flex-wrap:nowrap
     }
 
-    .search-container {
+    .filter-search-container {
         flex-basis: 30%
     }
 
@@ -229,7 +229,7 @@
         flex-basis: calc(30% - 16px)
     }
 
-    .form-container {
+    .filter-form-container {
         max-width: 780px
     }
 }
