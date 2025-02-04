@@ -1,12 +1,17 @@
 :root {
     --background-color: #FFFFFF;
-    --text-color:#050505;
+    --secondary-color: #050505;
+    --text-color: #333;
     --primary-color: #9BB537;
+    --border-color: #05050533;
+    --white-bg: #f8f8f8;
     --font-family: "Inter";
 }
-body{
+
+body {
     font-family: var(--font-family);
 }
+
 body.darkmode {
     --background-color:#1E1E1E;
     --text-color:#FFFFFF;
