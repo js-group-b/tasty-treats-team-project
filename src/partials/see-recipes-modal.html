@@ -1,3 +1,46 @@
-<div>
-    
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>goit</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+<!-- <button type="submit" class="card-section-see-recipe-btn">See Recipe</button> -->
+    <!-- bu butonun içeriği gelecek ve burası iptal oalcak. denemek için burada dursun -->
+
+
+  <div id="see-recipes-modal">
+    <div class="see-recipes-modal-content">
+      <span class="see-recipes-close-btn">&times;</span>
+      <h2 id="see-recipes-modal-name">BURAYA APİ İLE TARİF ADI</h2>
+      <div id="see-recipes-modal-video">video buraya çekilecek
+        <iframe id="see-recipes-modal-video-frame" width="550" height="250" src="" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="see-recipes-modal-info">
+        <p><span id="see-recipes-modal-tags">#</span></p>
+        <p><span id="see-recipes-modal-rating">4.5</span> <span id="see-recipes-modal-rating-stars"
+            class="stars"></span></p>
+        <p><span id="see-recipes-modal-time">30 min</span></p>
+
+      </div>
+
+      <div id="see-recipes-modal-material">malzemeler-ölçüler buraya çekilecek</div>
+
+      <p id="see-recipes-modal-instructions">buraya tarif yazılacak.</p>
+
+      <button id="see-recipes-modal-favorite-btn">Add to favorite</button>
+      <button id="see-recipes-modal-rating-btn">Give a rating</button>
+        
+    </div>
+  </div>
+<script src="../partials/js/see-recipes-modal.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

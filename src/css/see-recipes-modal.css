@@ -1,1 +1,155 @@
-/* */ 
+#see-recipes-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F8F8;
+}
+
+#see-recipes-modal-name {
+  font-size: 18px;
+  color: #050505;
+}
+
+#see-recipes-modal-video {
+  height: 250px;
+}
+
+.see-recipes-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+  max-width: 530px;
+  position: relative;
+}
+
+
+.see-recipes-modal-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.see-recipes-modal-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+#see-recipes-modal-tags {
+  font-size: 14px;
+  color: #7a7a7a;
+  font-style: italic;
+}
+
+#see-recipes-modal-tags a {
+  text-decoration: none;
+  color: #9BB537;
+}
+
+#see-recipes-modal-tags a:hover {
+  text-decoration: underline;
+}
+
+
+#see-recipes-modal-material {
+  font-size: 14px;
+  display: block;
+  list-style-type: none;
+  line-height: 3px;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+#see-recipes-modal-instructions {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  height: 90px;
+  max-height: 200px;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #0505051A;
+  padding: 8px 0;
+  margin-bottom: 10px;
+}
+
+.ingredient-item strong {
+  flex: 1 0 auto;
+  text-align: left;
+}
+
+.ingredient-item span {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.ingredient-id {
+  text-align: left;
+  color: #050505;
+}
+
+.ingredient-measure {
+  text-align: right;
+  color: #05050580;
+}
+
+#see-recipes-modal-instructions::-webkit-scrollbar,
+#see-recipes-modal-material::-webkit-scrollbar {
+  width: 6px;
+}
+
+#see-recipes-modal-instructions::-webkit-scrollbar-thumb,
+#see-recipes-modal-material::-webkit-scrollbar-thumb {
+  background-color: #0505052E;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#see-recipes-modal-instructions::-webkit-scrollbar-button,
+#see-recipes-modal-material::-webkit-scrollbar-button {
+  display: none;
+}
+
+#see-recipes-modal-favorite-btn {
+  border: 1px solid #9BB537;
+  background-color: #9BB537;
+  color: #F8F8F8;
+  border-radius: 15px;
+  padding: 14px 28px;
+}
+
+#see-recipes-modal-favorite-btn:hover {
+  color: #050505;
+}
+
+#see-recipes-modal-rating-btn {
+  border: 1px solid #9BB537;
+  background-color: #F8F8F8;
+  color: #050505;
+  border-radius: 15px;
+  padding: 14px 28px;
+}
+
+#see-recipes-modal-rating-btn:hover {
+  background-color: #9BB537;
+}
+
+.see-recipes-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
