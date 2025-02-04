@@ -187,6 +187,7 @@
     height: 70%;
   }
 }
+
 @media (min-width: 1280px) {
   .slider-container {
     max-width: 602px;
@@ -222,7 +223,8 @@
   }
   .text-content {
     padding: 20px;
-
+  }
+}
 
 .hero-section-order-now {
   display: flex;
