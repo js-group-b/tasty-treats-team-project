@@ -1,3 +1,95 @@
-<div>
-    
-</div>
+<div class="filter-form-container">
+      <div id="filter-form">
+        <div class="filter-search-container">
+          <label for="search" class="filter-form-label">Search</label>
+          <div class="filter-input-container">
+            <input
+              class="filter-search-input"
+              type="text"
+              name="search"
+              id="search"
+              autocomplete="off"
+              placeholder="Enter Text"
+            />
+            <button type="button" aria-label="search button" class="filter-btn-search">
+              <svg class="filter-svg-search" width="18px" height="18px">
+                <use
+                  class="filter-svg-search-icon"
+                  href="./svg/search.svg#icon-search"
+                ></use>
+              </svg>
+            </button>
+            <button
+              type="button"
+              aria-label="input empty button"
+              class="filter-btn-cancel filter-hidden"
+              id="filter-cancel-btn"
+            >
+              <svg class="filter-svg-cancel" width="18px" height="18px">
+                <use
+                  class="filter-svg-cancel-icon"
+                  href="./svg/x.svg#icon-x"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Time -->
+        <div class="filter-custom-select-container time-container">
+          <h3 class="filter-form-label">Time</h3>
+          <div class="filter-custom-select-trigger" id="time-trigger">
+            <span id="time-trigger-text">Select</span>
+            <svg class="svg-arrow" width="18px" height="18px">
+              <use
+                class="svg-arrow-icon"
+                href="./svg/chevron-down.svg#icon-chevron-down"
+              ></use>
+            </svg>
+          </div>
+
+          <ul class="filter-options filter-hidden-dropdown" id="time-options"></ul>
+        </div>
+
+        <!-- Region -->
+        <div class="filter-custom-select-container area-container">
+          <h3 class="filter-form-label">Region</h3>
+          <div class="filter-custom-select-trigger" id="area-trigger">
+            <span id="area-trigger-text">Select</span>
+            <svg class="svg-arrow" width="18px" height="18px">
+              <use
+                class="svg-arrow-icon"
+                href="./svg/chevron-down.svg#icon-chevron-down"
+              ></use>
+            </svg>
+          </div>
+          <ul class="filter-options filter-hidden-dropdown" id="area-options"></ul>
+        </div>
+
+        <!-- Product -->
+        <div class="filter-custom-select-container ingr-container">
+          <h3 class="filter-form-label">Product</h3>
+          <div class="filter-custom-select-trigger" id="ingredient-trigger">
+            <span id="ingredient-trigger-text">Select</span>
+            <svg class="svg-arrow" width="18px" height="18px">
+              <use
+                class="svg-arrow-icon"
+                href="./svg/chevron-down.svg#icon-chevron-down"
+              ></use>
+            </svg>
+          </div>
+          <ul class="filter-options filter-hidden-dropdown" id="ingredient-options"></ul>
+        </div>
+      </div>
+
+      <!-- Reset -->
+      <button class="reset-filter-btn" id="reset-filter-btn">
+        <svg class="svg-reset" width="16px" height="16px">
+          <use
+            class="svg-cancel-icon"
+            href="./svg/x.svg#icon-x"
+          ></use>
+        </svg>
+        Reset the filter
+      </button>
+    </div>

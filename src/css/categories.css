@@ -1,1 +1,88 @@
-/* */ 
+
+.all-categories-main-container {
+  color: #0505054D;
+  max-width: 335px;
+}
+
+.all-categories-content-div {
+  margin: auto;
+}
+
+.all-categories-btn {
+  background: none;
+  border: 1px solid #0505054D;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 12px 18px;
+  color: #05050580;
+}
+
+.all-categories-btn:hover {
+  background-color: #9BB537;
+  color: #F8F8F8;
+}
+
+.all-categories-menu {
+
+  max-height: 198px;
+  overflow-y: auto;
+  width: 326px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.all-categories-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.all-categories-menu::-webkit-scrollbar-thumb {
+  background-color: #0505052E;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.all-categories-menu::-webkit-scrollbar-button {
+  display: none;
+}
+
+.categories-list {
+  list-style: none;
+}
+
+.categories-list li {
+  padding: 10px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.categories-list li:hover {
+  color: #9BB537;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .all-categories-btn {
+    max-width: 100%;
+    width: 176px;
+  }
+
+  .all-categories-menu {
+    max-height: 416px;
+    width: 176px;
+  }
+
+}
+
+@media(min-width: 1280px) {
+  .all-categories-menu {
+    max-height: 416px;
+    width: 235px;
+
+  }
+
+  .all-categories-btn {
+    width: 174px;
+    max-width: 100%;
+  }
+}
+
