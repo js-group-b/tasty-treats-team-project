@@ -1,15 +1,15 @@
 
 .hero-modal-now-form {
-  display: flex;
+  display: none; /* flex */
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f4f4f4;
 }
 
+
 .order-now-modal {
-  display: none;
-  position: fixed;
+  position: absolute; 
   z-index: 1000;
   left: 0;
   top: 0;
