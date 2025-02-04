@@ -75,7 +75,7 @@
   text-align: center;
   width: 127px;
   height: 45px;
-  padding: 14px 28px 14px 28px;
+  padding: 14px 14px 14px 14px;
   gap: 10px;
 }
 
@@ -162,7 +162,7 @@
     text-align: center;
     width: 127px;
     height: 45px;
-    padding: 14px 28px 14px 28px;
+    padding: 14px 14px 14px 14px;
 
     border-radius: 15px;
     opacity: 0px;
@@ -254,7 +254,7 @@
     text-align: center;
     width: 127px;
     height: 45px;
-    padding: 14px 28px 14px 28px;
+    padding: 14px 14px 14px 14px;
   }
 
   .hero-section-order-button:hover {
