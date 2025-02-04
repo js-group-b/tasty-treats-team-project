@@ -1,7 +1,10 @@
 :root {
     --background-color: #FFFFFF;
-    --text-color:#050505;
+    --secondary-color: #050505;
+    --text-color: #333;
     --primary-color: #9BB537;
+    --border-color: #05050533;
+    --white-bg: #f8f8f8;
     --font-family: "Inter";
 }
 
