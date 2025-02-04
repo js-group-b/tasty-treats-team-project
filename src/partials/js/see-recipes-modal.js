@@ -10,27 +10,3 @@ const modalVideoFrame = document.querySelector('#see-recipes-modal-video-frame')
 const modalMaterials = document.querySelector('#see-recipes-modal-material');
 const modalInstructions = document.querySelector('#see-recipes-modal-instructions');
 
-
-seeRecipesBtn.addEventListener('click', async function () {
-  seeRecipesModal.style.display = 'block';
-});
-closeBtn.addEventListener('click', function () {
-  seeRecipesModal.style.display = 'none';
-});
-async function fetchRecipes(recipes) {
-  const apiKeyRecipesUrl = ``;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
