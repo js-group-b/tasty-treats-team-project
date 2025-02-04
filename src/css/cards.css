@@ -1,1 +1,124 @@
-/* */
+.cards-section-main-container {
+    /* will be used to align with other sections*/
+}
+
+.cards-section-content-div {
+    max-width: 335px;
+    margin:auto;
+    color:white;
+}
+
+.cards-section-ul {
+    margin:auto;
+    align-items: center;
+}
+
+.cards-section-card-content-title {
+    font-size:14px;
+    font-weight: 600;
+    line-height: 1.2857;
+    margin-bottom: 10px;
+}
+
+.cards-section-card-content-p {
+    font-size:12px;
+    margin-bottom:16px;
+}
+
+.cards-section-card-item-inner-div {
+    position: relative;
+}
+
+.cards-section-card-item-inner-div img {
+    display: block;
+}
+
+.cards-section-card-content {
+    position:absolute;
+    top:184px;
+    left:0px;
+    padding:16px;
+    max-width:335px;
+}
+
+
+.cards-section-favorites-button {
+    width:22px;
+    height:22px;
+    position: absolute;
+    background-color: red;
+    top:16px;
+    left:297px;
+}
+
+.cards-section-card-bottom-div {
+    display:flex;
+    justify-content: space-between;
+}
+
+.cards-section-ratings-div {
+    display: flex;
+    align-items: center;
+}
+.cards-section-card-bottom-div-rating-star {
+    width:16px;
+    height: 16px;
+}
+.cards-section-see-recipe-button {
+    width:89px;
+    height: 31px;
+    margin-right:6px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color:white;
+    font-size:12px;
+}
+
+
+.cards-section-card-items {
+    margin-top:24px;
+}
+
+@media only screen and (min-width: 768px){
+
+    .cards-section-card-item-inner-div > img {
+        width:240px;
+        height: 264px;
+    }
+    .cards-section-card-content {
+        width:240px;
+        top:100px;
+    }
+    .cards-section-favorites-button {
+        width:22px;
+        height: 22px;
+        left:200px;
+    }
+    .cards-section-content-div {
+        max-width:496px;
+    }
+    .cards-section-ul {
+        width:496px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:16px;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+    .cards-section-content-div {
+        max-width:804px;
+    }
+    .cards-section-ul {
+        width:804px;
+    }
+
+    .cards-section-card-item-inner-div > img {
+        width:257px;
+        height: 287px;
+    }
+
+
+}
