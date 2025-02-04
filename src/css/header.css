@@ -26,7 +26,7 @@
   position: relative;
 }
 .navigation a::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -144,7 +144,6 @@
 .header-switch input {
   display: none;
 }
-
 .header-slider {
   position: absolute;
   cursor: pointer;
@@ -160,7 +159,7 @@
 
 .header-slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 17px;
   width: 17px;
   left: 2px;
@@ -279,7 +278,7 @@
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 15px;
   width: 15px;
   left: 4px;
@@ -300,7 +299,7 @@ input:checked + .slider:before {
 
 .current::after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: 0;
   left: 0;
   width: 100%;
@@ -313,6 +312,6 @@ input:checked + .slider:before {
 }
 
 .shopping-icon-use {
-  fill: #FFFFFF;
+  fill: #ffffff;
   stroke: #050505;
 }
