@@ -22,6 +22,15 @@
     margin-bottom:16px;
     height: 67px;
 }
+.pop-recipe-img {
+    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+}
+
+.popular-recipes-li-element {
+    margin-bottom:40px;
+}
 
 .pop-recipe-header-n-text-div {
     display:flex;
