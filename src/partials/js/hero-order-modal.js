@@ -5,27 +5,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!modal || !openModal || !closeModal) {
         console.error("Modal veya butonlar bulunamadı!");
-        return; 
+        return;  
     }
 
-    openModal.addEventListener("click", (event) => {
-        event.preventDefault();
+    function openModalHandler(event) {
+        event.preventDefault(); 
         modal.style.display = "flex";
-    });
 
-    closeModal.addEventListener("click", () => {
+        document.addEventListener("keydown", escKeyHandler);
+
+        modal.addEventListener("click", outsideClickHandler);
+    }
+
+    function closeModalHandler() {
         modal.style.display = "none";
-    });
 
-    window.addEventListener("keydown", (event) => {
+        document.removeEventListener("keydown", escKeyHandler);
+        modal.removeEventListener("click", outsideClickHandler);
+    }
+
+    function escKeyHandler(event) {
         if (event.key === "Escape") {
-            modal.style.display = "none";
+            closeModalHandler();
         }
-    });
+    }
 
-    window.addEventListener("click", (event) => {
+    function outsideClickHandler(event) {
         if (event.target === modal) {
-            modal.style.display = "none";
+            closeModalHandler();
         }
-    });
+    }
+
+    openModal.addEventListener("click", openModalHandler);
+    closeModal.addEventListener("click", closeModalHandler);
 });
