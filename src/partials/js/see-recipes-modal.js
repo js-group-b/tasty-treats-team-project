@@ -9,9 +9,9 @@ const modalTime = document.querySelector('#see-recipes-modal-time');
 const modalVideoFrame = document.querySelector('#see-recipes-modal-video-frame');
 const modalMaterials = document.querySelector('#see-recipes-modal-material');
 const modalInstructions = document.querySelector('#see-recipes-modal-instructions');
-seeRecipesBtn.addEventListener('click', async function () {
-    seeRecipesModal.style.display = 'flex';
-});
-closeBtn.addEventListener('click', function () {
-    seeRecipesModal.style.display = 'none';
-});
+// seeRecipesBtn.addEventListener('click', async function () {
+//     seeRecipesModal.style.display = 'flex';
+// });
+// closeBtn.addEventListener('click', function () {
+//     seeRecipesModal.style.display = 'none';
+// });
