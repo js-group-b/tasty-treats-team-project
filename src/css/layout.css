@@ -2,6 +2,12 @@
 .main-main-parent-container{
     margin:auto;    
 }
+.hero-section-the-main-container {
+    display:flex;
+    flex-direction: column;
+    max-width: 375px;
+    margin:auto;
+}
 
 .hero-section-1 {
     max-width:375px;
@@ -42,6 +48,13 @@
     .hero-section-2{
         max-width:704px;
     }
+
+    .hero-section-the-main-container {
+        display:flex;
+        flex-direction: column;
+        max-width: 704px;
+        margin:auto;
+    }
 }
 
 
@@ -62,8 +75,13 @@
     }
     .hero-section-2{
         max-width:1082px;
+        margin-top:160px;
     }
     header {
         max-width:1082px;
+    }
+    .hero-section-the-main-container {
+        flex-direction: row;
+        max-width: 1082px;
     }
 }
