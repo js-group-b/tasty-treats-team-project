@@ -17,13 +17,13 @@ const popularRecipesUL = document.querySelector(".popular-recipes-ul")
 
 const popularRecipesMarkup = popularRecipesData.map(
     ({ preview, title, description }) =>
-        `<li>
+        `<li class="popular-recipes-li-element">
                 <!-- MAP ELEMENT START -->
                 <div class="pop-recipe-unit-div">
-                    <img class="pop-recipe-img" src="${preview}" alt="${title}" width="64" height="64"/>
+                    <img class="pop-recipe-img" src="${preview}" alt="${title}"/>
                     <div class="pop-recipe-header-n-text-div">
-                        <h3 class="popular-recipe-title">${title}</h3>
-                        <p class="popular-recipe-text">${description}</p>
+                        <h3 class="popular-recipe-title">${title.toUpperCase()}</h3>
+                        <p class="popular-recipe-text">${description.substring(0,77)}...</p>
                     </div>
                 </div>
                 <!-- MAP ELEMENT END -->
