@@ -15,3 +15,5 @@
 @import url('./popular-recipes.css');
 @import url('./see-recipes-modal.css');
 
+/* alignment of the sections */
+@import url('./layout.css');

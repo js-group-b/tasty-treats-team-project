@@ -230,7 +230,6 @@
   display: flex;
   width: Fixed (335px) px;
   height: Hug (143px) px;
-  margin-top: 137px;
   margin-left: 20px;
   gap: 14px;
   opacity: 0px;
@@ -317,7 +316,6 @@
     display: flex;
     width: Fixed (446px) px;
     height: Hug (193px) px;
-    margin-top: 141px;
     margin-left: 32px;
     gap: 16px;
     opacity: 0px;
@@ -408,7 +406,6 @@
     display: flex;
     width: Fixed (446px) px;
     height: Hug (193px) px;
-    margin-top: 224px;
     margin-left: 100px;
   }
 
