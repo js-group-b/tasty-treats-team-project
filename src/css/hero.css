@@ -229,8 +229,8 @@
   display: flex;
   width: Fixed (335px) px;
   height: Hug (143px) px;
-  margin-top: 43px;
-  margin-bottom: 34px;
+  margin-top: 64.5px;
+  margin-bottom: 28px;
   gap: 14px;
   opacity: 0px;
 }
@@ -365,6 +365,7 @@
     max-width: 408px;
     height: 48px;
     margin-top: 16px;
+    margin-bottom:20px;
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;

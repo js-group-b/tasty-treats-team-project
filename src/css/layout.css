@@ -7,6 +7,7 @@
     flex-direction: column;
     max-width: 375px;
     margin:auto;
+    margin-bottom:80px;
 }
 
 .hero-section-1 {
@@ -21,8 +22,13 @@
 
 
 @media (min-width:768px){
+    .hero-section-order-now {
+        margin-top:73px;
+    }
+
     .categories-n-popular-container {
         max-width: 176px;
+        margin-top:26px;
     }
 
     .filters-n-cards-container {
@@ -51,12 +57,14 @@
         flex-direction: column;
         max-width: 704px;
         margin:auto;
+        margin-bottom:80px;
     }
 }
 
 
 @media (min-width:1280px){
     .categories-n-popular-container {
+        margin-top:26px;
         max-width: 235px;
     }
 
@@ -72,7 +80,7 @@
     }
     .hero-section-2{
         max-width:1082px;
-        margin-top:160px;
+        margin-top:96px;
     }
     header {
         max-width:1082px;
@@ -80,5 +88,7 @@
     .hero-section-the-main-container {
         flex-direction: row;
         max-width: 1082px;
+        margin-bottom:100px;
     }
+
 }

@@ -2,11 +2,11 @@ import axios from 'axios';
 
 const baseUrl4recipes = 'https://tasty-treats-backend.p.goit.global/api/recipes?';
 const searchParams = new URLSearchParams({
-    //title: '',
-    //category: '',
-    //area: '',
-    //ingredient: '',
-    //time: '',
+    title: '',
+    category: '',
+    area: '',
+    ingredient: '',
+    time: '',
     page: 1,
     limit:9,
   });
@@ -15,7 +15,7 @@ const searchParams = new URLSearchParams({
 async function getRecipesCardData(){
    try {
        const response = await axios.get(baseUrl4recipes,{ params: searchParams })
-       return response.data.results
+       return response.data.results;
     }
     catch(error){
         console.log(error)
