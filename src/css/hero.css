@@ -1,3 +1,6 @@
+.hero-section-order-now {
+  margin-top:137px;
+}
 
 .slider-container {
   width: 100%;
@@ -231,6 +234,7 @@
   width: Fixed (335px) px;
   height: Hug (143px) px;
   margin-left: 20px;
+  margin-top:224px; 
   gap: 14px;
   opacity: 0px;
 }
@@ -318,6 +322,7 @@
     width: Fixed (446px) px;
     height: Hug (193px) px;
     margin-left: 32px;
+    margin-top:141px;
     gap: 16px;
     opacity: 0px;
   }
