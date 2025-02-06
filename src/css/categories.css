@@ -3,6 +3,7 @@
   color: #0505054D;
   max-width: 335px;
   margin:auto;
+  margin-bottom:40px;
 }
 
 .all-categories-content-div {
@@ -61,7 +62,7 @@
   color: #9BB537;
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px)  {
   .all-categories-btn {
     max-width: 100%;
     width: 176px;
@@ -72,9 +73,17 @@
     width: 176px;
   }
 
+  .all-categories-main-container {
+    margin-bottom:64px;
+  }
+
 }
 
 @media(min-width: 1280px) {
+  .all-categories-main-container {
+    margin-bottom:64px;
+  }
+
   .all-categories-menu {
     max-height: 416px;
     width: 235px;
@@ -85,5 +94,7 @@
     width: 174px;
     max-width: 100%;
   }
+
+
 }
 
