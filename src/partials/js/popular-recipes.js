@@ -1,4 +1,6 @@
 import axios from 'axios';
+//import {searchParams} from './cards';
+//import {fetchAndMapCardsData} from './cards';
 
 const popiRecipesUrl = "https://tasty-treats-backend.p.goit.global/api/recipes/popular";
 
@@ -33,21 +35,5 @@ const popularRecipesMarkup = popularRecipesData.map(
 popularRecipesUL.innerHTML = popularRecipesMarkup;
 
 
-/*
-mobile view'da popular categories 2 element dönmeli 4 değil
-
-// Function to update height and width
-function isMobileView() {
-    let w = window.innerWidth;
-    if (w < 768){
-        return true;
-    }
-    return false;
-}
-
-// Add event listener for window resize
-window.addEventListener('resize', isMobileView);
-
-// Initial update
-isMobileView();
-*/
+//searchParams.set('category', "Beef");
+//fetchAndMapCardsData();
