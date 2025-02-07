@@ -1,11 +1,8 @@
 import axios from 'axios';
-// import { getRecipesCardData } from './card.js';
+import { searchParams } from './card.js';
+import { fetchAndMapCardsData } from './cards.js';
 
 const baseUrlCategories = 'https://tasty-treats-backend.p.goit.global/api/categories?';
-const searchParamsRecipes = new URLSearchParams({   //bu params gerekli mi buraya emin olamadım.
-  page: 1,
-});
-
 async function fetchCategories() {
   try {
     const urlCategory = `${baseUrlCategories}${searchParamsRecipes.toString()}`;
@@ -21,8 +18,8 @@ async function fetchCategories() {
       categoryList.appendChild(listItem);
 
       listItem.addEventListener('click', () => {
-        searchParams.set('category', category.id);    // burada yapmak istediğim şey, click edilen kategoriyi cards.js'deki searchParams'a eklemek ama
-        getRecipesCardData();                         // doğru mu yaptım emin olamadım
+        searchParams.set('category', category.id);
+        fetchAndMapCardsData();
       });
     });
   } catch (error) {
