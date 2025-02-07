@@ -22,6 +22,7 @@
 
 
 @media (min-width:768px){
+
     .hero-section-order-now {
         margin-top:73px;
     }
@@ -63,6 +64,7 @@
 
 
 @media (min-width:1280px){
+
     .categories-n-popular-container {
         margin-top:26px;
         max-width: 235px;
