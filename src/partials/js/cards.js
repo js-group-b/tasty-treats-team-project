@@ -11,14 +11,13 @@ export const searchParams = new URLSearchParams({
     limit:9,
   });
 
-
 export async function fetchAndMapCardsData(){
    try {
         const response = await axios.get(baseUrl4recipes,{ params: searchParams })
         const  cardsData = response.data.results;
-        const cardsSectionUL = document.querySelector(".cards-section-ul")
+        const cardsSectionUL = document.querySelector(".cards-section-ul");
         const cardsSectionMarkup = cardsData.map(
-           ({ preview, title, description, rating }) =>
+           ({ preview, title, description, rating, _id}) =>
                `<li class="cards-section-card-items">
                        <div class="cards-section-card-item-inner-div">
                            <button class="cards-section-favorites-button">
@@ -38,7 +37,7 @@ export async function fetchAndMapCardsData(){
                                        <img class="cards-section-card-bottom-div-rating-star" src="../img/star-empty.png" alt="star" />
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
-                                       <button class="cards-section-see-recipe-button">See recipe</button>
+                                       <button id="${_id}" class="cards-section-see-recipe-button">See recipe</button>
                                    </div>
                                </div>
                            </div>
@@ -53,4 +52,21 @@ export async function fetchAndMapCardsData(){
     }
 }
 
-fetchAndMapCardsData();
+await fetchAndMapCardsData();
+
+
+// adding event listener to "see recipes" button and getting the data for that particular recipe
+
+const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
+
+
+for (let i = 0 ; i < seeRecipeButtons.length ; i++){
+    seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
+}
+
+async function handleClickSeeRecipesButton(event){
+    console.log("tıklanan tarifin id'si:",event.target.id);
+    let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
+    const responseRecipe = await axios.get(getRecipeByIdURL);
+    console.log("tıklanan tarife ait modal'da kullanılacak data:", responseRecipe.data);
+}
