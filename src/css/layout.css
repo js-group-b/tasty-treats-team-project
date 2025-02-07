@@ -1,96 +1,107 @@
-
-.main-main-parent-container{
-    margin:auto;    
-}
 .hero-section-the-main-container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     max-width: 375px;
-    margin:auto;
-    margin-bottom:80px;
+    margin: auto;
+    margin-bottom: 80px;
 }
 
 .hero-section-1 {
-    max-width:375px;
-    margin:auto;
+    max-width: 375px;
+    margin: auto;
 }
 
 .hero-section-2 {
-    max-width:375px;
-    margin:auto;
+    max-width: 375px;
+    margin: auto;
 }
 
+.main-main-parent-container {
+    margin: auto;
+}
 
-@media (min-width:768px){
+@media (min-width:768px) {
+
+    .header-items {
+        max-width: 704px;
+        margin: auto;
+    }
 
     .hero-section-order-now {
-        margin-top:73px;
+        margin-top: 73px;
     }
 
     .categories-n-popular-container {
         max-width: 176px;
-        margin-top:26px;
+        margin-top: 26px;
     }
 
     .filters-n-cards-container {
-        display:flex;
-        flex-direction: column; 
+        display: flex;
+        flex-direction: column;
         max-width: 496px;
     }
 
-    .main-main-parent-container{
-        display:flex;
+    .main-main-parent-container {
+        display: flex;
         flex-direction: row;
         justify-content: center;
         max-width: 704px;
-        gap:32px;
+        gap: 32px;
     }
 
-    .hero-section-1{
-        max-width:704px;
+    .hero-section-1 {
+        max-width: 704px;
     }
-    .hero-section-2{
-        max-width:704px;
+
+    .hero-section-2 {
+        max-width: 704px;
     }
 
     .hero-section-the-main-container {
-        display:flex;
+        display: flex;
         flex-direction: column;
         max-width: 704px;
-        margin:auto;
-        margin-bottom:80px;
+        margin: auto;
+        margin-bottom: 80px;
     }
 }
 
 
-@media (min-width:1280px){
+@media (min-width:1280px) {
 
     .categories-n-popular-container {
-        margin-top:26px;
+        margin-top: 26px;
         max-width: 235px;
     }
 
     .filters-n-cards-container {
         max-width: 782px;
     }
-    .main-main-parent-container{
+
+    .main-main-parent-container {
         max-width: 1082px;
-        gap:65px;
+        gap: 65px;
     }
-    .hero-section-1{
-        max-width:1082px;
+
+    .hero-section-1 {
+        max-width: 1082px;
     }
-    .hero-section-2{
-        max-width:1082px;
-        margin-top:96px;
+
+    .hero-section-2 {
+        max-width: 1082px;
+        margin-top: 96px;
     }
-    header {
-        max-width:1082px;
+
+    .header-items {
+        max-width: 1082px;
+        margin: auto;
     }
+
     .hero-section-the-main-container {
         flex-direction: row;
         max-width: 1082px;
-        margin-bottom:100px;
+        margin-bottom: 100px;
     }
 
 }
