@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const popularRecipesImg = document.querySelectorAll(".pop-recipe-img");
 
 popularRecipesImg.forEach((img) => {
@@ -32,12 +34,16 @@ async function handleClickSeeRecipesButton(event) {
   });
 }
 
-
-export function MakeSeeRecipeModalVisible(){
+export async function MakeSeeRecipeModalVisible(recipeID){
   const modal = document.querySelector('#see-recipes-modal-form');
+  const recipeId = recipeID;
+  const recpieURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${recipeId}`;
+  const response = await axios.get(recpieURL);
+  console.log(response.data);
+
   modal.style.display = 'flex';
 }
-
+MakeSeeRecipeModalVisible("6462a8f74c3d0ddd28897fc1")
 
 
 const modelCloseButton = document.querySelector(".see-recipes-close-btn");
