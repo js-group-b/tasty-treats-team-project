@@ -152,6 +152,14 @@
     padding: 8px;
     font-size: 12px;
   }
+  .slide-button {
+    padding: 8px;
+    gap: 4px;
+  }
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
 }
 @media (max-width: 767px) {
   .slide {
@@ -184,6 +192,14 @@
   .image-large {
     width: 70%;
     height: 70%;
+  }
+  .slide-button {
+    padding: 8px;
+    gap: 4px;
+  }
+  .indicator {
+    width: 6px;
+    height: 6px;
   }
 }
 
@@ -222,6 +238,13 @@
   }
   .text-content {
     padding: 20px;
+  }
+  .slide-button {
+    padding: 20px;
+  }
+  .indicator {
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -489,4 +512,22 @@
     background: #7ea03f;
     color: white;
   }
+}
+.slide-button {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.indicator.active{
+  background-color: rgb(155, 181, 55);
 }
