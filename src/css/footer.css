@@ -1,1 +1,17 @@
-/* */ 
+.scroll-to-up{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    border-radius: 50%;
+}
+.scroll-to-up:hover{
+    background-color: #889E2F;
+}

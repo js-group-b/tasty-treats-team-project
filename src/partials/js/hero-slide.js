@@ -11,8 +11,6 @@ async function fetchEvents() {
 
 fetchEvents();
 
-
-fetchEvents();
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(()=>{
     import("../../../src/css/hero.css").then(() => {
