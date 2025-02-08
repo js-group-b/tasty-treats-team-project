@@ -3,7 +3,7 @@ import axios from 'axios';
 async function fetchEvents() {
   try {
     const response = await axios.get('https://tasty-treats-backend.p.goit.global/api/events');
-    console.log(JSON.stringify(response.data, null, 2)); // JSON verisini düzenli yazdır
+    //console.log(JSON.stringify(response.data, null, 2)); // JSON verisini düzenli yazdır
   } catch (error) {
     console.error('Veri çekme sırasında bir hata oluştu:', error);
   }

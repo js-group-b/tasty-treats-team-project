@@ -46,5 +46,5 @@ async function handleClickSeeRecipesButton(event){
     let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
     const responseRecipe = await axios.get(getRecipeByIdURL);
     console.log("tıklanan tarife ait modal'da kullanılacak data:", responseRecipe.data);
-    MakeSeeRecipeModalVisible();
+    MakeSeeRecipeModalVisible(event.target.id);
 }
