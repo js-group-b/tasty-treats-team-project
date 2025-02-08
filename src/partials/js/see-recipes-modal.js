@@ -30,3 +30,22 @@ async function handleClickSeeRecipesButton(event) {
     modal.style.display = 'none';
   });
 }
+
+
+export function MakeSeeRecipeModalVisible(){
+  const modal = document.querySelector('#see-recipes-modal');
+  modal.style.display = 'flex';
+}
+
+
+
+const modelCloseButton = document.querySelector(".see-recipes-close-btn");
+
+modelCloseButton.addEventListener('click', closeSeeRecipeModal);
+
+function closeSeeRecipeModal(){
+  const modal = document.querySelector('#see-recipes-modal');
+  modal.style.display = 'none';
+}
+
+
