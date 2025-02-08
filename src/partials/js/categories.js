@@ -1,12 +1,13 @@
 import axios from 'axios';
-import { searchParams } from './card.js';
+import { searchParams } from './cards.js';
 import { fetchAndMapCardsData } from './cards.js';
 
 const baseUrlCategories = 'https://tasty-treats-backend.p.goit.global/api/categories?';
 async function fetchCategories() {
   try {
-    const urlCategory = `${baseUrlCategories}${searchParamsRecipes.toString()}`;
+    const urlCategory = `${baseUrlCategories}`;
     const response = await axios.get(urlCategory);
+    console.log(response);
     const categories = response.data;
     const categoryList = document.querySelector('#categories-list');
     categoryList.innerHTML = '';
@@ -28,6 +29,7 @@ async function fetchCategories() {
 }
 
 fetchCategories();
+
 
 
 
