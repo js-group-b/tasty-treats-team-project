@@ -27,7 +27,6 @@
 
 .cards-section-card-item-inner-div img {
     display: block;
-    filter: brightness(70%);
 }
 
 .cards-section-card-content {
@@ -48,10 +47,8 @@
     width:22px;
     height:22px;
     position: absolute;
-    background-color: red;
     top:16px;
     left:297px;
-    z-index: 1;
 }
 
 .cards-section-card-bottom-div {
@@ -90,7 +87,6 @@
     .cards-section-card-item-inner-div > img {
         max-width:240px;
         max-height: 264px;
-        
     }
     .cards-section-card-content {
         width:240px;
@@ -129,7 +125,7 @@
     }
 
     .cards-section-favorites-button{
-        left:212px;
+        left:213.8px;
     }
 }
 
