@@ -18,6 +18,7 @@
 
 .main-main-parent-container {
     margin: auto;
+    margin-bottom: 40px;
 }
 
 @media (min-width:768px) {
@@ -48,6 +49,7 @@
         justify-content: center;
         max-width: 704px;
         gap: 32px;
+        margin-bottom:64px;
     }
 
     .hero-section-1 {
