@@ -7,7 +7,6 @@ async function fetchCategories() {
   try {
     const urlCategory = `${baseUrlCategories}`;
     const response = await axios.get(urlCategory);
-    console.log(response);
     const categories = response.data;
     const categoryList = document.querySelector('#categories-list');
     categoryList.innerHTML = '';
