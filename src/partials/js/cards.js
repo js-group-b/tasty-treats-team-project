@@ -1,4 +1,6 @@
 import axios from 'axios';
+import {MakeSeeRecipeModalVisible} from './see-recipes-modal'
+
 
 const baseUrl4recipes = 'https://tasty-treats-backend.p.goit.global/api/recipes?';
 export const searchParams = new URLSearchParams({
@@ -69,6 +71,7 @@ async function handleClickSeeRecipesButton(event){
     let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
     const responseRecipe = await axios.get(getRecipeByIdURL);
     console.log("tıklanan tarife ait modal'da kullanılacak data:", responseRecipe.data);
+    MakeSeeRecipeModalVisible();
 }
 
 // adding event listener to heart icon and getting the data for that particular recipe
