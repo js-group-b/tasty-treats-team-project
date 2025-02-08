@@ -1,13 +1,18 @@
-import img1 from "../../img/header-pics/chef1.png"
-import img2 from "../../img/header-pics/plate1.png"
-import img3 from "../../img/header-pics/platezoom.png"
-import img4 from "../../img/header-pics/chef2.png"
-import img5 from "../../img/header-pics/pizza-picture.png"
-import img6 from "../../img/header-pics/pizza-picture-zoom.png"
-import img7 from "../../img/header-pics/chef3.png"
-import img8 from "../../img/header-pics/pie.png"
-import img9 from "../../img/header-pics/pie-zoom.png"
-const imageArr = [img1,img2,img3,img4,img5,img6,img7,img8,img9]
+const axios = require('axios');
+
+async function fetchEvents() {
+  try {
+    const response = await axios.get('https://tasty-treats-backend.p.goit.global/api/events');
+    console.log(JSON.stringify(response.data, null, 2)); // JSON verisini düzenli yazdır
+  } catch (error) {
+    console.error('Veri çekme sırasında bir hata oluştu:', error);
+  }
+}
+
+fetchEvents();
+
+
+fetchEvents();
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(()=>{
     import("../../../src/css/hero.css").then(() => {
