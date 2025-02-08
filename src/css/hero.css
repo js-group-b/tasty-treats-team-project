@@ -528,3 +528,6 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+.indicator.active{
+  background-color: rgb(155, 181, 55);
+}
