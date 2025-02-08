@@ -18,8 +18,8 @@ async function fetchCategories() {
       listItem.setAttribute('data-id', category.id);
       categoryList.appendChild(listItem);
 
-      listItem.addEventListener('click', () => {
-        searchParams.set('category', category.id);
+      listItem.addEventListener('click', (event) => {
+        searchParams.set('category', event.target.textContent);
         fetchAndMapCardsData();
       });
     });
