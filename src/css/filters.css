@@ -84,6 +84,8 @@
 }
 
 .filter-options {
+    display: flex;
+    flex-direction: column;
     max-height: 176px;
     padding: 14px 18px;
     background-color: var(--white-bg);
@@ -107,8 +109,9 @@
 }
 
 .option {
-    font-size: 1.4rem;
-    line-height: 18px;
+    
+    font-size: 1.2rem;
+    line-height: 20px;
     color: var(--border-color);
     cursor: pointer
 }
@@ -200,8 +203,8 @@
     }
 
     .option {
-        font-size: 1.6rem;
-        line-height: 20px
+        font-size: 1.4rem;
+        line-height: 24px
     }
 
     .filter-form-container {
