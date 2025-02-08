@@ -15,12 +15,7 @@
 .scroll-to-up:hover{
     background-color: #889E2F;
 }
-.page-number-btn{
-    color: var(--text-color);
-    background-color: transparent;
-    border: 1px solid rgba(var(--text-color-rgb), 0.3);
-    border-radius: 50%;
-}
+
 .page-select {
     display: flex;
     flex-direction: row;
