@@ -1,4 +1,10 @@
 import axios from 'axios';
+import { searchParams } from './cards';
+import { fetchAndMapCardsData } from './cards';
+// searchParams.set('ingredients', 'Fish Pie');
+// fetchAndMapCardsData();
+
+
 const allIngredientsURL =
   'https://tasty-treats-backend.p.goit.global/api/ingredients';
 const allRegionsUrl = 'https://tasty-treats-backend.p.goit.global/api/areas';
