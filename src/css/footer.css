@@ -15,3 +15,82 @@
 .scroll-to-up:hover{
     background-color: #889E2F;
 }
+.page-number-btn{
+    color: var(--text-color);
+    background-color: transparent;
+    border: 1px solid rgba(var(--text-color-rgb), 0.3);
+    border-radius: 50%;
+}
+.page-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    max-width: 335px;
+    margin: 4rem auto;
+  }
+  .page-select .page-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: transparent;
+    border: 1px solid rgba(var(--text-color-rgb), 0.3);
+    border-radius: 50%;
+  }
+  
+  .page-select .active-page {
+    background-color: var(--primary-color);
+    border: 1px solid rgba(var(--primary-color-rgb), 1);
+  }
+  .left-direction-arrow,
+  .right-direction-arrow {
+    display: flex;
+    gap: 4px;
+  }
+  .page-number-btn {
+    display: flex;
+    gap: 8px;
+  }
+  .page-select .double-arrow-left,
+  .page-select .one-arrow-left {
+    background-color: #050505;
+  }
+  .page-select .double-arrow-right,
+  .page-select .one-arrow-right {
+    background-color: var(--primary-color);
+  }
+  .page-select .left-end svg,
+  .page-select .left-one svg {
+    color: #f8f8f8;
+  }
+  .page-select .right-end svg,
+  .page-select .right-one svg {
+    fill: #050505;
+  }
+  @media screen and (min-width: 768px) {
+    .page-select {
+      max-width: 446px;
+      margin: 6.4rem auto;
+      gap: 24px;
+    }
+    .page-select .page-button {
+      width: 44px;
+      height: 44px;
+    }
+    .left-direction-arrow,
+    .right-direction-arrow {
+      gap: 8px;
+    }
+    .page-number-btn {
+      gap: 10px;
+    }
+  }
