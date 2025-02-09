@@ -2,9 +2,8 @@ import axios from 'axios';
 import { searchParams } from './cards';
 import { fetchAndMapCardsData } from './cards';
 
-console.log("testtt___");
-searchParams.set('ingredient', '640c2dd963a319ea671e3668');
-await fetchAndMapCardsData();
+//searchParams.set('ingredient', '640c2dd963a319ea671e3668');
+//await fetchAndMapCardsData();
 
 const allIngredientsURL =
   'https://tasty-treats-backend.p.goit.global/api/ingredients';
