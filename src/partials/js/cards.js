@@ -47,6 +47,37 @@ export async function fetchAndMapCardsData(){
                    </li>`
            ).join("");
         cardsSectionUL.innerHTML = cardsSectionMarkup;
+        
+
+
+        // adding event listener to "see recipes" button and getting the data for that particular recipe
+
+        const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
+
+
+        for (let i = 0 ; i < seeRecipeButtons.length ; i++){
+            seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
+        }
+
+        async function handleClickSeeRecipesButton(event){
+            console.log("tıklanan tarifin id'si:",event.target.id);
+            let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
+            const responseRecipe = await axios.get(getRecipeByIdURL);
+            console.log("tıklanan tarife ait modal'da kullanılacak data:", responseRecipe.data);
+            MakeSeeRecipeModalVisible(event.target.id);
+        }
+
+        // adding event listener to heart icon and getting the data for that particular recipe
+
+        const heartIconSvg = document.getElementsByClassName("cards-section-favorites-button");
+
+        for (let i = 0 ; i < heartIconSvg.length ; i++){
+            heartIconSvg[i].addEventListener('click', handleClickHerthIcon);
+        }
+
+        async function handleClickHerthIcon(event){
+            console.log("favorilere eklenecen tarifin id'si:", event.target.id.substring(5));
+        }
 
     }
     catch(error){
@@ -57,31 +88,3 @@ export async function fetchAndMapCardsData(){
 await fetchAndMapCardsData();
 
 
-// adding event listener to "see recipes" button and getting the data for that particular recipe
-
-const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
-
-
-for (let i = 0 ; i < seeRecipeButtons.length ; i++){
-    seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
-}
-
-async function handleClickSeeRecipesButton(event){
-    console.log("tıklanan tarifin id'si:",event.target.id);
-    let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
-    const responseRecipe = await axios.get(getRecipeByIdURL);
-    console.log("tıklanan tarife ait modal'da kullanılacak data:", responseRecipe.data);
-    MakeSeeRecipeModalVisible(event.target.id);
-}
-
-// adding event listener to heart icon and getting the data for that particular recipe
-
-const heartIconSvg = document.getElementsByClassName("cards-section-favorites-button");
-
-for (let i = 0 ; i < heartIconSvg.length ; i++){
-    heartIconSvg[i].addEventListener('click', handleClickHerthIcon);
-}
-
-async function handleClickHerthIcon(event){
-    console.log("favorilere eklenecen tarifin id'si:", event.target.id.substring(5));
-}
