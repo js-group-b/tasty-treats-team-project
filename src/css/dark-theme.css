@@ -1,0 +1,74 @@
+:root {
+    --background-light: #ffffff;
+    --text-light: #222;
+    --button-light: #4caf50;
+    --button-text-light: #fff;
+
+    --background-dark: #121212;
+    --text-dark: #ffffff;
+    --button-dark: #121212;
+    --button-text-dark: #ffffff;
+
+}
+
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+
+.hero-section-the-main-container {
+    background-color: var(--background-light);
+    transition: background 0.3s ease;
+}
+
+.dark-mode .hero-section-the-main-container {
+    background-color: var(--background-dark);
+}
+
+/* Hero Title */
+.hero-section-order-title {
+    color: var(--text-light);
+}
+.dark-mode .hero-section-order-card{
+ background-color: var(--background-dark);
+}
+
+.dark-mode .all-categories-btn{
+    background-color: ;
+}
+.dark-mode .hero-section-order-p {
+ color: var(--text-dark);
+}
+.dark-mode .hero-section-order-title {
+    color: var(--text-dark);
+}
+
+/* Highlight */
+.hero-section-highlight {
+    color: #76c893;
+    /* Yeşil vurgulu */
+}
+
+/* Buton */
+.hero-section-order-button {
+    background-color: var(--button-light);
+    color: var(--button-text-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .hero-section-order-button {
+    background-color: var(--button-dark);
+    color: var(--button-text-dark);
+}
