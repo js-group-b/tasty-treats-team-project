@@ -43,6 +43,10 @@
         max-width: 496px;
     }
 
+    .filter-form-container {
+        margin-top:0px;
+    }
+
     .main-main-parent-container {
         display: flex;
         flex-direction: row;
