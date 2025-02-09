@@ -138,3 +138,33 @@ if (timeUL) {
 } else {
   console.error('Element with ID "time-options" not found.');
 }
+
+// Reset filter functionality
+const resetButton = document.getElementById('reset-filter-btn');
+if (resetButton) {
+  resetButton.addEventListener('click', () => {
+    // 1. Sıfırlama: Arama kutusunu temizle
+    const searchInput = document.getElementById('search');
+    if (searchInput) {
+      searchInput.value = '';
+    }
+
+    // 2. Sıfırlama: Seçilen öğe başlıklarını eski haline getir
+    const resetTriggers = document.querySelectorAll('.filter-custom-select-trigger');
+    resetTriggers.forEach(trigger => {
+      trigger.classList.remove('selected');  // 'selected' sınıfını kaldır
+      const triggerText = trigger.querySelector('span');
+      if (triggerText) {
+        // Başlık metinlerini varsayılan hale getir
+        triggerText.textContent = 'Select';
+      }
+    });
+
+    // 3. Sıfırlama: Dropdown'ları kapat
+    const allDropdowns = document.querySelectorAll('.filter-options');
+    allDropdowns.forEach(dropdown => {
+      dropdown.classList.add('filter-hidden-dropdown');
+    });
+
+  });
+}
