@@ -250,4 +250,7 @@
  #see-recipes-modal-name-tablet-desktop,  #see-recipes-modal-info-tablet-desktop {
     display: block;
   }
+    .see-recipes-modal-content{
+      max-width: 550px;
+    }
 }
