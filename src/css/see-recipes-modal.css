@@ -23,6 +23,7 @@
   width: 100%;
 }
 
+
 .see-recipes-modal-content {
   background-color: white;
   padding: 20px;
@@ -91,10 +92,16 @@
     justify-content: flex-end;
     margin-bottom: 10px;
 }
-
+#see-recipes-modal-info-rat{
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 #see-recipes-modal-tags {
   font-size: 14px;
   color: #7a7a7a;
+  display: flex;
+    align-items: center;
 
 }
 
