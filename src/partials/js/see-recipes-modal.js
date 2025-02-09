@@ -35,7 +35,12 @@ async function handleClickSeeRecipesButton(event) {
   closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
   });
+
+
+
 }
+
+
 
 export async function MakeSeeRecipeModalVisible(recipeID) {
   const modal = document.querySelector('#see-recipes-modal-form');
@@ -60,10 +65,11 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
 
   const modalInnerHTML =
     `<div>
+        <h2 id="see-recipes-modal-name-tablet-desktop">${response.data.title.toUpperCase()}</h2>
        <div id="see-recipes-modal-video">
           <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
-       <h2 id="see-recipes-modal-name">${response.data.title.toUpperCase()}</h2>
+       <h2 id="see-recipes-modal-name-mobil">${response.data.title.toUpperCase()}</h2>
 
 
        <div id="see-recipes-modal-info">

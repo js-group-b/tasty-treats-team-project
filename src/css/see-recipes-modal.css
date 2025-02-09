@@ -202,6 +202,15 @@
   background-color: #9BB537;
 }
 
+#see-recipes-modal-name-mobil {
+  display: block;
+}
+
+#see-recipes-modal-name-tablet-desktop {
+  display: none;
+
+}
+
 @media (min-width: 768px) {
 
   #see-recipes-modal-favorite-btn,
@@ -212,5 +221,13 @@
 
   #see-recipes-modal-btn {
     justify-content: flex-start;
+  }
+
+ #see-recipes-modal-name-mobil {
+    display: none;
+  }
+
+ #see-recipes-modal-name-tablet-desktop {
+    display: block;
   }
 }
