@@ -2,8 +2,9 @@ import axios from 'axios';
 import { searchParams } from './cards';
 import { fetchAndMapCardsData } from './cards';
 
-searchParams.set('ingredients', 'Fish Pie');
-fetchAndMapCardsData();
+console.log("testtt___");
+searchParams.set('ingredient', '640c2dd963a319ea671e3668');
+await fetchAndMapCardsData();
 
 const allIngredientsURL =
   'https://tasty-treats-backend.p.goit.global/api/ingredients';
@@ -146,7 +147,15 @@ if (resetButton) {
     // 1. Sıfırlama: Arama kutusunu temizle
     const searchInput = document.getElementById('search');
     if (searchInput) {
+
+      // reset the search params & update the cards data
       searchInput.value = '';
+      searchParams.set('title', '');
+      searchParams.set('category', '');
+      searchParams.set('area', '');
+      searchParams.set('ingredient', '');
+      searchParams.set('time', '');
+      fetchAndMapCardsData();
     }
 
     // 2. Sıfırlama: Seçilen öğe başlıklarını eski haline getir
