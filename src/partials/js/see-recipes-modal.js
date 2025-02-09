@@ -84,11 +84,13 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
 
 
        <div id="see-recipes-modal-info-mobil">
+       <div id="see-recipes-modal-info-rat">
        <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
        <span id="see-recipes-modal-rating-stars" class="stars">
          ${'★ '.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
        </span></p>
         <p id="see-recipes-modal-time">${response.data.time} min</p>
+           </div>
         </div>
 
 
