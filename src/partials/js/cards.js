@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {MakeSeeRecipeModalVisible} from './see-recipes-modal'
 
-
 const baseUrl4recipes = 'https://tasty-treats-backend.p.goit.global/api/recipes?';
 export const searchParams = new URLSearchParams({
     title: '',
@@ -47,7 +46,62 @@ export async function fetchAndMapCardsData(){
                    </li>`
            ).join("");
         cardsSectionUL.innerHTML = cardsSectionMarkup;
+        
 
+
+        // adding event listener to "see recipes" button
+        const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
+
+        for (let i = 0 ; i < seeRecipeButtons.length ; i++){
+            seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
+        }
+
+        async function handleClickSeeRecipesButton(event){
+            await MakeSeeRecipeModalVisible(event.target.id);
+        }
+
+
+
+        // adding event listener to heart icon
+        const heartIconSvg = document.getElementsByClassName("cards-section-favorites-button");
+
+        for (let i = 0 ; i < heartIconSvg.length ; i++){
+            heartIconSvg[i].addEventListener('click', HandleClickHerthIcon);
+        }
+
+        async function HandleClickHerthIcon(event){
+            const idOfClickedFavItem = event.target.id.substring(5); 
+            let currentFavs = localStorage.getItem('favorites');
+            let stringifiedListOfFavs;
+            // if there is no fav element in local storage
+            if (currentFavs === null){
+                currentFavs = [];
+                currentFavs.push(idOfClickedFavItem);
+                stringifiedListOfFavs = JSON.stringify(currentFavs);
+                localStorage.setItem('favorites', stringifiedListOfFavs);
+            }
+            // if there is fav element(s) in local storage
+            else{
+                // clicked item is in the list
+                if(currentFavs.indexOf(idOfClickedFavItem)>= 0){
+                    stringifiedListOfFavs = localStorage.getItem('favorites');
+                    currentFavs = await JSON.parse(stringifiedListOfFavs);
+                    currentFavs.splice(currentFavs.indexOf(idOfClickedFavItem), 1);
+                    stringifiedListOfFavs = JSON.stringify(currentFavs);
+                    localStorage.setItem('favorites', stringifiedListOfFavs);
+                }
+                // clicked item is not in the list
+                else{
+                    stringifiedListOfFavs = localStorage.getItem('favorites');
+                    currentFavs = await JSON.parse(stringifiedListOfFavs);
+                    currentFavs.push(idOfClickedFavItem);
+                    stringifiedListOfFavs = JSON.stringify(currentFavs);
+                    localStorage.removeItem('favorites');
+                    localStorage.setItem('favorites', stringifiedListOfFavs);
+                    currentFavs = localStorage.getItem('favorites');
+                }
+            }
+        }
     }
     catch(error){
         console.log(error)
@@ -57,31 +111,3 @@ export async function fetchAndMapCardsData(){
 await fetchAndMapCardsData();
 
 
-// adding event listener to "see recipes" button and getting the data for that particular recipe
-
-const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
-
-
-for (let i = 0 ; i < seeRecipeButtons.length ; i++){
-    seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
-}
-
-async function handleClickSeeRecipesButton(event){
-    console.log("tıklanan tarifin id'si:",event.target.id);
-    let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
-    const responseRecipe = await axios.get(getRecipeByIdURL);
-    console.log("tıklanan tarife ait modal'da kullanılacak data:", responseRecipe.data);
-    MakeSeeRecipeModalVisible();
-}
-
-// adding event listener to heart icon and getting the data for that particular recipe
-
-const heartIconSvg = document.getElementsByClassName("cards-section-favorites-button");
-
-for (let i = 0 ; i < heartIconSvg.length ; i++){
-    heartIconSvg[i].addEventListener('click', handleClickHerthIcon);
-}
-
-async function handleClickHerthIcon(event){
-    console.log("favorilere eklenecen tarifin id'si:", event.target.id.substring(5));
-}

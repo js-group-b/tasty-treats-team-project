@@ -7,7 +7,6 @@ async function fetchCategories() {
   try {
     const urlCategory = `${baseUrlCategories}`;
     const response = await axios.get(urlCategory);
-    console.log(response);
     const categories = response.data;
     const categoryList = document.querySelector('#categories-list');
     categoryList.innerHTML = '';
@@ -31,6 +30,12 @@ async function fetchCategories() {
 fetchCategories();
 
 
+const allCategoriesButon = document.querySelector(".all-categories-btn");
+  allCategoriesButon.addEventListener('click', resetCategoriesFiltering);
 
+  async function resetCategoriesFiltering(){
+    searchParams.set('category', '');
+    await fetchAndMapCardsData();
+  }
 
 
