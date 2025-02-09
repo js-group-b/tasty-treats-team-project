@@ -71,8 +71,19 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
        </div>
        <h2 id="see-recipes-modal-name-mobil">${response.data.title.toUpperCase()}</h2>
 
+        <div id="see-recipes-modal-info-tablet-desktop">
+         <div id="see-recipes-modal-info">
+        <p id="see-recipes-modal-tags">${response.data.tags.map(tag => `<span>#${tag}</span>`).join('')}</p>
+       <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
+       <span id="see-recipes-modal-rating-stars" class="stars">
+         ${'★ '.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
+       </span></p>
+        <p id="see-recipes-modal-time">${response.data.time} min</p>
+         </div>
+        </div>
 
-       <div id="see-recipes-modal-info">
+
+       <div id="see-recipes-modal-info-mobil">
        <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
        <span id="see-recipes-modal-rating-stars" class="stars">
          ${'★ '.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
@@ -83,7 +94,7 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
 
        <span class="see-recipes-close-btn">&times;</span>
        <div id="see-recipes-modal-material">${ingredientsHTML}</div>
-       <div id="see-recipes-modal-info">
+       <div id="see-recipes-modal-info-mobil">
        <p id="see-recipes-modal-tags">${response.data.tags.map(tag => `<span>#${tag}</span>`).join('')}</p>
        </div>
        <p id="see-recipes-modal-instructions">${response.data.instructions}</p>
