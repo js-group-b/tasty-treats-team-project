@@ -201,3 +201,16 @@
 #see-recipes-modal-rating-btn:hover {
   background-color: #9BB537;
 }
+
+@media (min-width: 768px) {
+
+  #see-recipes-modal-favorite-btn,
+  #see-recipes-modal-rating-btn {
+    flex: none;
+
+  }
+
+  #see-recipes-modal-btn {
+    justify-content: flex-start;
+  }
+}
