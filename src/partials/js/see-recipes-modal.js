@@ -60,24 +60,32 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
 
   const modalInnerHTML =
     `<div>
-    <h2 id="see-recipes-modal-name">${response.data.title.toUpperCase()}</h2>
-    <div id="see-recipes-modal-video">
-      <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <span class="see-recipes-close-btn">&times;</span>
-    <div id="see-recipes-modal-info">
-    <p id="see-recipes-modal-tags">${response.data.tags.map(tag => `<span>#${tag}</span>`).join('')}</p>
-    <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
-    <span id="see-recipes-modal-rating-stars" class="stars">
-     ${'★'.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
-   </span></p>
-     <p id="see-recipes-modal-time">${response.data.time} min</p></div>
-    <div id="see-recipes-modal-material">${ingredientsHTML}</div>
-    <p id="see-recipes-modal-instructions">${response.data.instructions}</p>
-  </div>
+       <div id="see-recipes-modal-video">
+          <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+       <h2 id="see-recipes-modal-name">${response.data.title.toUpperCase()}</h2>
 
+
+       <div id="see-recipes-modal-info">
+       <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
+       <span id="see-recipes-modal-rating-stars" class="stars">
+         ${'★ '.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
+       </span></p>
+        <p id="see-recipes-modal-time">${response.data.time} min</p>
+        </div>
+
+
+       <span class="see-recipes-close-btn">&times;</span>
+       <div id="see-recipes-modal-material">${ingredientsHTML}</div>
+       <div id="see-recipes-modal-info">
+       <p id="see-recipes-modal-tags">${response.data.tags.map(tag => `<span>#${tag}</span>`).join('')}</p>
+       </div>
+       <p id="see-recipes-modal-instructions">${response.data.instructions}</p>
+    </div>
+     <div id="see-recipes-modal-btn">
   <button id="see-recipes-modal-favorite-btn">Add to favorite</button>
   <button id="see-recipes-modal-rating-btn">Give a rating</button>
+    </div>
   `;
 
   seeRecipesContent.innerHTML = modalInnerHTML;
