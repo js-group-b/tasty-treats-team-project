@@ -24,6 +24,9 @@
   background-color: #9BB537;
   color: #F8F8F8;
 }
+.all-categories-btn:focus{
+  background-color: #9BB537;
+}
 
 .all-categories-menu {
 
@@ -58,7 +61,11 @@
   line-height: 20px;
 }
 
-.categories-list li:hover {
+#categories-list li:hover {
+  color: #9BB537;
+}
+
+#categories-list li:focus{
   color: #9BB537;
 }
 

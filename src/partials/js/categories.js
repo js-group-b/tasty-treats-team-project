@@ -15,11 +15,13 @@ async function fetchCategories() {
       const listItem = document.createElement('li');
       listItem.textContent = category.name;
       listItem.setAttribute('data-id', category.id);
+      listItem.setAttribute('tabindex', '0'); 
       categoryList.appendChild(listItem);
 
       listItem.addEventListener('click', (event) => {
         searchParams.set('category', event.target.textContent);
         fetchAndMapCardsData();
+        event.target.focus();
       });
     });
   } catch (error) {
