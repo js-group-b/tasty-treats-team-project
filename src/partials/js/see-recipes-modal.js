@@ -7,11 +7,11 @@ popularRecipesImg.forEach((img) => {
 });
 
 async function handleClickSeeRecipesButton(event) {
-  console.log("Tıklanan tarifin id'si:", event.target.id);
+  // console.log("Tıklanan tarifin id'si:", event.target.id);
   let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
   const responseRecipe = await axios.get(getRecipeByIdURL);
   const recipeData = responseRecipe.data;
-  console.log("Tıklanan tarife ait modal'da kullanılacak data:", recipeData);
+  // console.log("Tıklanan tarife ait modal'da kullanılacak data:", recipeData);
 
   document.querySelector("#id=see-recipes-modal-name").innerText = recipeData.title.toUpperCase();
 
@@ -29,7 +29,7 @@ async function handleClickSeeRecipesButton(event) {
   document.querySelector("#see-recipes-modal-instructions").innerText = recipeData.instructions;
 
   const modal = document.querySelector('#see-recipes-modal-form');
-  console.log(modal);
+  // console.log(modal);
 
   const closeButton = document.querySelector('.see-recipes-close-btn');
   closeButton.addEventListener('click', () => {
@@ -52,7 +52,7 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
   let youtubeUrl = response.data.youtube;
   let embedUrl = youtubeUrl.replace("watch?v=", "embed/");
 
-  console.log(response.data);
+  // console.log(response.data);
 
   const ingredientsHTML = response.data.ingredients.map(ingredient => {
     return `
