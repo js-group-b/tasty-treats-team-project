@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const popularRecipesImg = document.querySelectorAll(".pop-recipe-img");
 
 popularRecipesImg.forEach((img) => {
@@ -22,7 +24,8 @@ async function handleClickSeeRecipesButton(event) {
   document.querySelector("#see-recipes-modal-material").innerText = recipeData.ingredients.join(', ');
   document.querySelector("#see-recipes-modal-instructions").innerText = recipeData.instructions;
 
-  const modal = document.querySelector('#see-recipes-modal');
+  const modal = document.querySelector('#see-recipes-modal-form');
+  console.log(modal); 
   modal.style.display = 'flex';
 
   const closeButton = document.querySelector('.see-recipes-close-btn');
@@ -31,12 +34,16 @@ async function handleClickSeeRecipesButton(event) {
   });
 }
 
+export async function MakeSeeRecipeModalVisible(recipeID){
+  const modal = document.querySelector('#see-recipes-modal-form');
+  const recipeId = recipeID;
+  const recpieURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${recipeId}`;
+  const response = await axios.get(recpieURL);
+  console.log(response.data);
 
-export function MakeSeeRecipeModalVisible(){
-  const modal = document.querySelector('#see-recipes-modal');
   modal.style.display = 'flex';
 }
-
+MakeSeeRecipeModalVisible("6462a8f74c3d0ddd28897fc1")
 
 
 const modelCloseButton = document.querySelector(".see-recipes-close-btn");
@@ -44,7 +51,7 @@ const modelCloseButton = document.querySelector(".see-recipes-close-btn");
 modelCloseButton.addEventListener('click', closeSeeRecipeModal);
 
 function closeSeeRecipeModal(){
-  const modal = document.querySelector('#see-recipes-modal');
+  const modal = document.querySelector('#see-recipes-modal-form');
   modal.style.display = 'none';
 }
 
