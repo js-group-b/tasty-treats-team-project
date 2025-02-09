@@ -28,15 +28,14 @@ async function handleClickSeeRecipesButton(event) {
   document.querySelector("#see-recipes-modal-material").innerText = recipeData.ingredients.join(', ');
   document.querySelector("#see-recipes-modal-instructions").innerText = recipeData.instructions;
 
-  const modal = document.querySelector('#see-recipes-modal-form');
+  // const modal = document.querySelector('#see-recipes-modal-form');
   // console.log(modal);
 
-  const closeButton = document.querySelector('.see-recipes-close-btn');
-  closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-
+  // const closeButton = document.querySelector('.see-recipes-close-btn');
+  // closeButton.addEventListener('click', () => {
+  //   modal.style.display = 'none';
+  // });
+ 
 
 }
 
@@ -109,13 +108,28 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
 
   seeRecipesContent.innerHTML = modalInnerHTML;
   modal.style.display = 'flex';
+
+  const modalCloseButton = document.querySelector(".see-recipes-close-btn");
+  const modalBackground = document.querySelector('#see-recipes-modal');
+  modalCloseButton.addEventListener('click', closeSeeRecipeModal);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === "Escape") {
+      closeSeeRecipeModal();
+    }
+  });
+
+  modalBackground.addEventListener('click', (event) => {
+    if (event.target === modalBackground) {
+      closeSeeRecipeModal();
+    }
+  });
+
+  function closeSeeRecipeModal() {
+    const modal = document.querySelector('#see-recipes-modal-form');
+    modal.style.display = 'none';
+  }
+
 }
 
-const modelCloseButton = document.querySelector(".see-recipes-close-btn");
 
-modelCloseButton.addEventListener('click', closeSeeRecipeModal);
-
-function closeSeeRecipeModal() {
-  const modal = document.querySelector('#see-recipes-modal-form');
-  modal.style.display = 'none';
-}
