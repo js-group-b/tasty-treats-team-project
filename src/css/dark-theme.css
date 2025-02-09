@@ -75,7 +75,14 @@ background-color: var(--background-dark);
     background-color: var(--background-dark);
     color: var(--text-dark);
 }
-
+.dark-mode .filter-options {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+.dark-mode .filter-options li{
+  
+    color: var(--text-dark);
+}
 .dark-mode #see-recipes-modal-tags span{
     color: var(--text-dark);
 }
