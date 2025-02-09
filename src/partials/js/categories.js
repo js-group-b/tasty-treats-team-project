@@ -30,6 +30,12 @@ async function fetchCategories() {
 fetchCategories();
 
 
+const allCategoriesButon = document.querySelector(".all-categories-btn");
+  allCategoriesButon.addEventListener('click', resetCategoriesFiltering);
 
+  async function resetCategoriesFiltering(){
+    searchParams.set('category', '');
+    await fetchAndMapCardsData();
+  }
 
 
