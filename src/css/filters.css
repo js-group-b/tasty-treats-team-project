@@ -66,6 +66,10 @@
     color: var(--border-color)
 }
 
+.filter-custom-select-trigger.selected {
+color: var(--secondary-color)
+}
+
 .area-container,.time-container {
     width: 160px
 }
