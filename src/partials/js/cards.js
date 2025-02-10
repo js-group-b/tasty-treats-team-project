@@ -44,10 +44,10 @@ export async function fetchAndMapCardsData(){
                                    <div class="cards-section-ratings-div">
                                        <p class="cards-section-card-bottom-div-rating-p">${rating}</p>                                
                                        <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="../img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="../src/img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./tasty-treats-team-project/img/star-empty.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="/tasty-treats-team-project/img/star-empty.png" alt="star" />
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
                                        <button id="${_id}" class="cards-section-see-recipe-button">See recipe</button>
