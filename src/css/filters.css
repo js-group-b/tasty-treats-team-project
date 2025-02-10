@@ -62,7 +62,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 18px;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--border-color)
 }
 
@@ -114,7 +114,7 @@ color: var(--secondary-color)
 
 .option {
     
-    font-size: 1.2rem;
+    font-size: 16px;
     line-height: 20px;
     color: var(--border-color);
     cursor: pointer
@@ -198,7 +198,7 @@ color: var(--secondary-color)
     }
 
     .filter-form-label {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 18px
     }
 
@@ -207,7 +207,7 @@ color: var(--secondary-color)
     }
 
     .option {
-        font-size: 1.4rem;
+        font-size: 16px;
         line-height: 24px
     }
 
