@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.addEventListener("change", () => {
         if (themeToggle.checked) {
             document.body.classList.add("dark-mode");
-            localStorage.setItem("theme", "dark");
+            localStorage.setItem("theme", "light");
         } else {
             document.body.classList.remove("dark-mode");
-            localStorage.setItem("theme", "light");
+            localStorage.setItem("theme", "dark");
         }
     });
 });
