@@ -47,4 +47,4 @@ import{a as l}from"./vendor-BhqcI0kQ.js";(function(){const a=document.createElem
   <button id="see-recipes-modal-rating-btn">Give a rating</button>
     </div>
   `;t.innerHTML=u,a.style.display="flex";const f=document.querySelector(".see-recipes-close-btn"),c=document.querySelector("#see-recipes-modal");f.addEventListener("click",d),document.addEventListener("keydown",r=>{r.key==="Escape"&&d()}),c.addEventListener("click",r=>{r.target===c&&d()});function d(){const r=document.querySelector("#see-recipes-modal-form");r.style.display="none"}}window.global||(window.global=window);export{v as M};
-//# sourceMappingURL=main-Br_bLTUz.js.map
+//# sourceMappingURL=main-yaeVuLEU.js.map
