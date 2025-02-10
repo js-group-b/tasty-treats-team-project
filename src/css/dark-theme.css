@@ -23,6 +23,10 @@ body {
     background-color: var(--background-dark);
     color: var(--text-dark);
 }
+.dark-mode .cards-section-card-image border{
+background-color: var(--background-dark);
+  z-index:var(--background-dark);
+}
 
 .dark-mode #header-favorites-text{
     color: var(--text-dark);
