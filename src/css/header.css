@@ -353,6 +353,7 @@
   font-size: 12px;
   font-weight: 500;
   justify-content: center;
+  text-decoration: none;
 }
 
 .active-header-list-item {
