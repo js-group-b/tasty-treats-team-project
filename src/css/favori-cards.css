@@ -1,0 +1,19 @@
+.favorite-cards-section-ul {
+    margin:auto;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+.favorite-cards-section-ul {
+    width:496px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+}
+}
+
+@media only screen and (min-width: 1280px) {
+    .favorite-cards-section-ul {
+        width:804px;
+    }
+}
