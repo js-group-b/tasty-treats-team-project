@@ -28,7 +28,7 @@
   padding: 20px;
   border-radius: 10px;
   position: relative;
-  max-width: 338px;
+  max-width: 375px;
   height: auto;
 }
 
@@ -136,6 +136,9 @@
   max-height: 150px;
   overflow-y: scroll;
  
+}
+#see-recipes-modal-material::-webkit-scrollbar {
+  height: px;
 }
 
 #see-recipes-modal-instructions {
