@@ -16,7 +16,7 @@ export const searchParams = new URLSearchParams({
 export async function fetchAndMapCardsData(){
    try {
         const response = await axios.get(baseUrl4recipes,{ params: searchParams })
-        const  cardsData = response.data.results;
+        const  cardsData = await response.data.results;
         const cardsSectionUL = document.querySelector(".cards-section-ul");
         
         let mystr = localStorage.getItem('favorites');
@@ -38,7 +38,8 @@ export async function fetchAndMapCardsData(){
             return `<li class="cards-section-card-items">
                        <div class="cards-section-card-item-inner-div">
                        
-                            ${ myfavs.indexOf(_id)>= 0 ?
+                            ${ 
+                                myfavs.indexOf(_id)>= 0 ?
                                 `<svg id="svg__${_id}"class="cards-section-favorites-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path id="path_${_id}" fill-rule="evenodd" clip-rule="evenodd" d="M10.9934 4.70783C9.16066 2.5652 6.10444 1.98884 3.80814 3.95085C1.51185 5.91285 1.18856 9.19323 2.99186 11.5137C4.49117 13.443 9.02863 17.5121 10.5158 18.8291C10.6821 18.9764 10.7653 19.0501 10.8624 19.0791C10.9471 19.1043 11.0397 19.1043 11.1244 19.0791C11.2215 19.0501 11.3046 18.9764 11.471 18.8291C12.9582 17.5121 17.4956 13.443 18.9949 11.5137C20.7982 9.19323 20.5144 5.89221 18.1786 3.95085C15.8429 2.00948 12.8261 2.5652 10.9934 4.70783Z" fill="#F8F8F8"/>
                                 </svg>` 
