@@ -35,7 +35,7 @@
 .order-modal-title {
   color: #333;
   margin-bottom: 15px;
-  font-family: Inter;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -67,7 +67,7 @@
   height: 18px;
   font-weight: bold;
   color: #05050580;
-  font-family: Inter;
+  font-family: var(--font-family);
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -84,7 +84,7 @@
   border-radius: 15px;
   font-size: 14px;
   color: #05050580;
-  font-family: Inter;
+  font-family: var(--font-family);
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
