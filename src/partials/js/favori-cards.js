@@ -65,11 +65,11 @@ async function fetchRecipeData(recipeId){
                                <div class="cards-section-card-bottom-div">
                                    <div class="cards-section-ratings-div">
                                        <p class="cards-section-card-bottom-div-rating-p">${favCardsData.rating}</p>                                
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../img/star-empty.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../img/star-empty.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
                                        <button id="${favCardsData._id}" class="cards-section-see-recipe-button">See recipe</button>
