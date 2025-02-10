@@ -50,6 +50,10 @@
     top:16px;
     left:297px;
 }
+.cards-section-see-recipe-button:hover{
+    color: #050505;
+    background-color: #fff;
+}
 
 .cards-section-card-bottom-div {
     display:flex;
