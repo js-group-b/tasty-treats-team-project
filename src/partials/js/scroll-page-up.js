@@ -14,7 +14,7 @@ function backToPageUp(event) {
     behavior: "smooth",
   });
 }
-
+scrollBtn.style.display = "none";
 window.addEventListener("scroll", displayHideBackToTop);
 
 scrollBtn.addEventListener("click", s => backToPageUp(s));
