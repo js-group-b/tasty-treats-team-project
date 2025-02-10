@@ -5,11 +5,11 @@
     --primary-color: #9BB537;
     --border-color: #05050533;
     --white-bg: #f8f8f8;
-    --font-family: "Inter";
+    --font-family: Inter, sans-serif;
 }
 
 body {
-    font-family: var(--font-family), sans-serif;
+    font-family: var(--font-family);
 }
 
 body.darkmode {
