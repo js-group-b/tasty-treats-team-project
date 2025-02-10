@@ -30,7 +30,7 @@ async function getPopularRecipesData(){
     }
 }
 
-await getPopularRecipesData();
+getPopularRecipesData();
 
 //adding event listener to popular recipes images and getting the data for that particular recipe
 

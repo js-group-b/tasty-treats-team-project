@@ -123,6 +123,6 @@ export async function fetchAndMapCardsData(){
     }
 }
 
-await fetchAndMapCardsData();
+fetchAndMapCardsData();
 
 
