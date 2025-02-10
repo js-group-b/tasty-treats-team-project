@@ -6,7 +6,13 @@ import {MakeSeeRecipeModalVisible} from './see-recipes-modal';
 
 async function GetLocalStorageAndFetchAll(){
     let favsStr = localStorage.getItem('favorites');
-    let myFavoritedRecipeIDs = await JSON.parse(favsStr);
+    let myFavoritedRecipeIDs;
+    if (favsStr == null){
+        myFavoritedRecipeIDs = []
+    }else{
+        myFavoritedRecipeIDs = await JSON.parse(favsStr); 
+    }
+
     for (let i = 0 ; i < myFavoritedRecipeIDs.length ; i++){
         await fetchRecipeData(myFavoritedRecipeIDs[i]);
     }
