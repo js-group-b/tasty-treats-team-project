@@ -3,11 +3,46 @@ import axios from 'axios';
 async function fetchEvents() {
   try {
     const response = await axios.get('https://tasty-treats-backend.p.goit.global/api/events');
-    //console.log(JSON.stringify(response.data, null, 2)); // JSON verisini düzenli yazdır
+    const responseData = await response.data
+
+    // 
+    const chef1png = document.querySelector(".chef1png");
+    chef1png.src = responseData[0].cook.imgUrl;
+
+    const plate1png = document.querySelector(".plate1png");
+    plate1png.src = responseData[0].topic.previewUrl;
+    
+    const platezoom1png = document.querySelector(".platezoom1png");
+    platezoom1png.src = responseData[0].topic.imgUrl;
+
+
+    //
+    const chef2png = document.querySelector(".chef2png");
+    chef2png.src = responseData[1].cook.imgUrl;
+
+    const pizzapicturepng = document.querySelector(".pizzapicturepng");
+    pizzapicturepng.src = responseData[1].topic.previewUrl;
+
+    const pizzapicturezoompng = document.querySelector(".pizzapicturezoompng");
+    pizzapicturezoompng.src = responseData[1].topic.imgUrl;
+
+
+    //
+    const chef3png = document.querySelector(".chef3png");
+    chef3png.src = responseData[2].cook.imgUrl;
+
+    const piepng = document.querySelector(".piepng");
+    piepng.src = responseData[2].topic.previewUrl;
+
+    const pizezoompng = document.querySelector(".pizezoompng");
+    pizezoompng.src = responseData[2].topic.imgUrl;
+
   } catch (error) {
     console.error('Veri çekme sırasında bir hata oluştu:', error);
   }
 }
+
+
 
 fetchEvents();
 
