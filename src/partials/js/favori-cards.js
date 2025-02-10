@@ -51,6 +51,17 @@ async function fetchRecipeData(recipeId){
 
         const favoriteCardsSectionUL = document.querySelector(".favorite-cards-section-ul");
 
+        let setOfStars = "";
+            for (let i =0 ; i< 5; i++ ){
+               if (i < Math.floor(favCardsData.rating+0.4)){
+                   setOfStars += `<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />`
+               }
+               else {
+                   setOfStars += `<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />`
+               }
+            } 
+
+
         const favCardsMarkup = `<li class="cards-section-card-items">
                        <div class="favorite-cards-section-card-item-inner-div">
 
@@ -64,12 +75,10 @@ async function fetchRecipeData(recipeId){
                                <p class="cards-section-card-content-p">${favCardsData.description.substring(0,57)}...</p>
                                <div class="cards-section-card-bottom-div">
                                    <div class="cards-section-ratings-div">
-                                       <p class="cards-section-card-bottom-div-rating-p">${favCardsData.rating}</p>                                
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
+                                       <p class="cards-section-card-bottom-div-rating-p">${favCardsData.rating}</p>     
+
+                                        ${setOfStars}
+
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
                                        <button id="${favCardsData._id}" class="cards-section-see-recipe-button">See recipe</button>
