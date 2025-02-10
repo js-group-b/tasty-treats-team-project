@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Menü açma fonksiyonu
   function openMenu() {
     mobileMenu.classList.add('open');
+    menuLinks.forEach(link => (link.style.color = 'white')); // Yazıları beyaz yap
   }
 
   // Menü kapatma fonksiyonu
