@@ -15,11 +15,11 @@ import{M as B}from"./assets/main-CFA54l7e.js";import{a as v}from"./assets/vendor
                                <div class="cards-section-card-bottom-div">
                                    <div class="cards-section-ratings-div">
                                        <p class="cards-section-card-bottom-div-rating-p">${l}</p>                                
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../src/img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../src/img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../src/img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../src/img/star-empty.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="../src/img/star-empty.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
+                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
                                        <button id="${p}" class="cards-section-see-recipe-button">See recipe</button>
