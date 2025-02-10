@@ -1,1 +1,1 @@
-import './js/init';
+import './partials/js/init';
