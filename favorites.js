@@ -1,4 +1,4 @@
-import"./assets/main-CFA54l7e.js";import{a as d}from"./assets/vendor-N5iQpiFS.js";async function n(){let r=localStorage.getItem("favorites"),a=await JSON.parse(r);for(let s=0;s<a.length;s++)await l(a[s]);const c=document.getElementsByClassName("cards-section-favorites-button");for(let s=0;s<c.length;s++)c[s].addEventListener("click",t);async function t(s){const o=s.target.id.substring(5);let e=localStorage.getItem("favorites"),i;i=localStorage.getItem("favorites"),e=await JSON.parse(i),e.splice(e.indexOf(o),1),i=JSON.stringify(e),localStorage.setItem("favorites",i),document.querySelector(".favorite-cards-section-ul").innerHTML="",n()}}async function l(r){try{const a=`https://tasty-treats-backend.p.goit.global/api/recipes/${r}`,t=await(await d.get(a)).data,s=document.querySelector(".favorite-cards-section-ul"),o=`<li class="cards-section-card-items">
+import"./assets/main-COImvNk6.js";import{a as d}from"./assets/vendor-BhqcI0kQ.js";async function n(){let c=localStorage.getItem("favorites"),r=await JSON.parse(c);for(let e=0;e<r.length;e++)await l(r[e]);const o=document.getElementsByClassName("cards-section-favorites-button");for(let e=0;e<o.length;e++)o[e].addEventListener("click",t);async function t(e){const i=e.target.id.substring(5);let a=localStorage.getItem("favorites"),s;s=localStorage.getItem("favorites"),a=await JSON.parse(s),a.splice(a.indexOf(i),1),s=JSON.stringify(a),localStorage.setItem("favorites",s),document.querySelector(".favorite-cards-section-ul").innerHTML="",n()}}async function l(c){try{const r=`https://tasty-treats-backend.p.goit.global/api/recipes/${c}`,t=await(await d.get(r)).data,e=document.querySelector(".favorite-cards-section-ul");let i="";for(let s=0;s<5;s++)s<Math.floor(t.rating+.4)?i+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />':i+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />';const a=`<li class="cards-section-card-items">
                        <div class="favorite-cards-section-card-item-inner-div">
 
                             <svg id="svg__${t._id}"class="cards-section-favorites-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,12 +11,10 @@ import"./assets/main-CFA54l7e.js";import{a as d}from"./assets/vendor-N5iQpiFS.js
                                <p class="cards-section-card-content-p">${t.description.substring(0,57)}...</p>
                                <div class="cards-section-card-bottom-div">
                                    <div class="cards-section-ratings-div">
-                                       <p class="cards-section-card-bottom-div-rating-p">${t.rating}</p>                                
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
-                                       <img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />
+                                       <p class="cards-section-card-bottom-div-rating-p">${t.rating}</p>     
+
+                                        ${i}
+
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
                                        <button id="${t._id}" class="cards-section-see-recipe-button">See recipe</button>
@@ -24,5 +22,5 @@ import"./assets/main-CFA54l7e.js";import{a as d}from"./assets/vendor-N5iQpiFS.js
                                </div>
                            </div>
                        </div>
-                   </li> `;s.innerHTML+=o}catch{console.log("error occurd while fetching the data :C")}}n();
+                   </li> `;e.innerHTML+=a}catch{console.log("error occurd while fetching the data :C")}}n();
 //# sourceMappingURL=favorites.js.map
