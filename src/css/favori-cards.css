@@ -21,6 +21,7 @@
 }
 
 .favorite-cards-image{
+    content:url("../img/favs-card-mobile.png");
     width: 335px;
     height: 516px;
     margin-top: 50px;
