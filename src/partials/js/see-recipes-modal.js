@@ -1,4 +1,5 @@
 import axios from 'axios';
+// import { HandleClickHerthIcon } from './cards.js';
 
 const popularRecipesImg = document.querySelectorAll(".pop-recipe-img");
 
@@ -105,8 +106,15 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
   <button id="see-recipes-modal-rating-btn">Give a rating</button>
     </div>
   `;
-
+  
   seeRecipesContent.innerHTML = modalInnerHTML;
+
+  // const addToFavorites = document.querySelector('#see-recipes-modal-favorite-btn');
+
+  // addToFavorites.addEventListener('click', function () {
+  //   HandleClickHerthIcon();
+  // });
+
   modal.style.display = 'flex';
 
   const modalCloseButton = document.querySelector(".see-recipes-close-btn");
