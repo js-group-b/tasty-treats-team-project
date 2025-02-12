@@ -1,15 +1,15 @@
 import axios from 'axios';
 import { searchParams } from './cards';
-import { fetchAndMapCardsData } from './cards';
+import { FetchAndMapCardsData } from './cards';
 
 //searchParams.set('ingredient', '640c2dd963a319ea671e3668');
-//await fetchAndMapCardsData();
+//await FetchAndMapCardsData();
 
 const allIngredientsURL = 'https://tasty-treats-backend.p.goit.global/api/ingredients';
 const allRegionsUrl = 'https://tasty-treats-backend.p.goit.global/api/areas';
 
-fetchIngredients();
-fetchRegions();
+FetchIngredients();
+FetchRegions();
 
 // Toggle dropdown menu açma/kapatma
 const toggleForm = (trigger, formId) => {
@@ -53,7 +53,7 @@ const updateSelectedOption = (optionSelector, triggerTextId) => {
         }
         //updating the search param
         searchParams.set('time', timeParameter);
-        fetchAndMapCardsData();
+        FetchAndMapCardsData();
         }
         
 
@@ -62,7 +62,7 @@ const updateSelectedOption = (optionSelector, triggerTextId) => {
         // if the region is selected
         if(triggerText.id === "area-trigger-text"){
           searchParams.set('area', selectedText.trim());
-          fetchAndMapCardsData();
+          FetchAndMapCardsData();
         }
 
         
@@ -89,7 +89,7 @@ const updateSelectedOption = (optionSelector, triggerTextId) => {
             const idOfMyIngredient = await FindIdOfIngredientWithItsName();
             // update the parameter and fetch the card data
             searchParams.set('ingredient', idOfMyIngredient);
-            fetchAndMapCardsData();
+            FetchAndMapCardsData();
           }
           ProductFilterFetching();
         }
@@ -108,7 +108,7 @@ const updateSelectedOption = (optionSelector, triggerTextId) => {
 };
 
 
-async function fetchIngredients() {
+async function FetchIngredients() {
   try {
     const response = await axios.get(allIngredientsURL);
     const ingredients = response.data;
@@ -144,7 +144,7 @@ async function fetchIngredients() {
   }
 }
 
-async function fetchRegions() {
+async function FetchRegions() {
   try {
     const response = await axios.get(allRegionsUrl);
     const regions = response.data;
@@ -212,7 +212,7 @@ if (resetButton) {
       searchParams.set('area', '');
       searchParams.set('ingredient', '');
       searchParams.set('time', '');
-      fetchAndMapCardsData();
+      FetchAndMapCardsData();
     }
 
     // 2. Sıfırlama: Seçilen öğe başlıklarını eski haline getir
@@ -242,20 +242,20 @@ const filterSearchTextField = document.querySelector(".filter-search-input");
 
 //setup before functions
 let typingTimer;                //timer identifier
-let doneTypingInterval = 300;  //time in ms (2 seconds)
+let DONE_TYPING_INTERVAL = 300;  //time in ms 
 
 //on keyup, start the countdown
 filterSearchTextField.addEventListener('keyup', () => {
     clearTimeout(typingTimer);
     if (filterSearchTextField.value) {
-        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        typingTimer = setTimeout(DoAfterTypingDone, DONE_TYPING_INTERVAL);
     }
 });
 
 //user has finished typing 
-async function doneTyping () {
+async function DoAfterTypingDone () {
   // updating the title param and then fetching the card data...
   searchParams.set('title', filterSearchTextField.value );
-  await fetchAndMapCardsData();
+  await FetchAndMapCardsData();
 }
 

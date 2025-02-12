@@ -13,7 +13,7 @@ export const searchParams = new URLSearchParams({
     limit:9,
   });
 
-export async function fetchAndMapCardsData(){
+export async function FetchAndMapCardsData(){
    try {
         const response = await axios.get(baseUrl4recipes,{ params: searchParams })
         const  cardsData = await response.data.results;
@@ -73,10 +73,10 @@ export async function fetchAndMapCardsData(){
         const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
 
         for (let i = 0 ; i < seeRecipeButtons.length ; i++){
-            seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
+            seeRecipeButtons[i].addEventListener('click', HandleClickSeeRecipesButton);
         }
 
-        async function handleClickSeeRecipesButton(event){
+        async function HandleClickSeeRecipesButton(event){
             await MakeSeeRecipeModalVisible(event.target.id);
         }
 
@@ -99,7 +99,7 @@ export async function fetchAndMapCardsData(){
                 currentFavs.push(idOfClickedFavItem);
                 stringifiedListOfFavs = JSON.stringify(currentFavs);
                 localStorage.setItem('favorites', stringifiedListOfFavs);
-                fetchAndMapCardsData();
+                FetchAndMapCardsData();
             }
             // if there is fav element(s) in local storage
             else{
@@ -110,7 +110,7 @@ export async function fetchAndMapCardsData(){
                     currentFavs.splice(currentFavs.indexOf(idOfClickedFavItem), 1);
                     stringifiedListOfFavs = JSON.stringify(currentFavs);
                     localStorage.setItem('favorites', stringifiedListOfFavs);
-                    fetchAndMapCardsData();
+                    FetchAndMapCardsData();
                 }
                 // clicked item is not in the list
                 else{
@@ -121,7 +121,7 @@ export async function fetchAndMapCardsData(){
                     localStorage.removeItem('favorites');
                     localStorage.setItem('favorites', stringifiedListOfFavs);
                     currentFavs = localStorage.getItem('favorites');
-                    fetchAndMapCardsData();
+                    FetchAndMapCardsData();
                 }
             }
         }
@@ -131,6 +131,6 @@ export async function fetchAndMapCardsData(){
     }
 }
 
-fetchAndMapCardsData();
+FetchAndMapCardsData();
 
 

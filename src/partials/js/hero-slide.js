@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-async function fetchEvents() {
+async function FetchEvents() {
   try {
     const response = await axios.get('https://tasty-treats-backend.p.goit.global/api/events');
     const responseData = await response.data
@@ -44,7 +44,7 @@ async function fetchEvents() {
 
 
 
-fetchEvents();
+FetchEvents();
 
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(()=>{
@@ -80,18 +80,18 @@ document.addEventListener('DOMContentLoaded', function () {
       slides.forEach((_, index) => {
           const indicator = document.createElement("div");
           indicator.classList.add("indicator");
-          indicator.addEventListener("click", () => goToSlide(index));
+          indicator.addEventListener("click", () => GoToSlide(index));
           indicatorsContainer.appendChild(indicator);
       });
     
       const indicators = document.querySelectorAll(".indicator");
     
-      function updateSlider() {
+      function UpdateSlider() {
           slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-          updateIndicators();
+          UpdateIndicators();
       }
     
-      function updateIndicators() {
+      function UpdateIndicators() {
           indicators.forEach((indicator, index) => {
               if (index === currentIndex) {
                   indicator.classList.add("active");
@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
           });
       }
     
-      function goToSlide(index) {
+      function GoToSlide(index) {
           currentIndex = index;
-          updateSlider();
+          UpdateSlider();
       }
     
       function updateSlideWidth() {
@@ -118,17 +118,17 @@ document.addEventListener('DOMContentLoaded', function () {
           else {
               slideWidth = 100;
           }
-          updateSlider();
+          UpdateSlider();
       }
     
       updateSlideWidth();
-      updateSlider();
+      UpdateSlider();
     
       window.addEventListener("resize", updateSlideWidth);
     
       setInterval(() => {
           currentIndex = (currentIndex + 1) % slides.length;
-          updateSlider();
+          UpdateSlider();
       }, 5000);
       }).catch((err) => {
         console.error("CSS yüklenirken bir hata oluştu:", err);

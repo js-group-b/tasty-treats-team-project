@@ -3,7 +3,7 @@ import {MakeSeeRecipeModalVisible} from './see-recipes-modal'
 
 const popiRecipesUrl = "https://tasty-treats-backend.p.goit.global/api/recipes/popular";
 
-async function getPopularRecipesData(){
+async function GetPopularRecipesData(){
     try {
         const response = await axios.get(popiRecipesUrl)
         const  popularRecipesData = response.data
@@ -29,11 +29,11 @@ async function getPopularRecipesData(){
         const popularRecipesImg = document.getElementsByClassName("pop-recipe-img");
 
         for (let i = 0 ; i < popularRecipesImg.length ; i++){
-            popularRecipesImg[i].addEventListener('click', handleClickSeeRecipesButton);
+            popularRecipesImg[i].addEventListener('click', HandleClickSeeRecipesButton);
         }
 
 
-        async function handleClickSeeRecipesButton(event){
+        async function HandleClickSeeRecipesButton(event){
             await MakeSeeRecipeModalVisible(event.target.id);
         }
 
@@ -43,5 +43,5 @@ async function getPopularRecipesData(){
     }
 }
 
-getPopularRecipesData();
+GetPopularRecipesData();
 

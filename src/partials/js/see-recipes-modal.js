@@ -4,10 +4,10 @@ import axios from 'axios';
 const popularRecipesImg = document.querySelectorAll(".pop-recipe-img");
 
 popularRecipesImg.forEach((img) => {
-  img.addEventListener('click', handleClickSeeRecipesButton);
+  img.addEventListener('click', HandleClickSeeRecipesButton);
 });
 
-async function handleClickSeeRecipesButton(event) {
+async function HandleClickSeeRecipesButton(event) {
   // console.log("Tıklanan tarifin id'si:", event.target.id);
   let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
   const responseRecipe = await axios.get(getRecipeByIdURL);
@@ -119,21 +119,21 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
 
   const modalCloseButton = document.querySelector(".see-recipes-close-btn");
   const modalBackground = document.querySelector('#see-recipes-modal');
-  modalCloseButton.addEventListener('click', closeSeeRecipeModal);
+  modalCloseButton.addEventListener('click', CloseSeeRecipeModal);
 
   document.addEventListener('keydown', (event) => {
     if (event.key === "Escape") {
-      closeSeeRecipeModal();
+      CloseSeeRecipeModal();
     }
   });
 
   modalBackground.addEventListener('click', (event) => {
     if (event.target === modalBackground) {
-      closeSeeRecipeModal();
+      CloseSeeRecipeModal();
     }
   });
 
-  function closeSeeRecipeModal() {
+  function CloseSeeRecipeModal() {
     const modal = document.querySelector('#see-recipes-modal-form');
     modal.style.display = 'none';
   }

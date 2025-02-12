@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { searchParams } from './cards.js';
-import { fetchAndMapCardsData } from './cards.js';
+import { FetchAndMapCardsData } from './cards.js';
 
 const baseUrlCategories = 'https://tasty-treats-backend.p.goit.global/api/categories?';
-async function fetchCategories() {
+async function FetchCategories() {
   try {
     const urlCategory = `${baseUrlCategories}`;
     const response = await axios.get(urlCategory);
@@ -20,7 +20,7 @@ async function fetchCategories() {
 
       listItem.addEventListener('click', (event) => {
         searchParams.set('category', event.target.textContent);
-        fetchAndMapCardsData();
+        FetchAndMapCardsData();
         event.target.focus();
       });
     });
@@ -29,15 +29,15 @@ async function fetchCategories() {
   }
 }
 
-fetchCategories();
+FetchCategories();
 
 
 const allCategoriesButon = document.querySelector(".all-categories-btn");
-  allCategoriesButon.addEventListener('click', resetCategoriesFiltering);
+  allCategoriesButon.addEventListener('click', ResetCategoriesFiltering);
 
-  async function resetCategoriesFiltering(){
+  async function ResetCategoriesFiltering(){
     searchParams.set('category', '');
-    await fetchAndMapCardsData();
+    await FetchAndMapCardsData();
   }
 
 
