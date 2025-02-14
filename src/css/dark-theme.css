@@ -8,145 +8,144 @@
     --text-dark: #ffffff;
     --button-dark: #121212;
     --button-text-dark: #ffffff;
-   
+    --border-color-dark:#121212;
+
 }
 
 
-body {
+body { 
     background-color: var(--background-light);
     color: var(--text-light);
     transition: background 0.3s ease, color 0.3s ease;
 }
+.darkMode .cards-section-card-image {
+border-color: #121212;
+}
 
-
-.dark-mode {
+.darkMode {
     background-color: var(--background-dark);
     color: var(--text-dark);
 }
-.dark-mode .cards-section-card-image border{
-background-color: var(--background-dark);
-  z-index:var(--background-dark);
-}
 
-.dark-mode #header-favorites-text{
+.darkMode #header-favorites-text{
     color: var(--text-dark);
 } 
-.dark-mode .logo-second {
+.darkMode .logo-second {
     color: var(--text-dark);
 }
-.dark-mode .mobile-menu-icon {
+.darkMode .mobile-menu-icon {
     color: var(--text-dark);
 } 
-.dark-mode .filter-form-label {
+.darkMode .filter-form-label {
     color: var(--text-dark);
 }
-.dark-mode .reset-filter-btn {
+.darkMode .reset-filter-btn {
     color: var(--text-dark);
 }
-.dark-mode .categories-list {
+.darkMode .categories-list {
     color: var(--text-dark);
 }
-.dark-mode #ingredient-trigger-text {
+.darkMode #ingredient-trigger-text {
 color: var(--text-dark);
 }
-.dark-mode .filter-custom-select-trigger {
+.darkMode .filter-custom-select-trigger {
 color: var(--text-dark);
 border: 1px solid gray;
 }
-.dark-mode .order-modal-content {
+.darkMode .order-modal-content {
     background-color: var(--background-dark);
 
 }
-.dark-mode .order-modal-title {
+.darkMode .order-modal-title {
     color: var(--text-dark);
 }
-.dark-mode .order-modal-label {
+.darkMode .order-modal-label {
     color: var(--text-dark);
 }
-.dark-mode #order-modal-label-input{
+.darkMode #order-modal-label-input{
 background-color: var(--background-dark);
 }
-.dark-mode #closeModal {
+.darkMode #closeModal {
     color: var(--text-dark);
 }
 
-.dark-mode .filter-search-container input{
+.darkMode .filter-search-container input{
 
     border: 1px solid gray;
 }
 
-.dark-mode .see-recipes-modal-content{
+.darkMode .see-recipes-modal-content{
     background-color: var(--background-dark);
     color: var(--text-dark);
 }
-.dark-mode .filter-options {
+.darkMode .filter-options {
     background-color: var(--background-dark);
     color: var(--text-dark);
 }
-.dark-mode .filter-options li{
+.darkMode .filter-options li{
   
     color: var(--text-dark);
 }
-.dark-mode #see-recipes-modal-tags span{
+.darkMode #see-recipes-modal-tags span{
     color: var(--text-dark);
 }
 
-.dark-mode #see-recipes-modal-tags span{
+.darkMode #see-recipes-modal-tags span{
     color: var(--text-dark);
 }
-.dark-mode .filter-input-container input {
+.darkMode .filter-input-container input {
     color: var(--text-dark);
 }
-.dark-mode .ingredient-name{
-    color: var(--text-dark);
-}
-
-.dark-mode .ingredient-amount {
-    color: var(--text-dark);
-}
-.dark-mode #see-recipes-modal-rating {
-    color: var(--text-dark);
-}
-.dark-mode .see-recipes-close-btn {
+.darkMode .ingredient-name{
     color: var(--text-dark);
 }
 
-.hero-section-the-main-container {
+.darkMode .ingredient-amount {
+    color: var(--text-dark);
+}
+.darkMode #see-recipes-modal-rating {
+    color: var(--text-dark);
+}
+.darkMode .see-recipes-close-btn {
+    color: var(--text-dark);
+}
+
+.heroSectionTheMainContainer {
     background-color: var(--background-light);
     transition: background 0.3s ease;
 }
 
-.dark-mode .hero-section-the-main-container {
+.darkMode .heroSectionTheMainContainer {
     background-color: var(--background-dark);
 }
 
 /* Hero Title */
-.hero-section-order-title {
+.heroSectionOrderTitle {
     color: var(--text-light);
 }
-.dark-mode .hero-section-order-card{
+.darkMode .heroSectionOrderCard{
  background-color: var(--background-dark);
 }
 
-.dark-mode .all-categories-btn{
+.darkMode .all-categories-btn{
     background-color: #9bb537;;
     color: var(--text-dark);
 }
-.dark-mode .hero-section-order-p {
+.darkMode .heroSectionOrderP {
  color: var(--text-dark);
 }
-.dark-mode .hero-section-order-title {
+.darkMode .heroSectionOrderTitle {
     color: var(--text-dark);
 }
 
 /* Highlight */
-.hero-section-highlight {
+.heroSectionOrderHighlight {
     color: #76c893;
     /* Yeşil vurgulu */
 }
 
 /* Buton */
-.hero-section-order-button {
+.heroSectionOrderButton {
     background-color: var(--button-light);
     color: var(--button-text-light);
     padding: 10px 20px;
@@ -155,27 +154,27 @@ background-color: var(--background-dark);
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.dark-mode .hero-section-order-button {
+.darkMode .heroSectionOrderButton {
     background-color: var(--button-dark);
     color: var(--button-text-dark);
 }
 
-.dark-mode .filter-svg-search{
+.darkMode .filter-svg-search{
     fill: var(--text-dark);
 }
-.dark-mode .svg-arrow {
+.darkMode .svg-arrow {
     fill: var(--text-dark);
 }
-.dark-mode .hero-order-modal-input {
+.darkMode .heroOrderModalInput {
     background-color: var(--button-dark);
 }
-.dark-mode .hero-order-modal-textarea {
+.darkMode .heroOrderModalTextarea {
     background-color: var(--button-dark);
 }
-.dark-mode .hero-order-modal-input input{
+.darkMode .heroOrderModalInput input{
     color: var(--text-dark);
 }
 
-.dark-mode .hero-order-modal-textarea input{
+.darkMode .heroOrderModalTextarea input{
 color: var(--text-dark);
 }
