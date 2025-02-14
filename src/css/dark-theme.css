@@ -8,24 +8,23 @@
     --text-dark: #ffffff;
     --button-dark: #121212;
     --button-text-dark: #ffffff;
-   
+    --border-color-dark:#121212;
+
 }
 
 
-body {
+body { 
     background-color: var(--background-light);
     color: var(--text-light);
     transition: background 0.3s ease, color 0.3s ease;
 }
-
+.dark-mode .cards-section-card-image {
+border-color: #121212;
+}
 
 .dark-mode {
     background-color: var(--background-dark);
     color: var(--text-dark);
-}
-.dark-mode .cards-section-card-image border{
-background-color: var(--background-dark);
-  z-index:var(--background-dark);
 }
 
 .dark-mode #header-favorites-text{
