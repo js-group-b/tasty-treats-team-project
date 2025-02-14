@@ -9,35 +9,35 @@ document.addEventListener("DOMContentLoaded", function () {
         return;  
     }
 
-    function openModalHandler(event) {
+    function OpenModalHandler(event) {
         event.preventDefault(); 
         modal.style.display = "flex";
 
-        document.addEventListener("keydown", escKeyHandler);
+        document.addEventListener("keydown", ESCKeyHandler);
 
-        modal.addEventListener("click", outsideClickHandler);
+        modal.addEventListener("click", OutsideClickHandler);
     }
 
-    function closeModalHandler() {
+    function CloseModalHandler() {
         modal.style.display = "none";
 
-        document.removeEventListener("keydown", escKeyHandler);
-        modal.removeEventListener("click", outsideClickHandler);
+        document.removeEventListener("keydown", ESCKeyHandler);
+        modal.removeEventListener("click", OutsideClickHandler);
     }
 
-    function escKeyHandler(event) {
+    function ESCKeyHandler(event) {
         if (event.key === "Escape") {
-            closeModalHandler();
+            CloseModalHandler();
         }
     }
 
-    function outsideClickHandler(event) {
+    function OutsideClickHandler(event) {
         if (event.target === modal) {
-            closeModalHandler();
+            CloseModalHandler();
         }
     }
 
-    openModal.addEventListener("click", openModalHandler);
-    closeModal.addEventListener("click", closeModalHandler);
-     imitationButton.addEventListener("click", openModalHandler);
+    openModal.addEventListener("click", OpenModalHandler);
+    closeModal.addEventListener("click", CloseModalHandler);
+     imitationButton.addEventListener("click", OpenModalHandler);
 });

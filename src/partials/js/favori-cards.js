@@ -14,7 +14,7 @@ async function GetLocalStorageAndFetchAll(){
     }
 
     for (let i = 0 ; i < myFavoritedRecipeIDs.length ; i++){
-        await fetchRecipeData(myFavoritedRecipeIDs[i]);
+        await FetchRecipeData(myFavoritedRecipeIDs[i]);
     }
     // add event listeners to heart icons
     const heartIconSvg = document.getElementsByClassName("cards-section-favorites-button");
@@ -48,7 +48,7 @@ async function GetLocalStorageAndFetchAll(){
     // }
 }
 
-async function fetchRecipeData(recipeId){
+async function FetchRecipeData(recipeId){
     try {
         const recipeByIdURL =  `https://tasty-treats-backend.p.goit.global/api/recipes/${recipeId}`;
 

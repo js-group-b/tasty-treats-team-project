@@ -1,16 +1,15 @@
 import axios from 'axios';
 import { searchParams } from './cards';
-import { fetchAndMapCardsData } from './cards';
+import { FetchAndMapCardsData } from './cards';
 
 //searchParams.set('ingredient', '640c2dd963a319ea671e3668');
-//await fetchAndMapCardsData();
+//await FetchAndMapCardsData();
 
-const allIngredientsURL =
-  'https://tasty-treats-backend.p.goit.global/api/ingredients';
+const allIngredientsURL = 'https://tasty-treats-backend.p.goit.global/api/ingredients';
 const allRegionsUrl = 'https://tasty-treats-backend.p.goit.global/api/areas';
 
-fetchIngredients();
-fetchRegions();
+FetchIngredients();
+FetchRegions();
 
 // Toggle dropdown menu açma/kapatma
 const toggleForm = (trigger, formId) => {
@@ -36,6 +35,65 @@ const updateSelectedOption = (optionSelector, triggerTextId) => {
 
       if (triggerText) {
         triggerText.textContent = selectedText; // Update the selected option on the header
+
+        //console.log(triggerText);
+        //console.log(triggerText.id);
+        // if the time field is selected
+        if (triggerText.id === "time-trigger-text"){
+
+          // when selected time is 2 digits 10min to 95 min
+          let timeParameter = selectedText.trim().substring(0,3);
+          if(timeParameter[2] == ' '){
+          timeParameter = timeParameter.substring(0,2);
+          
+        }
+        // specific case where time is one digit (5 mins)
+        if(timeParameter[2]== 'm'){
+          timeParameter = timeParameter.substring(0,1);
+        }
+        //updating the search param
+        searchParams.set('time', timeParameter);
+        FetchAndMapCardsData();
+        }
+        
+
+
+
+        // if the region is selected
+        if(triggerText.id === "area-trigger-text"){
+          searchParams.set('area', selectedText.trim());
+          FetchAndMapCardsData();
+        }
+
+        
+
+        // if the product/ingredient is selected
+        if(triggerText.id === "ingredient-trigger-text"){
+          //console.log(selectedText.trim());           
+          // name of selected product
+
+          async function FindIdOfIngredientWithItsName() {
+            const response = await axios.get(allIngredientsURL)
+            const responseData = await response.data;
+            for (let i=0 ; i < responseData.length ; i ++){
+              // loop through all response objects and if the name is matching, grab the id.
+              if(responseData[i].name == selectedText.trim())
+                //console.log(responseData[i]._id);
+                // id of selected ingredient
+                return responseData[i]._id
+            }
+          }
+
+
+          async function ProductFilterFetching(){
+            const idOfMyIngredient = await FindIdOfIngredientWithItsName();
+            // update the parameter and fetch the card data
+            searchParams.set('ingredient', idOfMyIngredient);
+            FetchAndMapCardsData();
+          }
+          ProductFilterFetching();
+        }
+   
       }
 
       // Add 'selected' class to the trigger to make it bold
@@ -50,7 +108,7 @@ const updateSelectedOption = (optionSelector, triggerTextId) => {
 };
 
 
-async function fetchIngredients() {
+async function FetchIngredients() {
   try {
     const response = await axios.get(allIngredientsURL);
     const ingredients = response.data;
@@ -60,7 +118,7 @@ async function fetchIngredients() {
     const markupIngredient = ingredients
       .map(
         ({ name, _id }) => `
-        <li data-ingredient="${_id}" data-name="ingredient" class="option">
+        <li id="product_${_id}" data-ingredient="${_id}" data-name="ingredient" class="option ingredient-li">
           ${name}
         </li>`
       )
@@ -86,7 +144,7 @@ async function fetchIngredients() {
   }
 }
 
-async function fetchRegions() {
+async function FetchRegions() {
   try {
     const response = await axios.get(allRegionsUrl);
     const regions = response.data;
@@ -154,7 +212,7 @@ if (resetButton) {
       searchParams.set('area', '');
       searchParams.set('ingredient', '');
       searchParams.set('time', '');
-      fetchAndMapCardsData();
+      FetchAndMapCardsData();
     }
 
     // 2. Sıfırlama: Seçilen öğe başlıklarını eski haline getir
@@ -176,3 +234,28 @@ if (resetButton) {
 
   });
 }
+
+
+
+// selecting the text input in filters
+const filterSearchTextField = document.querySelector(".filter-search-input");
+
+//setup before functions
+let typingTimer;                //timer identifier
+let DONE_TYPING_INTERVAL = 300;  //time in ms 
+
+//on keyup, start the countdown
+filterSearchTextField.addEventListener('keyup', () => {
+    clearTimeout(typingTimer);
+    if (filterSearchTextField.value) {
+        typingTimer = setTimeout(DoAfterTypingDone, DONE_TYPING_INTERVAL);
+    }
+});
+
+//user has finished typing 
+async function DoAfterTypingDone () {
+  // updating the title param and then fetching the card data...
+  searchParams.set('title', filterSearchTextField.value );
+  await FetchAndMapCardsData();
+}
+
