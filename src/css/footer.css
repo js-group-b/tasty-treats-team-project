@@ -1,4 +1,4 @@
-.scroll-to-up{
+.ScrollToUp{
     width: 3.2rem;
     height: 3.2rem;
     background-color: var(--primary-color);
@@ -12,11 +12,11 @@
     z-index: 1000;
     border-radius: 50%;
 }
-.scroll-to-up:hover{
+.ScrollToUp:hover{
     background-color: #889E2F;
 }
 
-.page-select {
+.PageSelect {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -25,13 +25,13 @@
     max-width: 335px;
     margin: 4rem auto;
   }
-  .page-select button{
+  .PageSelect button{
     cursor: pointer;
   }
   .tui-is-selected {
     background-color: var(--primary-color);
   }
-  .page-select .page-button {
+  .PageSelect .page-button {
     width: 40px;
     height: 40px;
     display: flex;
@@ -48,7 +48,7 @@
     border-radius: 50%;
   }
   
-  .page-select .active-page {
+  .PageSelect .active-page {
     background-color: var(--primary-color);
     border: 1px solid rgba(var(--primary-color-rgb), 1);
   }
@@ -78,21 +78,21 @@
   .tui-last {
     background-color: var(--primary-color);
   }
-  .page-select .left-end svg,
-  .page-select .left-one svg {
+  .PageSelect .left-end svg,
+  .PageSelect .left-one svg {
     color: #f8f8f8;
   }
-  .page-select .right-end svg,
-  .page-select .right-one svg {
+  .PageSelect .right-end svg,
+  .PageSelect .right-one svg {
     fill: #050505;
   }
   @media screen and (min-width: 768px) {
-    .page-select {
+    .PageSelect {
       max-width: 446px;
       margin: 6.4rem auto;
       gap: 24px;
     }
-    .page-select .page-button {
+    .PageSelect .page-button {
       width: 44px;
       height: 44px;
     }

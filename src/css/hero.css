@@ -1,45 +1,45 @@
-.slider-container {
+.SliderContainer {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
-.header-main-chefs-section {
+.HeadeMainChefsSection {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 .content,
-.header-main-chefs-section img {
+.HeadeMainChefsSection img {
   border-radius: 8px;
   background-size: cover;
 }
-.header-chefs-main {
+.HeadeChefsMain {
   display: flex;
   transition: transform 0.5s ease-in-out;
   height: 100%;
 }
-.slide {
+.Slide {
   flex: 0 0 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 8px;
 }
-.image-container {
+.ImageContainer {
   border-radius: 8px;
   background-color: #050505;
   flex: 1;
   aspect-ratio: 137/468;
   overflow: hidden;
 }
-.small-image {
+.SmallImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .content,
-.image-med {
+.ImageMed {
   flex: 2;
   aspect-ratio: 351/468;
   position: relative;
@@ -66,14 +66,14 @@
     rgba(0, 0, 0, 0.6) 50%
   );
 }
-.second-content::before {
+.SecondContent::before {
   background: radial-gradient(
     circle at center,
     rgba(60.78%, 70.98%, 21.57%, 0.6) 0,
     rgba(0, 0, 0, 0.2) 75%
   ) !important;
 }
-.image-wrapper {
+.ImageWrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -85,12 +85,12 @@
   object-fit: contain;
   object-position: center;
 }
-.image-large {
+.ImageLarge {
   width: 100%;
   height: 100%;
   z-index: 1;
 }
-.text-content {
+.TextContent {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -99,38 +99,38 @@
   padding: 16px;
   text-align: center;
 }
-.image-med {
+.ImageMed {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.last-item {
+.LastItem {
   background-color: #050505;
   border-radius: 15px;
   overflow: hidden;
 }
-.slide p {
+.Slide p {
   font-size: 14px;
   line-height: 18px;
 }
-.slide .subtext {
+.Slide .subtext {
   font-size: 12px;
   line-height: 14px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header-main-chefs-section {
+  .HeadeMainChefsSection {
     width: 100%;
     max-width: 100%;
     height: 468px;
   }
-  .slide {
+  .Slide {
     flex: 0 0 100%;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     gap: 8px;
   }
-  .image-container {
+  .ImageContainer {
     flex: 1;
     aspect-ratio: 137/468;
     overflow: hidden;
@@ -142,17 +142,17 @@
     overflow: hidden;
     border-radius: 8px;
   }
-  .image-med {
+  .ImageMed {
     flex: 2;
     display: block;
     aspect-ratio: 351/468;
     overflow: hidden;
   }
-  .text-content {
+  .TextContent {
     padding: 8px;
     font-size: 12px;
   }
-  .slide-button {
+  .SlideButton {
     padding: 8px;
     gap: 4px;
   }
@@ -162,7 +162,7 @@
   }
 }
 @media (max-width: 767px) {
-  .slide {
+  .Slide {
     flex: 0 0 100%;
     height: 302px;
     display: flex;
@@ -170,7 +170,7 @@
     align-items: stretch;
     gap: 8px;
   }
-  .image-container {
+  .ImageContainer {
     flex: 1;
     aspect-ratio: 137/468;
     overflow: hidden;
@@ -182,18 +182,18 @@
     overflow: hidden;
     border-radius: 8px;
   }
-  .image-med {
+  .ImageMed {
     display: none;
   }
-  .text-content {
+  .TextContent {
     padding: 8px;
     font-size: 12px;
   }
-  .image-large {
+  .ImageLarge {
     width: 70%;
     height: 70%;
   }
-  .slide-button {
+  .SlideButton {
     padding: 8px;
     gap: 4px;
   }
@@ -204,18 +204,18 @@
 }
 
 @media (min-width: 1280px) {
-  .slider-container {
+  .SliderContainer {
     max-width: 602px;
   }
-  .header-main-chefs-section {
+  .HeadeMainChefsSection {
     height: 468px;
   }
-  .slide {
+  .Slide {
     flex: 0 0 602px;
     max-width: 602px;
     gap: 12px;
   }
-  .image-container {
+  .ImageContainer {
     flex: 0 0 115px;
     min-width: 115px;
   }
@@ -223,23 +223,23 @@
     flex: 0 0 230px;
     min-width: 230px;
   }
-  .last-item {
+  .LastItem {
     flex: 0 0 230px;
     min-width: 230px;
   }
-  .last-item .image-med {
+  .LastItem .ImageMed {
     width: 400px;
     height: 515px;
     object-position: center;
     transform: translate(-8%, -5%);
   }
-  .slide p {
+  .Slide p {
     font-size: 16px;
   }
-  .text-content {
+  .TextContent {
     padding: 20px;
   }
-  .slide-button {
+  .SlideButton {
     padding: 20px;
   }
   .indicator {
@@ -248,7 +248,7 @@
   }
 }
 
-.hero-section-order-now {
+.HeroSectionOrderNow {
   display: flex;
   width: Fixed (335px) px;
   height: Hug (143px) px;
@@ -258,7 +258,7 @@
   opacity: 0px;
 }
 
-.hero-section-order-card {
+.HeroSectionOrderCard {
   background: white;
   padding: 20px;
   margin: auto;
@@ -269,7 +269,7 @@
   left: 20px;
 }
 
-.hero-section-order-title {
+.HeroSectionOrderTitle {
   width: 335px;
   height: 93px;
   font-family: Inter;
@@ -281,7 +281,7 @@
   text-decoration-skip-ink: none;
 }
 
-.hero-section-highlight {
+.HeroSectionHighlight {
   font-style: italic;
   color: #7ea03f;
   font-family: Inter;
@@ -293,7 +293,7 @@
   text-decoration-skip-ink: none;
 }
 
-.hero-section-order-p {
+.HeroSectionOrderP {
   color: #555;
   font-family: Inter;
   font-size: 14px;
@@ -307,7 +307,7 @@
   margin-top: 16px;
 }
 
-.hero-section-order-button {
+.HeroSectionOrderButton {
   display: inline-block;
   background-color: white;
   margin-top: 32px;
@@ -330,13 +330,13 @@
   gap: 10px;
 }
 
-.hero-section-order-button:hover {
+.HeroSectionOrderButton:hover {
   background: #7ea03f;
   color: white;
 }
 
 @media screen and (min-width: 768px) {
-  .hero-section-order-now {
+  .HeroSectionOrderNow {
     display: flex;
     width: Fixed (446px) px;
     height: Hug (193px) px;
@@ -346,7 +346,7 @@
     opacity: 0px;
   }
 
-  .hero-section-order-card {
+  .HeroSectionOrderCard {
     background: white;
     width: Fixed (446px) px;
     height: Hug (193px) px;
@@ -356,7 +356,7 @@
     opacity: 0px;
   }
 
-  .hero-section-order-title {
+  .HeroSectionOrderTitle {
     font-family: Inter;
     font-size: 36px;
     font-weight: 600;
@@ -370,7 +370,7 @@
     opacity: 0px;
   }
 
-  .hero-section-highlight {
+  .HeroSectionHighlight {
     color: #7ea03f;
 
     font-family: Inter;
@@ -383,7 +383,7 @@
     text-decoration-skip-ink: none;
   }
 
-  .hero-section-order-p {
+  .HeroSectionOrderP {
     color: #555;
     max-width: 408px;
     height: 48px;
@@ -398,7 +398,7 @@
     text-decoration-skip-ink: none;
   }
 
-  .hero-section-order-button {
+  .HeroSectionOrderButton {
     display: inline-block;
     border: 1px solid #7ea03f;
     text-decoration: none;
@@ -421,14 +421,14 @@
     margin-top: 32px;
   }
 
-  .hero-section-order-button:hover {
+  .HeroSectionOrderButton:hover {
     background: #7ea03f;
     color: white;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .hero-section-order-now {
+  .HeroSectionOrderNow {
     display: flex;
     width: Fixed (446px) px;
     height: Hug (193px) px;
@@ -436,7 +436,7 @@
     right: 20px;
   }
 
-  .hero-section-order-card {
+  .HeroSectionOrderCard {
     background: white;
     width: Fixed (446px) px;
     height: Hug (193px) px;
@@ -445,7 +445,7 @@
     opacity: 0px;
   }
 
-  .hero-section-order-title {
+  .HeroSectionOrderTitle {
     font-family: Inter;
     font-size: 36px;
     font-weight: 600;
@@ -459,7 +459,7 @@
     opacity: 0px;
   }
 
-  .hero-section-highlight {
+  .HeroSectionHighlight {
     color: #7ea03f;
     font-family: Inter;
     font-size: 36px;
@@ -471,7 +471,7 @@
     text-decoration-skip-ink: none;
   }
 
-  .hero-section-order-p {
+  .HeroSectionOrderP {
     color: #555;
     max-width: 100%;
     height: 48px;
@@ -487,7 +487,7 @@
     text-decoration-skip-ink: none;
   }
 
-  .hero-section-order-button {
+  .HeroSectionOrderButton {
     display: inline-block;
     border: 1px solid #7ea03f;
     border-radius: 15px;
@@ -508,12 +508,12 @@
     padding: 14px 14px 14px 14px;
   }
 
-  .hero-section-order-button:hover {
+  .HeroSectionOrderButton:hover {
     background: #7ea03f;
     color: white;
   }
 }
-.slide-button {
+.SlideButton {
   padding: 16px;
   display: flex;
   justify-content: center;

@@ -10,7 +10,7 @@ const totalPages = Math.ceil(totalItems / itemsPerPage); // Sayfa sayısını he
 
 console.log(`Toplam öğe sayısı: ${totalItems}, Toplam sayfa sayısı: ${totalPages}`);
 
-const container = document.querySelector('.page-select');
+const container = document.querySelector('.PageSelect');
 
 const options = {
   totalItems: totalItems, // Dinamik olarak öğe sayısını belirledik

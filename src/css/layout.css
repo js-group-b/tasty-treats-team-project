@@ -1,4 +1,4 @@
-.hero-section-the-main-container {
+.HeroSectionTheMainContainer {
     display: flex;
     flex-direction: column;
     max-width: 375px;
@@ -6,12 +6,12 @@
     margin-bottom: 80px;
 }
 
-.hero-section-1 {
+.HeroSection1 {
     max-width: 375px;
     margin: auto;
 }
 
-.hero-section-2 {
+.HeroSection2 {
     max-width: 375px;
     margin: auto;
 }
@@ -28,7 +28,7 @@
         margin: auto;
     }
 
-    .hero-section-order-now {
+    .HeroSectionOrderNow {
         margin-top: 73px;
     }
 
@@ -52,15 +52,15 @@
         margin-bottom:64px;
     }
 
-    .hero-section-1 {
+    .HeroSection1 {
         max-width: 704px;
     }
 
-    .hero-section-2 {
+    .HeroSection2 {
         max-width: 704px;
     }
 
-    .hero-section-the-main-container {
+    .HeroSectionTheMainContainer {
         display: flex;
         flex-direction: column;
         max-width: 704px;
@@ -86,11 +86,11 @@
         gap: 65px;
     }
 
-    .hero-section-1 {
+    .HeroSection1 {
         max-width: 1082px;
     }
 
-    .hero-section-2 {
+    .HeroSection2 {
         max-width: 1082px;
         margin-top: 96px;
     }
@@ -100,7 +100,7 @@
         margin: auto;
     }
 
-    .hero-section-the-main-container {
+    .HeroSectionTheMainContainer {
         flex-direction: row;
         max-width: 1082px;
         margin-bottom: 100px;

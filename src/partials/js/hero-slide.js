@@ -14,10 +14,10 @@ fetchEvents();
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(()=>{
     import("../../../src/css/hero.css").then(() => {
-      const slider = document.querySelector(".header-chefs-main");
-      const slides = document.querySelectorAll(".slide");
+      const slider = document.querySelector(".HeadeChefsMain");
+      const slides = document.querySelectorAll(".Slide");
       const lazyImages = document.querySelectorAll(".lazy-image");
-      const indicatorsContainer = document.querySelector(".slide-button");
+      const indicatorsContainer = document.querySelector(".SlideButton");
       
       let currentIndex = 0;
       let slideWidth = 100;
