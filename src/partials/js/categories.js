@@ -2,23 +2,24 @@ import axios from 'axios';
 import { searchParams } from './cards.js';
 import { FetchAndMapCardsData } from './cards.js';
 
-const baseUrlCategories = 'https://tasty-treats-backend.p.goit.global/api/categories?';
-async function FetchCategories() {
+
+const BASE_URL_CATEGORİES = 'https://tasty-treats-backend.p.goit.global/api/categories?';
+async function fetchCategories() {
   try {
-    const urlCategory = `${baseUrlCategories}`;
-    const response = await axios.get(urlCategory);
-    const categories = response.data;
-    const categoryList = document.querySelector('#categories-list');
-    categoryList.innerHTML = '';
+    const URL_CATEGORY = `${BASE_URL_CATEGORİES}`;
+    const RESPONSE = await axios.get(URL_CATEGORY);
+    const CATEGORİES = RESPONSE.data;
+    const CATEGORY_LİST = document.querySelector('#CategoriesList');
+    CATEGORY_LİST.innerHTML = '';
 
-    categories.forEach(category => {
-      const listItem = document.createElement('li');
-      listItem.textContent = category.name;
-      listItem.setAttribute('data-id', category.id);
-      listItem.setAttribute('tabindex', '0'); 
-      categoryList.appendChild(listItem);
+    CATEGORİES.forEach(category => {
+      const LİST_ITEM = document.createElement('li');
+      LİST_ITEM.textContent = category.name;
+      LİST_ITEM.setAttribute('data-id', category.id);
+      LİST_ITEM.setAttribute('tabindex', '0'); 
+      CATEGORY_LİST.appendChild(LİST_ITEM);
 
-      listItem.addEventListener('click', (event) => {
+      LİST_ITEM.addEventListener('click', (event) => {
         searchParams.set('category', event.target.textContent);
         FetchAndMapCardsData();
         event.target.focus();
@@ -31,9 +32,8 @@ async function FetchCategories() {
 
 FetchCategories();
 
-
-const allCategoriesButon = document.querySelector(".all-categories-btn");
-  allCategoriesButon.addEventListener('click', ResetCategoriesFiltering);
+const ALL_CATEGORİES_BUTTON = document.querySelector(".AllCategoriesBtn");
+ALL_CATEGORİES_BUTTON.addEventListener('click', resetCategoriesFiltering);
 
   async function ResetCategoriesFiltering(){
     searchParams.set('category', '');

@@ -42,7 +42,7 @@ border-color: #121212;
 .darkMode .reset-filter-btn {
     color: var(--text-dark);
 }
-.darkMode .categories-list {
+.darkMode #CategoriesList {
     color: var(--text-dark);
 }
 .darkMode #ingredient-trigger-text {
@@ -127,8 +127,8 @@ background-color: var(--background-dark);
  background-color: var(--background-dark);
 }
 
-.darkMode .all-categories-btn{
-    background-color: #9bb537;;
+.darkMode .AllCategoriesBtn{
+    background-color: #9bb537;
     color: var(--text-dark);
 }
 .darkMode .heroSectionOrderP {

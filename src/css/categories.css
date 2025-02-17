@@ -1,16 +1,15 @@
-
-.all-categories-main-container {
+.AllCategoriesMainContainer {
   color: #0505054D;
   max-width: 335px;
-  margin:auto;
-  margin-bottom:40px;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
-.all-categories-content-div {
+.AllCategoriesContentDiv {
   margin: auto;
 }
 
-.all-categories-btn {
+.AllCategoriesBtn {
   background: none;
   border: 1px solid #0505054D;
   border-radius: 15px;
@@ -20,15 +19,16 @@
   color: #05050580;
 }
 
-.all-categories-btn:hover {
+.AllCategoriesBtn:hover {
   background-color: #9BB537;
   color: #F8F8F8;
 }
-.all-categories-btn:focus{
+
+.AllCategoriesBtn:focus {
   background-color: #9BB537;
 }
 
-.all-categories-menu {
+.AllCategoriesMenu {
 
   max-height: 198px;
   overflow-y: auto;
@@ -37,71 +37,67 @@
   margin-top: 15px;
 }
 
-.all-categories-menu::-webkit-scrollbar {
+.AllCategoriesMenu::-webkit-scrollbar {
   width: 8px;
 }
 
-.all-categories-menu::-webkit-scrollbar-thumb {
+.AllCategoriesMenu::-webkit-scrollbar-thumb {
   background-color: #0505052E;
   border-radius: 10px;
   border: 1px solid #ccc;
 }
 
-.all-categories-menu::-webkit-scrollbar-button {
+.AllCategoriesMenu::-webkit-scrollbar-button {
   display: none;
 }
 
-.categories-list {
+#CategoriesList {
   list-style: none;
 }
 
-.categories-list li {
+#CategoriesList li {
   padding: 10px;
   cursor: pointer;
   line-height: 20px;
 }
 
-#categories-list li:hover {
+#CategoriesList li:hover {
   color: #9BB537;
 }
 
-#categories-list li:focus{
+#CategoriesList li:focus {
   color: #9BB537;
 }
 
-@media (min-width: 768px)  {
-  .all-categories-btn {
+@media (min-width: 768px) {
+  .AllCategoriesBtn {
     max-width: 100%;
     width: 176px;
   }
 
-  .all-categories-menu {
+  .AllCategoriesMenu {
     max-height: 416px;
     width: 176px;
   }
 
-  .all-categories-main-container {
-    margin-bottom:64px;
+  .AllCategoriesMainContainer {
+    margin-bottom: 64px;
   }
-
 }
 
 @media(min-width: 1280px) {
-  .all-categories-main-container {
-    margin-bottom:64px;
+  .AllCategoriesMainContainer {
+    margin-bottom: 64px;
   }
 
-  .all-categories-menu {
+  .AllCategoriesMenu {
     max-height: 416px;
     width: 235px;
 
   }
 
-  .all-categories-btn {
+  .AllCategoriesBtn {
     width: 174px;
     max-width: 100%;
   }
-
-
 }
-
