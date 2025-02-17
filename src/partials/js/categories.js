@@ -30,12 +30,12 @@ async function fetchCategories() {
   }
 }
 
-FetchCategories();
+fetchCategories();
 
 const ALL_CATEGORİES_BUTTON = document.querySelector(".AllCategoriesBtn");
 ALL_CATEGORİES_BUTTON.addEventListener('click', resetCategoriesFiltering);
 
-  async function ResetCategoriesFiltering(){
+  async function resetCategoriesFiltering(){
     searchParams.set('category', '');
     await FetchAndMapCardsData();
   }
