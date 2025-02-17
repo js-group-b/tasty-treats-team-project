@@ -42,7 +42,7 @@ async function handleClickSeeRecipesButton(event) {
 
 
 
-export async function MakeSeeRecipeModalVisible(recipeID) {
+export async function makeSeeRecipeModalVisible(recipeID) {
   const modal = document.querySelector('#see-recipes-modal-form');
   const recipeId = recipeID;
   const recpieURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${recipeId}`;

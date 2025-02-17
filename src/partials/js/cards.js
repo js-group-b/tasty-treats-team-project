@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {MakeSeeRecipeModalVisible} from './see-recipes-modal'
+import {makeSeeRecipeModalVisible} from './see-recipes-modal'
 import { set } from 'lodash';
 
 const baseUrl4recipes = 'https://tasty-treats-backend.p.goit.global/api/recipes?';

@@ -242,13 +242,13 @@ const filterSearchTextField = document.querySelector(".filter-search-input");
 
 //setup before functions
 let typingTimer;                //timer identifier
-let doneTypingInterval = 300;  //time in ms (2 seconds)
+const DONE_TYPING_INTERVAL = 300;  //time in ms -> 0.3 seconds
 
 //on keyup, start the countdown
 filterSearchTextField.addEventListener('keyup', () => {
     clearTimeout(typingTimer);
     if (filterSearchTextField.value) {
-        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        typingTimer = setTimeout(doneTyping, DONE_TYPING_INTERVAL);
     }
 });
 

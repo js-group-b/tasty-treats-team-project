@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {MakeSeeRecipeModalVisible} from './see-recipes-modal'
+import {makeSeeRecipeModalVisible} from './see-recipes-modal'
 
 const popiRecipesUrl = "https://tasty-treats-backend.p.goit.global/api/recipes/popular";
 
@@ -34,7 +34,7 @@ async function getPopularRecipesData(){
 
 
         async function handleClickSeeRecipesButton(event){
-            await MakeSeeRecipeModalVisible(event.target.id);
+            await makeSeeRecipeModalVisible(event.target.id);
         }
 
     }
