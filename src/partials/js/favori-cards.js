@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {MakeSeeRecipeModalVisible} from './see-recipes-modal';
+import {makeSeeRecipeModalVisible} from './see-recipes-modal';
 
 
 
@@ -44,7 +44,7 @@ async function GetLocalStorageAndFetchAll(){
     // }
 
     // async function handleClickSeeRecipesButton(event){
-    //     await MakeSeeRecipeModalVisible(event.target.id);
+    //     await makeSeeRecipeModalVisible(event.target.id);
     // }
 }
 
