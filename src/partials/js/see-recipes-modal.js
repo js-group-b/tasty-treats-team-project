@@ -63,9 +63,13 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
          <div id="see-recipes-modal-info">
         <p id="see-recipes-modal-tags">${response.data.tags.map(tag => `<span>#${tag}</span>`).join('')}</p>
        <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
-       <span id="see-recipes-modal-rating-stars" class="stars">
-         ${'★ '.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
-       </span></p>
+      <span id="see-recipes-modal-rating-stars" class="stars">
+  ${Array.from({ length: 5 }, (_, index) =>
+      index < Math.round(response.data.rating)
+        ? `<img src="./public/img/star.png">`
+        : `<img src="./public/img/star-empty.png">`
+    ).join('')}
+</span>
         <p id="see-recipes-modal-time">${response.data.time} min</p>
          </div>
         </div>
@@ -94,7 +98,7 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
   <button id="see-recipes-modal-rating-btn">Give a rating</button>
     </div>
   `;
-  
+
   seeRecipesContent.innerHTML = modalInnerHTML;
 
   modal.style.display = 'flex';
