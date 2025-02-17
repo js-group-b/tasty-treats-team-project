@@ -43,7 +43,7 @@ background-color: var(--background-dark);
 .dark-mode .reset-filter-btn {
     color: var(--text-dark);
 }
-.dark-mode .categories-list {
+.dark-mode #CategoriesList {
     color: var(--text-dark);
 }
 .dark-mode #ingredient-trigger-text {
@@ -128,8 +128,8 @@ background-color: var(--background-dark);
  background-color: var(--background-dark);
 }
 
-.dark-mode .all-categories-btn{
-    background-color: #9bb537;;
+.dark-mode .AllCategoriesBtn{
+    background-color: #9bb537;
     color: var(--text-dark);
 }
 .dark-mode .hero-section-order-p {
