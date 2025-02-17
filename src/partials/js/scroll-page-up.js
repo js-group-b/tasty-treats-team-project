@@ -1,4 +1,4 @@
-const scrollBtn = document.getElementById("scroll-page-up");
+const scrollBtn = document.getElementById("ScrollPageUp");
 
 function DisplayHideBackToTop() {
   if (window.scrollY > 350) {
@@ -15,6 +15,8 @@ function BackToPageUp(event) {
   });
 }
 
-window.addEventListener("scroll", DisplayHideBackToTop);
+scrollBtn.style.display = "none";
+window.addEventListener("scroll", displayHideBackToTop);
+
 
 scrollBtn.addEventListener("click", s => BackToPageUp(s));
