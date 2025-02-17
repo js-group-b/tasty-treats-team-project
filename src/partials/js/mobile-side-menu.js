@@ -5,32 +5,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuLinks = document.querySelectorAll('.mobile-menu a');
 
   // Menü açma fonksiyonu
-  function openMenu() {
+  function OpenMenu() {
     mobileMenu.classList.add('open');
     menuLinks.forEach(link => (link.style.color = 'white')); // Yazıları beyaz yap
   }
 
   // Menü kapatma fonksiyonu
-  function closeMenu() {
+  function CloseMenu() {
     mobileMenu.classList.remove('open');
   }
 
   // Menü butonuna tıklanınca aç
   menuButton.addEventListener('click', function (event) {
     event.preventDefault();
-    openMenu();
+    OpenMenu();
   });
 
   // Kapatma butonuna tıklanınca kapa
   closeButton.addEventListener('click', function (event) {
     event.preventDefault();
-    closeMenu();
+    CloseMenu();
   });
 
   // Menü içindeki linklere tıklanınca menüyü kapat
   menuLinks.forEach(link => {
     link.addEventListener('click', function () {
-      closeMenu();
+      CloseMenu();
     });
   });
 });

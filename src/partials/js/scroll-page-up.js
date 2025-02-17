@@ -1,13 +1,13 @@
 const scrollBtn = document.getElementById("scroll-page-up");
 
-function displayHideBackToTop() {
+function DisplayHideBackToTop() {
   if (window.scrollY > 350) {
     scrollBtn.style.display = "block";
   } else {
     scrollBtn.style.display = "none";
   }
 }
-function backToPageUp(event) {
+function BackToPageUp(event) {
   event.preventDefault();
   window.scrollTo({
     top: 0,
@@ -15,6 +15,6 @@ function backToPageUp(event) {
   });
 }
 
-window.addEventListener("scroll", displayHideBackToTop);
+window.addEventListener("scroll", DisplayHideBackToTop);
 
-scrollBtn.addEventListener("click", s => backToPageUp(s));
+scrollBtn.addEventListener("click", s => BackToPageUp(s));

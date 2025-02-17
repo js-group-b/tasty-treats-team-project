@@ -1,4 +1,4 @@
-.hero-modal-now-form {
+.heroModalNowForm {
   display: none; /* flex */
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
   background-color: #f4f4f4;
 }
 
-.order-now-modal {
+.orderNowModal {
   display: none;
   position: fixed;
   /* position: absolute;  */
@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.order-modal-content {
+.orderModalContent{
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -32,7 +32,7 @@
   position: relative;
 }
 
-.order-modal-title {
+.orderModalTitle {
   color: #333;
   margin-bottom: 15px;
   font-family: var(--font-family);
@@ -44,7 +44,7 @@
   text-decoration-skip-ink: none;
 }
 
-.order-now-close {
+.orderNowClose {
   position: absolute;
   right: 15px;
   top: 10px;
@@ -55,12 +55,12 @@
   color: #050505;
 }
 
-.hero-order-modal-form {
+.heroOrderModalForm {
   display: flex;
   flex-direction: column;
 }
 
-.order-modal-label {
+.orderModalLabel {
   margin-top: 18px;
   margin-bottom: 8px;
   width: 100%;
@@ -76,8 +76,8 @@
   text-decoration-skip-ink: none;
 }
 
-.hero-order-modal-input,
-.hero-order-modal-textarea {
+.heroOrderModalInput,
+.heroOrderModalTextarea{
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -93,12 +93,12 @@
   text-decoration-skip-ink: none;
 }
 
-.hero-order-modal-textarea {
+.heroOrderModalTextarea {
   resize: vertical;
   min-height: 80px;
 }
 
-.hero-order-submit-btn {
+.heroOrderSubmitBtn {
   background-color: #a6c54a;
   color: white;
 
@@ -113,12 +113,12 @@
   height: 48px;
 }
 
-.hero-order-submit-btn:hover {
+.heroOrderSubmitBtn:hover {
   background-color: #8faa39;
 }
 
 @media (min-width: 768px) {
-  .order-modal-content {
+  .orderModalContent {
     width: 100%;
     height: auto;
   }
