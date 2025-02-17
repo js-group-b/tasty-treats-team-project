@@ -50,7 +50,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 18px
+    right: 18px;
 }
 
 .filter-custom-select-trigger {
@@ -62,8 +62,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 18px;
-    font-size: 1.4rem;
+    font-size: 16px;
     color: var(--border-color)
+}
+
+.filter-custom-select-trigger.selected {
+color: var(--secondary-color)
 }
 
 .area-container,.time-container {
@@ -76,7 +80,7 @@
 
 .filter-form-label {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 12px;
     line-height: 14px;
     font-weight: 500;
     color: var(--border-color);
@@ -84,6 +88,8 @@
 }
 
 .filter-options {
+    display: flex;
+    flex-direction: column;
     max-height: 176px;
     padding: 14px 18px;
     background-color: var(--white-bg);
@@ -107,8 +113,9 @@
 }
 
 .option {
-    font-size: 1.4rem;
-    line-height: 18px;
+    
+    font-size: 16px;
+    line-height: 20px;
     color: var(--border-color);
     cursor: pointer
 }
@@ -177,7 +184,7 @@
     }
 
     .filter-custom-select-trigger {
-        font-size: 1.6rem
+        font-size: 16px;
     }
 
     .time-container,.area-container {
@@ -190,8 +197,8 @@
         flex-grow: 0
     }
 
-    .form-lanbel {
-        font-size: 1.4rem;
+    .filter-form-label {
+        font-size: 16px;
         line-height: 18px
     }
 
@@ -200,8 +207,8 @@
     }
 
     .option {
-        font-size: 1.6rem;
-        line-height: 20px
+        font-size: 16px;
+        line-height: 24px
     }
 
     .filter-form-container {
@@ -220,7 +227,7 @@
     }
 
     .time-container {
-        flex-basis: calc(15% - 16px)
+        flex-basis: calc(15% - 12px)
     }
 
     .area-container {

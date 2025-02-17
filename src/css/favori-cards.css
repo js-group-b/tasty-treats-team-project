@@ -1,0 +1,97 @@
+.favorite-cards-section-ul {
+    margin:auto;
+    align-items: center;
+}
+.cards-section-content-div{
+    color:white;
+    margin:auto;
+}
+
+.favorite-cards-section-card-item-inner-div {
+    position: relative;
+}
+
+.favorite-cards-section-card-item-inner-div img {
+    display: block;
+}
+
+.favorite-cards-image-div{
+    max-width:335px;
+    margin:auto;
+}
+
+.favorite-cards-image{
+    content:url("../img/favs-card-mobile.png");
+    width: 335px;
+    height: 516px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+
+.favorite-cards-image-div{
+    max-width:704px;
+    margin:auto;
+}
+    
+.favorite-cards-image{
+    content:url("../img/favs-card-tablet.png");
+    width: 704px;
+    height: 356px;
+}
+.cards-section-content-div{
+    margin:auto;
+    max-width: 704px;
+}
+.favorite-cards-section-card-item-inner-div > img {
+    max-width:224px;
+    max-height: 264px;
+}
+.cards-section-favorites-button {
+    left:188px;
+}
+.favorite-cards-section-ul {
+    width:704px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.cards-section-card-content {
+    width:240px;
+    top:143px;
+}
+
+}
+
+@media only screen and (min-width: 1280px) {
+    .favorite-cards-section-ul {
+        width:1080px;
+    }
+    .cards-section-content-div{
+        margin:auto;
+        max-width: 1080px;
+    }
+    .favorite-cards-section-card-item-inner-div > img {
+        max-width:258px;
+        max-height: 287px;
+    }
+    .favorite-cards-image-div{
+        max-width:1080px;
+        margin:auto;
+    }
+    .favorite-cards-image{
+        content:url("../img/favs-card-desktop.png");
+        width: 1080px;
+        height: 356px;
+    }
+    .cards-section-favorites-button {
+        left:220px;
+    }
+
+    .cards-section-card-content {
+        width:240px;
+        top:143px;
+    }
+}

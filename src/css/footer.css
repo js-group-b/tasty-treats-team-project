@@ -1,4 +1,6 @@
+
 .ScrollToUp{
+
     width: 3.2rem;
     height: 3.2rem;
     background-color: var(--primary-color);
@@ -12,6 +14,7 @@
     z-index: 1000;
     border-radius: 50%;
 }
+
 .ScrollToUp:hover{
     background-color: #889E2F;
 }
@@ -104,3 +107,37 @@
       gap: 10px;
     }
   }
+=======
+
+.scroll-to-up:hover {
+    background-color: #889E2F;
+}
+
+.Footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.Heart {
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: red;
+    }
+
+    50% {
+        transform: scale(1.2);
+        color: pink;
+    }
+
+    100% {
+        transform: scale(1);
+        color: red;
+    }
+}
+

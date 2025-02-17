@@ -3,7 +3,7 @@ import {MakeSeeRecipeModalVisible} from './see-recipes-modal'
 
 const popiRecipesUrl = "https://tasty-treats-backend.p.goit.global/api/recipes/popular";
 
-async function getPopularRecipesData(){
+async function GetPopularRecipesData(){
     try {
         const response = await axios.get(popiRecipesUrl)
         const  popularRecipesData = response.data
@@ -24,27 +24,24 @@ async function getPopularRecipesData(){
             ).join("");
         popularRecipesUL.innerHTML = popularRecipesMarkup;
 
+        //adding event listener to popular recipes images and getting the data for that particular recipe
+
+        const popularRecipesImg = document.getElementsByClassName("pop-recipe-img");
+
+        for (let i = 0 ; i < popularRecipesImg.length ; i++){
+            popularRecipesImg[i].addEventListener('click', HandleClickSeeRecipesButton);
+        }
+
+
+        async function HandleClickSeeRecipesButton(event){
+            await MakeSeeRecipeModalVisible(event.target.id);
+        }
+
     }
     catch(error){
         console.log(error)
     }
 }
 
-await getPopularRecipesData();
+GetPopularRecipesData();
 
-//adding event listener to popular recipes images and getting the data for that particular recipe
-
-const popularRecipesImg = document.getElementsByClassName("pop-recipe-img");
-
-for (let i = 0 ; i < popularRecipesImg.length ; i++){
-    popularRecipesImg[i].addEventListener('click', handleClickSeeRecipesButton);
-}
-
-
-async function handleClickSeeRecipesButton(event){
-    console.log("tıklanan tarifin id'si:",event.target.id);
-    let getRecipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${event.target.id}`;
-    const responseRecipe = await axios.get(getRecipeByIdURL);
-    console.log("tıklanan tarife ait modal'da kullanılacak data:", responseRecipe.data);
-    MakeSeeRecipeModalVisible();
-}
