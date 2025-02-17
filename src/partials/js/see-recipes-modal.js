@@ -28,19 +28,7 @@ async function HandleClickSeeRecipesButton(event) {
   document.querySelector("#see-recipes-modal-time").innerText = `${recipeData.time} min`;
   document.querySelector("#see-recipes-modal-material").innerText = recipeData.ingredients.join(', ');
   document.querySelector("#see-recipes-modal-instructions").innerText = recipeData.instructions;
-
-  // const modal = document.querySelector('#see-recipes-modal-form');
-  // console.log(modal);
-
-  // const closeButton = document.querySelector('.see-recipes-close-btn');
-  // closeButton.addEventListener('click', () => {
-  //   modal.style.display = 'none';
-  // });
- 
-
 }
-
-
 
 export async function MakeSeeRecipeModalVisible(recipeID) {
   const modal = document.querySelector('#see-recipes-modal-form');
@@ -108,12 +96,6 @@ export async function MakeSeeRecipeModalVisible(recipeID) {
   `;
   
   seeRecipesContent.innerHTML = modalInnerHTML;
-
-  // const addToFavorites = document.querySelector('#see-recipes-modal-favorite-btn');
-
-  // addToFavorites.addEventListener('click', function () {
-  //   HandleClickHerthIcon();
-  // });
 
   modal.style.display = 'flex';
 
