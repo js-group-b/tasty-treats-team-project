@@ -30,7 +30,6 @@ async function fetchCategories() {
   }
 }
 
-
 fetchCategories();
 
 const ALL_CATEGORİES_BUTTON = document.querySelector(".AllCategoriesBtn");
