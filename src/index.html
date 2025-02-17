@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tasty Treats</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="path-to-modern-normalize/modern-normalize.css">
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
-
-<body>
-  <load src="./partials/header.html" />
-  <main>
-    <load src="./partials/hero.html" />
-    <div class="main-main-parent-container">
-      <div class="categories-n-popular-container">
-        <load src="./partials/categories.html" />
-        <load src="./partials/popular-recipes.html" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Treats</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load src="./partials/header.html" />
+    <main>
+      <load src="./partials/hero.html" />
+      <div class="main-main-parent-container">
+        <div class="categories-n-popular-container">
+          <load src="./partials/categories.html" />
+          <load src="./partials/popular-recipes.html" />
+        </div>
+        <div class="filters-n-cards-container">
+          <load src="./partials/filters.html" />
+          <load src="./partials/cards.html" />
+        </div>
       </div>
-      <div class="filters-n-cards-container">
-        <load src="./partials/filters.html" />
-        <load src="./partials/cards.html" />
-      </div>
-    </div>
-    <load src="./partials/see-recipes-modal.html" />
-    <load src="./partials/order-now-modal.html" />
-  </main>
-  <load src="./partials/footer.html" />
-  <script type="module" src="./partials/js/categories.js"></script>
-  <script type="module" src="./partials/js/see-recipes-modal.js"></script>
-  <script type="module" src="./partials/js/cards.js"></script>
-  <script type="module" src="./partials/js/popular-recipes.js"></script>
-  <script type="module" src="./main.js"></script>
-  <script type="module" src="./partials/js/hero-order-modal.js"></script>
-  <script type="module" src="./partials/js/hero-slide.js"></script>
-  <script type="module" src="./partials/js/filters.js"></script>
-  <script type="module" src="./partials/js/scroll-page-up.js"></script>
-  <script type="module" src="./partials/js/dark-theme.js"></script>
-  <script type="module" src="./partials/js/mobile-side-menu.js"></script>
-</body>
-
+      <load src="./partials/see-recipes-modal.html" />
+      <load src="./partials/order-now-modal.html" />
+    </main>
+    <load src="./partials/footer.html" />
+    <script type="module" src="./partials/js/categories.js"></script>
+    <script type="module" src="./partials/js/see-recipes-modal.js"></script>
+    <script type="module" src="./partials/js/cards.js"></script>
+    <script type="module" src="./partials/js/popular-recipes.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./partials/js/hero-order-modal.js"></script>
+    <script type="module" src="./partials/js/hero-slide.js"></script>
+    <script type="module" src="./partials/js/ScrollPageUp.js"></script>
+    <script type="module" src="./partials/js/pagination.js"></script>
+  </body>
 </html>
