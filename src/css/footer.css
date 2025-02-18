@@ -15,3 +15,30 @@
 .scroll-to-up:hover{
     background-color: #889E2F;
 }
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.heart {
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: red;
+    }
+
+    50% {
+        transform: scale(1.2);
+        color: pink;
+    }
+
+    100% {
+        transform: scale(1);
+        color: red;
+    }
+}
