@@ -29,18 +29,7 @@ async function handleClickSeeRecipesButton(event) {
   document.querySelector("#see-recipes-modal-material").innerText = recipeData.ingredients.join(', ');
   document.querySelector("#see-recipes-modal-instructions").innerText = recipeData.instructions;
 
-  // const modal = document.querySelector('#see-recipes-modal-form');
-  // console.log(modal);
-
-  // const closeButton = document.querySelector('.see-recipes-close-btn');
-  // closeButton.addEventListener('click', () => {
-  //   modal.style.display = 'none';
-  // });
- 
-
 }
-
-
 
 export async function makeSeeRecipeModalVisible(recipeID) {
   const modal = document.querySelector('#see-recipes-modal-form');
@@ -70,30 +59,33 @@ export async function makeSeeRecipeModalVisible(recipeID) {
           <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
        <h2 id="see-recipes-modal-name-mobil">${response.data.title.toUpperCase()}</h2>
-
         <div id="see-recipes-modal-info-tablet-desktop">
          <div id="see-recipes-modal-info">
         <p id="see-recipes-modal-tags">${response.data.tags.map(tag => `<span>#${tag}</span>`).join('')}</p>
        <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
        <span id="see-recipes-modal-rating-stars" class="stars">
-         ${'★ '.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
+         ${Array.from({ length: 5 }, (_, index) =>
+           index < Math.round(response.data.rating)
+             ? `<img src="./public/img/star.png">`
+             : `<img src="./public/img/star-empty.png">`
+         ).join("")}
        </span></p>
         <p id="see-recipes-modal-time">${response.data.time} min</p>
          </div>
         </div>
-
-
        <div id="see-recipes-modal-info-mobil">
        <div id="see-recipes-modal-info-rat">
        <p><span id="see-recipes-modal-rating">${response.data.rating}</span>
        <span id="see-recipes-modal-rating-stars" class="stars">
-         ${'★ '.repeat(Math.round(response.data.rating))} ${'☆'.repeat(5 - Math.round(response.data.rating))}
+       ${Array.from({ length: 5 }, (_, index) =>
+         index < Math.round(response.data.rating)
+           ? `<img src="./public/img/star.png">`
+           : `<img src="./public/img/star-empty.png">`
+       ).join("")}
        </span></p>
         <p id="see-recipes-modal-time">${response.data.time} min</p>
            </div>
         </div>
-
-
        <span class="see-recipes-close-btn">&times;</span>
        <div id="see-recipes-modal-material">${ingredientsHTML}</div>
        <div id="see-recipes-modal-info-mobil">
@@ -139,5 +131,3 @@ export async function makeSeeRecipeModalVisible(recipeID) {
   }
 
 }
-
-
