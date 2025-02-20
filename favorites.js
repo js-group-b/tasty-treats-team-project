@@ -1,8 +1,8 @@
-import"./assets/dark-theme-DGa9OxoV.js";import{a as d}from"./assets/vendor-BhqcI0kQ.js";async function n(){let c=localStorage.getItem("favorites"),s;if(c==null){s=[];const t=document.createElement("div");t.className="no-favorites-message",t.innerHTML=`
-            <p>It appears that you haven't added any recipes to your favorites yet. 
-            To get started, you can add recipes that you like to your favorites 
-            for easier access in the future.</p>
-        `,document.querySelector(".favorite-cards-section-ul").appendChild(t)}else s=await JSON.parse(c);for(let t=0;t<s.length;t++)await l(s[t]);const o=document.getElementsByClassName("cards-section-favorites-button");for(let t=0;t<o.length;t++)o[t].addEventListener("click",e);async function e(t){const i=t.target.id.substring(5);let r=localStorage.getItem("favorites"),a;a=localStorage.getItem("favorites"),r=await JSON.parse(a),r.splice(r.indexOf(i),1),a=JSON.stringify(r),localStorage.setItem("favorites",a),document.querySelector(".favorite-cards-section-ul").innerHTML="",n()}}async function l(c){try{const s=`https://tasty-treats-backend.p.goit.global/api/recipes/${c}`,e=await(await d.get(s)).data,t=document.querySelector(".favorite-cards-section-ul");let i="";for(let a=0;a<5;a++)a<Math.floor(e.rating+.4)?i+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />':i+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />';const r=`<li class="cards-section-card-items">
+import"./assets/dark-theme-DGa9OxoV.js";import{a as d}from"./assets/vendor-BhqcI0kQ.js";async function n(){let c=localStorage.getItem("favorites"),s;if(c==null){if(s=[],!document.querySelector(".no-favorites-message")){const t=document.createElement("div");t.className="no-favorites-message",t.innerHTML=`
+                <p>It appears that you haven't added any recipes to your favorites yet. 
+                To get started, you can add recipes that you like to your favorites 
+                for easier access in the future.</p>
+            `,favoriteCardsSectionUL.appendChild(t)}}else s=await JSON.parse(c);for(let t=0;t<s.length;t++)await l(s[t]);const o=document.getElementsByClassName("cards-section-favorites-button");for(let t=0;t<o.length;t++)o[t].addEventListener("click",e);async function e(t){const r=t.target.id.substring(5);let i=localStorage.getItem("favorites"),a;a=localStorage.getItem("favorites"),i=await JSON.parse(a),i.splice(i.indexOf(r),1),a=JSON.stringify(i),localStorage.setItem("favorites",a),document.querySelector(".favorite-cards-section-ul").innerHTML="",n()}}async function l(c){try{const s=`https://tasty-treats-backend.p.goit.global/api/recipes/${c}`,e=await(await d.get(s)).data,t=document.querySelector(".favorite-cards-section-ul");let r="";for(let a=0;a<5;a++)a<Math.floor(e.rating+.4)?r+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />':r+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />';const i=`<li class="cards-section-card-items">
                        <div class="favorite-cards-section-card-item-inner-div">
 
                             <svg id="svg__${e._id}"class="cards-section-favorites-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +17,7 @@ import"./assets/dark-theme-DGa9OxoV.js";import{a as d}from"./assets/vendor-BhqcI
                                    <div class="cards-section-ratings-div">
                                        <p class="cards-section-card-bottom-div-rating-p">${e.rating}</p>     
 
-                                        ${i}
+                                        ${r}
 
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
@@ -26,5 +26,5 @@ import"./assets/dark-theme-DGa9OxoV.js";import{a as d}from"./assets/vendor-BhqcI
                                </div>
                            </div>
                        </div>
-                   </li> `;t.innerHTML+=r}catch{console.log("error occurd while fetching the data :C")}}n();
+                   </li> `;t.innerHTML+=i}catch{console.log("error occurd while fetching the data :C")}}n();
 //# sourceMappingURL=favorites.js.map
