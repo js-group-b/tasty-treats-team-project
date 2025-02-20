@@ -77,7 +77,7 @@ export async function fetchAndMapCardsData(){
         }
 
         async function handleClickSeeRecipesButton(event){
-            await MakeSeeRecipeModalVisible(event.target.id);
+            await makeSeeRecipeModalVisible(event.target.id);
         }
 
 
