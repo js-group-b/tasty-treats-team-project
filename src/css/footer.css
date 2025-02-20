@@ -15,7 +15,7 @@
 .scroll-to-up:hover{
     background-color: #889E2F;
 }
-.footer {
+.footer-text {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;

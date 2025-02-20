@@ -1,41 +1,44 @@
 import axios from 'axios';
-import {makeSeeRecipeModalVisible} from './see-recipes-modal';
+import { makeSeeRecipeModalVisible } from './see-recipes-modal';
 
 
 
 
-async function GetLocalStorageAndFetchAll(){
+async function GetLocalStorageAndFetchAll() {
     let favsStr = localStorage.getItem('favorites');
     let myFavoritedRecipeIDs;
-    if (favsStr == null){
+    if (favsStr == null) {
         myFavoritedRecipeIDs = [];
 
-        if (!document.querySelector(".no-favorites-message")) {
-            const messageDiv = document.createElement("div");
-            messageDiv.className = "no-favorites-message";
-            messageDiv.innerHTML = `
-                <p>It appears that you haven't added any recipes to your favorites yet. 
-                To get started, you can add recipes that you like to your favorites 
-                for easier access in the future.</p>
-            `;
-            favoriteCardsSectionUL.appendChild(messageDiv);
-        }
-    }else{
-        myFavoritedRecipeIDs = await JSON.parse(favsStr); 
+    } else {
+        myFavoritedRecipeIDs = await JSON.parse(favsStr);
     }
 
-    for (let i = 0 ; i < myFavoritedRecipeIDs.length ; i++){
+    if (myFavoritedRecipeIDs.length === 0) {
+        const favoriteCardsSectionUL2 = document.querySelector("#favorite-cards-section-ul-id");
+        const messageDiv = document.createElement("div");
+        messageDiv.className = "no-favorites-message";
+        messageDiv.innerHTML = `
+        <img src="./favicon/mstile-150x150.png">
+            <p>It appears that you haven't added any recipes to your favorites yet. 
+            To get started, you can add recipes that you like to your favorites 
+            for easier access in the future.</p>
+        `;
+        favoriteCardsSectionUL2.appendChild(messageDiv);
+    }
+
+    for (let i = 0; i < myFavoritedRecipeIDs.length; i++) {
         await fetchRecipeData(myFavoritedRecipeIDs[i]);
     }
     // add event listeners to heart icons
     const heartIconSvg = document.getElementsByClassName("cards-section-favorites-button");
 
-    for (let i = 0 ; i < heartIconSvg.length ; i++){
+    for (let i = 0; i < heartIconSvg.length; i++) {
         heartIconSvg[i].addEventListener('click', HandleClickHerthIcon);
     }
 
-    async function HandleClickHerthIcon(event){
-        const idOfClickedFavItem = event.target.id.substring(5); 
+    async function HandleClickHerthIcon(event) {
+        const idOfClickedFavItem = event.target.id.substring(5);
         let currentFavs = localStorage.getItem('favorites');
         let stringifiedListOfFavs;
         stringifiedListOfFavs = localStorage.getItem('favorites');
@@ -44,7 +47,7 @@ async function GetLocalStorageAndFetchAll(){
         stringifiedListOfFavs = JSON.stringify(currentFavs);
         localStorage.setItem('favorites', stringifiedListOfFavs);
         document.querySelector(".favorite-cards-section-ul").innerHTML = "";
-        GetLocalStorageAndFetchAll();  
+        GetLocalStorageAndFetchAll();
     }
 
     // // adding event listener to "see recipes" button
@@ -59,24 +62,24 @@ async function GetLocalStorageAndFetchAll(){
     // }
 }
 
-async function fetchRecipeData(recipeId){
+async function fetchRecipeData(recipeId) {
     try {
-        const recipeByIdURL =  `https://tasty-treats-backend.p.goit.global/api/recipes/${recipeId}`;
+        const recipeByIdURL = `https://tasty-treats-backend.p.goit.global/api/recipes/${recipeId}`;
 
         const response = await axios.get(recipeByIdURL);
-        const  favCardsData = await response.data;
+        const favCardsData = await response.data;
 
         const favoriteCardsSectionUL = document.querySelector(".favorite-cards-section-ul");
 
         let setOfStars = "";
-            for (let i =0 ; i< 5; i++ ){
-               if (i < Math.floor(favCardsData.rating+0.4)){
-                   setOfStars += `<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />`
-               }
-               else {
-                   setOfStars += `<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />`
-               }
-            } 
+        for (let i = 0; i < 5; i++) {
+            if (i < Math.floor(favCardsData.rating + 0.4)) {
+                setOfStars += `<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />`
+            }
+            else {
+                setOfStars += `<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />`
+            }
+        }
 
 
         const favCardsMarkup = `<li class="cards-section-card-items">
@@ -88,8 +91,8 @@ async function fetchRecipeData(recipeId){
 
                            <img class="cards-section-card-image" style=" background: linear-gradient(rgba(5, 5, 5, .5), rgba(5, 5, 5, .5)), url(${favCardsData.preview});" />
                            <div class="cards-section-card-content">
-                               <h3 class="cards-section-card-content-title">${ favCardsData.title.length < 20 ? favCardsData.title.toUpperCase() : favCardsData.title.toUpperCase().substring(0, 20) + "..."}</h3>
-                               <p class="cards-section-card-content-p">${favCardsData.description.substring(0,57)}...</p>
+                               <h3 class="cards-section-card-content-title">${favCardsData.title.length < 20 ? favCardsData.title.toUpperCase() : favCardsData.title.toUpperCase().substring(0, 20) + "..."}</h3>
+                               <p class="cards-section-card-content-p">${favCardsData.description.substring(0, 57)}...</p>
                                <div class="cards-section-card-bottom-div">
                                    <div class="cards-section-ratings-div">
                                        <p class="cards-section-card-bottom-div-rating-p">${favCardsData.rating}</p>     
@@ -105,10 +108,10 @@ async function fetchRecipeData(recipeId){
                        </div>
                    </li> `;
 
-        favoriteCardsSectionUL.innerHTML +=  favCardsMarkup;
-        
+        favoriteCardsSectionUL.innerHTML += favCardsMarkup;
+
     }
-    catch{
+    catch {
         console.log("error occurd while fetching the data :C");
     }
 }
