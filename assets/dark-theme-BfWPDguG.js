@@ -42,4 +42,4 @@ import{a as p}from"./vendor-BhqcI0kQ.js";(function(){const a=document.createElem
   <button id="see-recipes-modal-rating-btn">Give a rating</button>
     </div>
   `;t.innerHTML=g,a.style.display="flex";const y=document.querySelector(".see-recipes-close-btn"),l=document.querySelector("#see-recipes-modal");y.addEventListener("click",d),document.addEventListener("keydown",i=>{i.key==="Escape"&&d()}),l.addEventListener("click",i=>{i.target===l&&d()});function d(){const i=document.querySelector("#see-recipes-modal-form");i.style.display="none"}}window.global||(window.global=window);document.addEventListener("DOMContentLoaded",()=>{const s=document.querySelector(".switch input");localStorage.getItem("theme")==="dark"?(document.body.classList.add("dark-mode"),s.checked=!0):(document.body.classList.remove("dark-mode"),s.checked=!1),s.addEventListener("change",()=>{s.checked?(document.body.classList.add("dark-mode"),localStorage.setItem("theme","dark")):(document.body.classList.remove("dark-mode"),localStorage.setItem("theme","light"))})});export{h as m};
-//# sourceMappingURL=dark-theme-DGa9OxoV.js.map
+//# sourceMappingURL=dark-theme-BfWPDguG.js.map
