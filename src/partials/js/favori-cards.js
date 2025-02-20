@@ -4,7 +4,7 @@ import { makeSeeRecipeModalVisible } from './see-recipes-modal';
 
 
 
-async function GetLocalStorageAndFetchAll() {
+async function getLocalStorageAndFetchAll() {
     let favsStr = localStorage.getItem('favorites');
     let myFavoritedRecipeIDs;
     if (favsStr == null) {
@@ -47,19 +47,8 @@ async function GetLocalStorageAndFetchAll() {
         stringifiedListOfFavs = JSON.stringify(currentFavs);
         localStorage.setItem('favorites', stringifiedListOfFavs);
         document.querySelector(".favorite-cards-section-ul").innerHTML = "";
-        GetLocalStorageAndFetchAll();
+        getLocalStorageAndFetchAll();
     }
-
-    // // adding event listener to "see recipes" button
-    // const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
-
-    // for (let i = 0 ; i < seeRecipeButtons.length ; i++){
-    //     seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
-    // }
-
-    // async function handleClickSeeRecipesButton(event){
-    //     await makeSeeRecipeModalVisible(event.target.id);
-    // }
 }
 
 async function fetchRecipeData(recipeId) {
@@ -117,6 +106,22 @@ async function fetchRecipeData(recipeId) {
 }
 
 
-GetLocalStorageAndFetchAll();
+async function loadAll(){
+    await getLocalStorageAndFetchAll();
+    
+    // adding event listener to "see recipes" button
+    const seeRecipeButtons = document.getElementsByClassName("cards-section-see-recipe-button");
 
+    for (let i = 0 ; i < seeRecipeButtons.length ; i++){
+        seeRecipeButtons[i].addEventListener('click', handleClickSeeRecipesButton);
+    }
+
+    async function handleClickSeeRecipesButton(event){
+        await makeSeeRecipeModalVisible(event.target.id);
+    }
+
+    console.log("test");
+}  
+
+loadAll();
 
