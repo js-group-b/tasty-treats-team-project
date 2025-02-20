@@ -1,9 +1,9 @@
-import"./assets/dark-theme-BfWPDguG.js";import{a as d}from"./assets/vendor-BhqcI0kQ.js";async function n(){let c=localStorage.getItem("favorites"),i;if(c==null?i=[]:i=await JSON.parse(c),i.length===0){const t=document.querySelector("#favorite-cards-section-ul-id"),a=document.createElement("div");a.className="no-favorites-message",a.innerHTML=`
+import{m as d}from"./assets/dark-theme-BfWPDguG.js";import{a as l}from"./assets/vendor-BhqcI0kQ.js";async function n(){let r=localStorage.getItem("favorites"),a;if(r==null?a=[]:a=await JSON.parse(r),a.length===0){const t=document.querySelector("#favorite-cards-section-ul-id"),i=document.createElement("div");i.className="no-favorites-message",i.innerHTML=`
         <img src="./favicon/mstile-150x150.png">
             <p>It appears that you haven't added any recipes to your favorites yet. 
             To get started, you can add recipes that you like to your favorites 
             for easier access in the future.</p>
-        `,t.appendChild(a)}for(let t=0;t<i.length;t++)await l(i[t]);const o=document.getElementsByClassName("cards-section-favorites-button");for(let t=0;t<o.length;t++)o[t].addEventListener("click",e);async function e(t){const a=t.target.id.substring(5);let r=localStorage.getItem("favorites"),s;s=localStorage.getItem("favorites"),r=await JSON.parse(s),r.splice(r.indexOf(a),1),s=JSON.stringify(r),localStorage.setItem("favorites",s),document.querySelector(".favorite-cards-section-ul").innerHTML="",n()}}async function l(c){try{const i=`https://tasty-treats-backend.p.goit.global/api/recipes/${c}`,e=await(await d.get(i)).data,t=document.querySelector(".favorite-cards-section-ul");let a="";for(let s=0;s<5;s++)s<Math.floor(e.rating+.4)?a+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />':a+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />';const r=`<li class="cards-section-card-items">
+        `,t.appendChild(i)}for(let t=0;t<a.length;t++)await g(a[t]);const s=document.getElementsByClassName("cards-section-favorites-button");for(let t=0;t<s.length;t++)s[t].addEventListener("click",e);async function e(t){const i=t.target.id.substring(5);let o=localStorage.getItem("favorites"),c;c=localStorage.getItem("favorites"),o=await JSON.parse(c),o.splice(o.indexOf(i),1),c=JSON.stringify(o),localStorage.setItem("favorites",c),document.querySelector(".favorite-cards-section-ul").innerHTML="",n()}}async function g(r){try{const a=`https://tasty-treats-backend.p.goit.global/api/recipes/${r}`,e=await(await l.get(a)).data,t=document.querySelector(".favorite-cards-section-ul");let i="";for(let c=0;c<5;c++)c<Math.floor(e.rating+.4)?i+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star.png" alt="star" />':i+='<img class="cards-section-card-bottom-div-rating-star" src="./img/star-empty.png" alt="star" />';const o=`<li class="cards-section-card-items">
                        <div class="favorite-cards-section-card-item-inner-div">
 
                             <svg id="svg__${e._id}"class="cards-section-favorites-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +18,7 @@ import"./assets/dark-theme-BfWPDguG.js";import{a as d}from"./assets/vendor-BhqcI
                                    <div class="cards-section-ratings-div">
                                        <p class="cards-section-card-bottom-div-rating-p">${e.rating}</p>     
 
-                                        ${a}
+                                        ${i}
 
                                    </div>
                                    <div class="cards-section-see-recipe-button-div">
@@ -27,5 +27,5 @@ import"./assets/dark-theme-BfWPDguG.js";import{a as d}from"./assets/vendor-BhqcI
                                </div>
                            </div>
                        </div>
-                   </li> `;t.innerHTML+=r}catch{console.log("error occurd while fetching the data :C")}}n();
+                   </li> `;t.innerHTML+=o}catch{console.log("error occurd while fetching the data :C")}}async function v(){await n();const r=document.getElementsByClassName("cards-section-see-recipe-button");for(let s=0;s<r.length;s++)r[s].addEventListener("click",a);async function a(s){await d(s.target.id)}console.log("test")}v();
 //# sourceMappingURL=favorites.js.map
