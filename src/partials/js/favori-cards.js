@@ -8,7 +8,18 @@ async function GetLocalStorageAndFetchAll(){
     let favsStr = localStorage.getItem('favorites');
     let myFavoritedRecipeIDs;
     if (favsStr == null){
-        myFavoritedRecipeIDs = []
+        myFavoritedRecipeIDs = [];
+
+        const messageDiv = document.createElement("div");
+        messageDiv.className = "no-favorites-message";
+        messageDiv.innerHTML = `
+            <p>It appears that you haven't added any recipes to your favorites yet. 
+            To get started, you can add recipes that you like to your favorites 
+            for easier access in the future.</p>
+        `;
+
+        const favoriteCardsSection = document.querySelector(".favorite-cards-section-ul");
+        favoriteCardsSection.appendChild(messageDiv);
     }else{
         myFavoritedRecipeIDs = await JSON.parse(favsStr); 
     }
