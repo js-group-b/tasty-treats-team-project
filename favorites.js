@@ -1,4 +1,4 @@
-import{m as d}from"./assets/dark-theme-BfWPDguG.js";import{a as l}from"./assets/vendor-BhqcI0kQ.js";async function n(){let r=localStorage.getItem("favorites"),a;if(r==null?a=[]:a=await JSON.parse(r),a.length===0){const t=document.querySelector("#favorite-cards-section-ul-id"),i=document.createElement("div");i.className="no-favorites-message",i.innerHTML=`
+import{m as d}from"./assets/dark-theme-Mfn6QuNp.js";import{a as l}from"./assets/vendor-BhqcI0kQ.js";async function n(){let r=localStorage.getItem("favorites"),a;if(r==null?a=[]:a=await JSON.parse(r),a.length===0){const t=document.querySelector("#favorite-cards-section-ul-id"),i=document.createElement("div");i.className="no-favorites-message",i.innerHTML=`
         <img src="./favicon/mstile-150x150.png">
             <p>It appears that you haven't added any recipes to your favorites yet. 
             To get started, you can add recipes that you like to your favorites 
