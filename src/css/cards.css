@@ -1,24 +1,24 @@
 .cards-section-content-div {
     max-width: 335px;
-    margin:auto;
-    color:white;
+    margin: auto;
+    color: white;
 }
 
 .cards-section-ul {
-    margin:auto;
+    margin: auto;
     align-items: center;
 }
 
 .cards-section-card-content-title {
-    font-size:14px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857;
     padding-bottom: 8px;
 }
 
 .cards-section-card-content-p {
-    font-size:12px;
-    margin-bottom:16px;
+    font-size: 12px;
+    margin-bottom: 16px;
 }
 
 .cards-section-card-item-inner-div {
@@ -30,14 +30,14 @@
 }
 
 .cards-section-card-content {
-    position:absolute;
-    top:214px;
-    left:0px;
-    padding:0 16px;
-    max-width:335px;
+    position: absolute;
+    top: 214px;
+    left: 0px;
+    padding: 0 16px;
+    max-width: 335px;
 }
 
-.cards-section-card-image{
+.cards-section-card-image {
     width: 335px;
     height: 335px;
     border-radius: 8px;
@@ -45,69 +45,115 @@
 }
 
 .cards-section-favorites-button {
-    width:22px;
-    height:22px;
+    width: 22px;
+    height: 22px;
     position: absolute;
-    top:16px;
-    left:297px;
+    top: 16px;
+    left: 297px;
 }
-.cards-section-see-recipe-button:hover{
+
+.cards-section-see-recipe-button:hover {
     color: #050505;
     background-color: #fff;
 }
 
 .cards-section-card-bottom-div {
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
 .cards-section-ratings-div {
     display: flex;
     align-items: center;
-    font-size:14px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857;
 }
+
 .cards-section-card-bottom-div-rating-star {
-    width:16px;
+    width: 16px;
     height: 16px;
 }
+
 .cards-section-see-recipe-button {
-    width:89px;
+    width: 89px;
     height: 31px;
-    margin-right:6px;
+    margin-right: 6px;
     border-radius: 8px;
     background-color: var(--primary-color);
-    color:white;
-    font-size:12px;
+    color: white;
+    font-size: 12px;
 }
 
 
 .cards-section-card-items {
-    margin-top:24px;
+    margin-top: 24px;
 }
 
-@media only screen and (min-width: 768px){
+.no-results-message {
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
 
-    .cards-section-card-item-inner-div > img {
-        max-width:240px;
+.no-results-message img {
+    width: 100px;
+    height: 100px;
+}
+
+.no-results-message p {
+    color: #050505;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .cards-section-card-item-inner-div>img {
+        max-width: 240px;
         max-height: 264px;
     }
+
     .cards-section-card-content {
-        width:240px;
-        top:143px;
+        width: 240px;
+        top: 143px;
     }
+
     .cards-section-favorites-button {
-        left:202px;
+        left: 202px;
     }
+
     .cards-section-content-div {
-        max-width:496px;
+        max-width: 496px;
     }
+
     .cards-section-ul {
-        width:496px;
-        display:flex;
-        flex-wrap:wrap;
-        gap:16px;
+        width: 496px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .no-results-message {
+        margin-top: 50px;
+    }
+
+    .no-results-message img {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .no-results-message p {
+        width: 100%;
+        max-width: 68%;
+        font-size: 16px;
+
     }
 
 }
@@ -115,22 +161,27 @@
 @media only screen and (min-width: 1280px) {
 
     .cards-section-content-div {
-        max-width:804px;
-    }
-    .cards-section-ul {
-        width:804px;
+        max-width: 804px;
     }
 
-    .cards-section-card-item-inner-div > img {
-        max-width:257px;
+    .cards-section-ul {
+        width: 804px;
+    }
+
+    .cards-section-card-item-inner-div>img {
+        max-width: 257px;
         max-height: 287px;
     }
+
     .cards-section-card-content {
-        top:166px;
+        top: 166px;
     }
 
-    .cards-section-favorites-button{
-        left:213.8px;
+    .cards-section-favorites-button {
+        left: 213.8px;
+    }
+
+    #no-results-message {
+        width: 80%;
     }
 }
-
