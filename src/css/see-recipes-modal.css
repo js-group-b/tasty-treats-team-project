@@ -22,7 +22,6 @@
   width: 100%;
 }
 
-
 .see-recipes-modal-content {
   background-color: white;
   padding: 20px;
@@ -54,7 +53,6 @@
   margin-bottom: 10px;
   border-radius: 20px;
   overflow: hidden;
-
 }
 
 #see-recipes-modal-video iframe {
@@ -72,7 +70,6 @@
   font-size: 14px;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 #see-recipes-modal-info-mobil {
@@ -82,7 +79,6 @@
   font-size: 14px;
   margin-top: 5px;
   margin-bottom: 5px;
-
 }
 
 #see-recipes-modal-info-tablet-desktop {
@@ -105,7 +101,7 @@
 }
 
 #see-recipes-modal-tags span {
-  border: 1px solid #0505054D;
+  border: 1px solid #0505054d;
   border-radius: 15px;
   padding: 6px 12px;
   margin-right: 4px;
@@ -115,7 +111,7 @@
 }
 
 .stars {
-  color: #EEA10C;
+  color: #eea10c;
   margin-right: 30px;
 }
 
@@ -138,7 +134,6 @@
   scrollbar-width: thin;
 }
 
-
 #see-recipes-modal-instructions {
   font-size: 14px;
   line-height: 18px;
@@ -153,7 +148,7 @@
 .ingredient {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #0505051A;
+  border-bottom: 1px solid #0505051a;
   margin-bottom: 8px;
 }
 
@@ -194,13 +189,12 @@
   max-width: 100%;
   justify-content: center;
   gap: 10px;
-
 }
 
 #see-recipes-modal-favorite-btn {
-  border: 1px solid #9BB537;
-  background-color: #9BB537;
-  color: #F8F8F8;
+  border: 1px solid #9bb537;
+  background-color: #9bb537;
+  color: #f8f8f8;
   border-radius: 15px;
   padding: 14px 28px;
   flex: 1;
@@ -211,8 +205,8 @@
 }
 
 #see-recipes-modal-rating-btn {
-  border: 1px solid #9BB537;
-  background-color: #F8F8F8;
+  border: 1px solid #9bb537;
+  background-color: #f8f8f8;
   color: #050505;
   border-radius: 15px;
   padding: 14px 28px;
@@ -220,7 +214,7 @@
 }
 
 #see-recipes-modal-rating-btn:hover {
-  background-color: #9BB537;
+  background-color: #9bb537;
 }
 
 #see-recipes-modal-name-mobil,
@@ -231,15 +225,12 @@
 #see-recipes-modal-name-tablet-desktop,
 #see-recipes-modal-info-tablet-desktop {
   display: none;
-
 }
 
 @media (min-width: 768px) {
-
   #see-recipes-modal-favorite-btn,
   #see-recipes-modal-rating-btn {
     flex: none;
-
   }
 
   #see-recipes-modal-btn {

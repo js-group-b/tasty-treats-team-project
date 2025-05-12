@@ -1,181 +1,175 @@
 :root {
-    --background-light: #ffffff;
-    --text-light: #222;
-    --button-light: #4caf50;
-    --button-text-light: #fff;
+  --background-light: #ffffff;
+  --text-light: #222;
+  --button-light: #4caf50;
+  --button-text-light: #fff;
 
-    --background-dark: #121212;
-    --text-dark: #ffffff;
-    --button-dark: #121212;
-    --button-text-dark: #ffffff;
-   
+  --background-dark: #121212;
+  --text-dark: #ffffff;
+  --button-dark: #121212;
+  --button-text-dark: #ffffff;
 }
-
 
 body {
-    background-color: var(--background-light);
-    color: var(--text-light);
-    transition: background 0.3s ease, color 0.3s ease;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
 }
-
 
 .dark-mode {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
-.dark-mode .cards-section-card-image border{
-background-color: var(--background-dark);
-  z-index:var(--background-dark);
+.dark-mode .cards-section-card-image border {
+  background-color: var(--background-dark);
+  z-index: var(--background-dark);
 }
 
-.dark-mode #header-favorites-text{
-    color: var(--text-dark);
-} 
+.dark-mode #header-favorites-text {
+  color: var(--text-dark);
+}
 .dark-mode .logo-second {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode .mobile-menu-icon {
-    color: var(--text-dark);
-} 
+  color: var(--text-dark);
+}
 .dark-mode .filter-form-label {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode .reset-filter-btn {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode .categories-list {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode #ingredient-trigger-text {
-color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode .filter-custom-select-trigger {
-color: var(--text-dark);
-border: 1px solid gray;
+  color: var(--text-dark);
+  border: 1px solid gray;
 }
 .dark-mode .order-modal-content {
-    background-color: var(--background-dark);
-
+  background-color: var(--background-dark);
 }
 .dark-mode .order-modal-title {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode .order-modal-label {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
-.dark-mode #order-modal-label-input{
-background-color: var(--background-dark);
+.dark-mode #order-modal-label-input {
+  background-color: var(--background-dark);
 }
 .dark-mode #closeModal {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
-.dark-mode .filter-search-container input{
-
-    border: 1px solid gray;
+.dark-mode .filter-search-container input {
+  border: 1px solid gray;
 }
 
-.dark-mode .see-recipes-modal-content{
-    background-color: var(--background-dark);
-    color: var(--text-dark);
+.dark-mode .see-recipes-modal-content {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
 .dark-mode .filter-options {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
-.dark-mode .filter-options li{
-  
-    color: var(--text-dark);
+.dark-mode .filter-options li {
+  color: var(--text-dark);
 }
-.dark-mode #see-recipes-modal-tags span{
-    color: var(--text-dark);
+.dark-mode #see-recipes-modal-tags span {
+  color: var(--text-dark);
 }
 
-.dark-mode #see-recipes-modal-tags span{
-    color: var(--text-dark);
+.dark-mode #see-recipes-modal-tags span {
+  color: var(--text-dark);
 }
 .dark-mode .filter-input-container input {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
-.dark-mode .ingredient-name{
-    color: var(--text-dark);
+.dark-mode .ingredient-name {
+  color: var(--text-dark);
 }
 
 .dark-mode .ingredient-amount {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode #see-recipes-modal-rating {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode .see-recipes-close-btn {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
 .hero-section-the-main-container {
-    background-color: var(--background-light);
-    transition: background 0.3s ease;
+  background-color: var(--background-light);
+  transition: background 0.3s ease;
 }
 
 .dark-mode .hero-section-the-main-container {
-    background-color: var(--background-dark);
+  background-color: var(--background-dark);
 }
 
 /* Hero Title */
 .hero-section-order-title {
-    color: var(--text-light);
+  color: var(--text-light);
 }
-.dark-mode .hero-section-order-card{
- background-color: var(--background-dark);
+.dark-mode .hero-section-order-card {
+  background-color: var(--background-dark);
 }
 
-.dark-mode .all-categories-btn{
-    background-color: #9bb537;;
-    color: var(--text-dark);
+.dark-mode .all-categories-btn {
+  background-color: #9bb537;
+  color: var(--text-dark);
 }
 .dark-mode .hero-section-order-p {
- color: var(--text-dark);
+  color: var(--text-dark);
 }
 .dark-mode .hero-section-order-title {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
 /* Highlight */
 .hero-section-highlight {
-    color: #76c893;
-    /* Yeşil vurgulu */
+  color: #76c893;
+  /* Yeşil vurgulu */
 }
 
 /* Buton */
 .hero-section-order-button {
-    background-color: var(--button-light);
-    color: var(--button-text-light);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
+  background-color: var(--button-light);
+  color: var(--button-text-light);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .dark-mode .hero-section-order-button {
-    background-color: var(--button-dark);
-    color: var(--button-text-dark);
+  background-color: var(--button-dark);
+  color: var(--button-text-dark);
 }
 
-.dark-mode .filter-svg-search{
-    fill: var(--text-dark);
+.dark-mode .filter-svg-search {
+  fill: var(--text-dark);
 }
 .dark-mode .svg-arrow {
-    fill: var(--text-dark);
+  fill: var(--text-dark);
 }
 .dark-mode .hero-order-modal-input {
-    background-color: var(--button-dark);
+  background-color: var(--button-dark);
 }
 .dark-mode .hero-order-modal-textarea {
-    background-color: var(--button-dark);
+  background-color: var(--button-dark);
 }
-.dark-mode .hero-order-modal-input input{
-    color: var(--text-dark);
+.dark-mode .hero-order-modal-input input {
+  color: var(--text-dark);
 }
 
-.dark-mode .hero-order-modal-textarea input{
-color: var(--text-dark);
+.dark-mode .hero-order-modal-textarea input {
+  color: var(--text-dark);
 }

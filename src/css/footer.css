@@ -1,44 +1,44 @@
-.scroll-to-up{
-    width: 3.2rem;
-    height: 3.2rem;
-    background-color: var(--primary-color);
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 2rem;
-    right: 1rem;
-    cursor: pointer;
-    display: none;
-    z-index: 1000;
-    border-radius: 50%;
+.scroll-to-up {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  border-radius: 50%;
 }
-.scroll-to-up:hover{
-    background-color: #889E2F;
+.scroll-to-up:hover {
+  background-color: #889e2f;
 }
 .footer-text {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .heart {
-    display: inline-block;
-    animation: pulse 1.5s infinite;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-        color: red;
-    }
+  0% {
+    transform: scale(1);
+    color: red;
+  }
 
-    50% {
-        transform: scale(1.2);
-        color: pink;
-    }
+  50% {
+    transform: scale(1.2);
+    color: pink;
+  }
 
-    100% {
-        transform: scale(1);
-        color: red;
-    }
+  100% {
+    transform: scale(1);
+    color: red;
+  }
 }
